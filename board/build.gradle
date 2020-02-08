@@ -38,6 +38,9 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	implementation 'org.projectlombok:lombok'
+
+출처: https://kikikimoong.tistory.com/entry/spring-boot-gradle-lombok-추가방법 [개발자 부부의 다양한 이야기]
 }
 
 test {

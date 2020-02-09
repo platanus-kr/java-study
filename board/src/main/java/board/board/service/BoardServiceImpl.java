@@ -1,7 +1,6 @@
 package board.board.service;
 
 import board.board.dto.BoardDto;
-import board.board.mapper.BoardMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

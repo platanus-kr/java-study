@@ -1,7 +1,6 @@
 package board.board.controller;
 
 import board.board.dto.BoardDto;
-import board.board.service.BoardService;
 
 import java.util.List;
 

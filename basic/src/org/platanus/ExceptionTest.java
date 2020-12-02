@@ -52,7 +52,6 @@ public class ExceptionTest {
 
 //        throw new Exception("Sorry");
 //        throw new RuntimeException("Oops");
-
         try {
             InputStream is = new URL("https://m.naver.com").openConnection().getInputStream();
             System.out.println(

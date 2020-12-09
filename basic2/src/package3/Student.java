@@ -1,6 +1,7 @@
 package package3;
 
 public class Student {
+
     int studentID;
     String studentName;
     int grade;
@@ -10,11 +11,11 @@ public class Student {
         System.out.println(studentName + "," + address);
     }
 
-    public String getStudentName(){
+    public String getStudentName() {
         return studentName;
     }
 
-    public void setStudentName(String name){
+    public void setStudentName(String name) {
         studentName = name;
     }
 

@@ -21,8 +21,8 @@ public class MyClass {
     }
 
     // 인스턴스화 하지 않아도 보임
-    public static void gg() {
-        System.out.println("Wow. ");
+        public static void gg() {
+            System.out.println("Wow. ");
     }
 
 }

@@ -1,6 +1,7 @@
-package package3;
+package CodePractice.package3;
 
 public class Person {
+
     String name;
     int height;
     double weight;

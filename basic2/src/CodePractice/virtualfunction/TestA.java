@@ -1,9 +1,10 @@
-package virtualfunction;
+package CodePractice.virtualfunction;
 
 public class TestA {
+
     int num;
 
-    void aaa(){
+    void aaa() {
         System.out.println("aaa() print");
     }
 

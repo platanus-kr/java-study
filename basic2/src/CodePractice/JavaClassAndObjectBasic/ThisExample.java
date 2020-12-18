@@ -1,4 +1,4 @@
-package JavaClassAndObjectBasic;
+package CodePractice.JavaClassAndObjectBasic;
 
 
 class BirthDay {

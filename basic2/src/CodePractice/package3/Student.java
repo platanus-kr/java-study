@@ -1,4 +1,4 @@
-package package3;
+package CodePractice.package3;
 
 public class Student {
 

@@ -1,10 +1,11 @@
-package domain;
+package Chicken.domain;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class MenuRepository {
+
     private static final List<Menu> menus = new ArrayList<>();
 
     static {

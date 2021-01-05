@@ -1,6 +1,7 @@
-package domain;
+package Chicken.domain;
 
 public class Menu {
+
     private final int number;
     private final String name;
     private final Category category;

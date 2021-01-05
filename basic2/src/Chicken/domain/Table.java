@@ -1,6 +1,7 @@
-package domain;
+package Chicken.domain;
 
 public class Table {
+
     private final int number;
 
     public Table(final int number) {

@@ -1,10 +1,11 @@
-package domain;
+package Chicken.domain;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class TableRepository {
+
     private static final List<Table> tables = new ArrayList<>();
 
     static {

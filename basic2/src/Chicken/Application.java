@@ -1,13 +1,15 @@
-import domain.Menu;
-import domain.MenuRepository;
-import domain.Table;
-import domain.TableRepository;
-import view.InputView;
-import view.OutputView;
+package Chicken;
 
+import Chicken.domain.Menu;
+import Chicken.domain.MenuRepository;
+import Chicken.domain.Table;
+import Chicken.domain.TableRepository;
+import Chicken.view.InputView;
+import Chicken.view.OutputView;
 import java.util.List;
 
 public class Application {
+
     // TODO 구현 진행
     public static void main(String[] args) {
         final List<Table> tables = TableRepository.tables();

@@ -6,9 +6,6 @@ public class Member {
     private Long id;
     private String email;
     private String password;
-
-
-
     private String name;
     private LocalDateTime registerDateTime;
 
@@ -45,7 +42,7 @@ public class Member {
 
     public void changePassword(String oldPassword, String newPassword){
         if (!password.equals(oldPassword))
-            throw new WrongIdPasswordException();
+            throw new WrongPasswordException();
         this.password=newPassword;
     }
 

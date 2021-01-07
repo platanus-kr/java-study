@@ -9,7 +9,7 @@ public class MemberRegisterService {
         this.memberDao = memberDao;
     }
 
-    public Long regist(RegisterRequest request){
+    public Long register(RegisterRequest request){
         Member member = memberDao.selectByEmail(request.getEmail());
         if(member !=null){
             throw new DuplicateMemberException("duplicated email " +request.getEmail());
@@ -17,7 +17,7 @@ public class MemberRegisterService {
         Member newMember = new Member(
             request.getEmail(),
             request.getPassword(),
-            request.gerName(),
+            request.getName(),
             LocalDateTime.now()
         );
         memberDao.insert(newMember);

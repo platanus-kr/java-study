@@ -16,7 +16,6 @@ public class MemberListPrinter {
         Collection<Member> members = memberDao.selectAll();
         for (Member member : members) {
             printer.print(member);
-
         }
     }
 

@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.ChangePasswordService;
 import spring.DuplicateMemberException;
+import spring.MemberInformationPrinter;
 import spring.MemberListPrinter;
 import spring.MemberNotFoundException;
 import spring.MemberRegisterService;
@@ -39,13 +40,27 @@ public class MainForSpring {
             } else if (command.startsWith("list")){
                 processListCommand();
                 continue;
+            } else if(command.startsWith("info ")){
+                processInformationCommand(command.split( " "));
+                continue;
             }
             printHelp();
         }
     }
 
+    private static void processInformationCommand(String[] s) {
+        if(s.length != 2){
+            printHelp();
+            return;
+        }
+        MemberInformationPrinter informationPrinter =
+            context.getBean("memberInformationPrinter", MemberInformationPrinter.class);
+        informationPrinter.printMemberInfo(s[1]);
+    }
+
     private static void processListCommand() {
-        MemberListPrinter listPrinter = context.getBean("listPrinter", MemberListPrinter.class);
+        MemberListPrinter listPrinter =
+            context.getBean("listPrinter", MemberListPrinter.class);
         listPrinter.printAll();
     }
 
@@ -55,7 +70,8 @@ public class MainForSpring {
             return;
         }
 //        MemberRegisterService registerService = assembler.getMemberRegisterService();
-        MemberRegisterService registerService = context.getBean("memberRegisterService", MemberRegisterService.class);
+        MemberRegisterService registerService =
+            context.getBean("memberRegisterService", MemberRegisterService.class);
         RegisterRequest request = new RegisterRequest();
         request.setEmail(arg[1]);
         request.setName(arg[2]);
@@ -95,8 +111,11 @@ public class MainForSpring {
     private static void printHelp(){
         System.out.println();
         System.out.println("invalid command. check under arguments");
+        System.out.println(">> commands list");
         System.out.println("new email name password passwordRepeat");
         System.out.println("change email nowPassword newPassword");
+        System.out.println("info email");
+        System.out.println("list");
         System.out.println();
     }
 

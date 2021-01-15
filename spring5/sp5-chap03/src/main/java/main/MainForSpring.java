@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.ChangePasswordService;
 import spring.DuplicateMemberException;
+import spring.MemberListPrinter;
 import spring.MemberNotFoundException;
 import spring.MemberRegisterService;
 import spring.RegisterRequest;
@@ -35,9 +36,17 @@ public class MainForSpring {
             } else if (command.startsWith("change ")){
                 processChangeCommand(command.split(" "));
                 continue;
+            } else if (command.startsWith("list")){
+                processListCommand();
+                continue;
             }
             printHelp();
         }
+    }
+
+    private static void processListCommand() {
+        MemberListPrinter listPrinter = context.getBean("listPrinter", MemberListPrinter.class);
+        listPrinter.printAll();
     }
 
     private static void processNewCommand(String[] arg){
@@ -53,7 +62,7 @@ public class MainForSpring {
         request.setPassword(arg[3]);
         request.setConfirmPassword(arg[4]);
 
-        if(!request.isPasswordEqualToConfirmPassword())k{
+        if(!request.isPasswordEqualToConfirmPassword()){
             System.out.println("invalid password.");
             return;
         }

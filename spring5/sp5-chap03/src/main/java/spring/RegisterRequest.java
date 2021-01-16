@@ -1,10 +1,12 @@
 package spring;
 
 public class RegisterRequest {
+
     private String email;
     private String password;
     private String confirmPassword;
     private String name;
+
     public String getEmail() {
         return email;
     }
@@ -37,7 +39,7 @@ public class RegisterRequest {
         this.name = name;
     }
 
-    public boolean isPasswordEqualToConfirmPassword(){
+    public boolean isPasswordEqualToConfirmPassword() {
         return password.equals(confirmPassword);
     }
 

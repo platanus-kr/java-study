@@ -3,32 +3,33 @@ package spring;
 import java.time.LocalDateTime;
 
 public class Member {
+ 
     private Long id;
     private String email;
     private String password;
     private String name;
     private LocalDateTime registerDateTime;
 
-    public Member(String email, String password, String name, LocalDateTime registerDateTime){
+    public Member(String email, String password, String name, LocalDateTime registerDateTime) {
         this.email = email;
         this.password = password;
         this.name = name;
         this.registerDateTime = registerDateTime;
     }
 
-    void setId(Long id){
+    void setId(Long id) {
         this.id = id;
     }
 
-    public Long getId(){
+    public Long getId() {
         return id;
     }
 
-    public String getEmail(){
+    public String getEmail() {
         return email;
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 
@@ -40,10 +41,11 @@ public class Member {
         return registerDateTime;
     }
 
-    public void changePassword(String oldPassword, String newPassword){
-        if (!password.equals(oldPassword))
+    public void changePassword(String oldPassword, String newPassword) {
+        if (!password.equals(oldPassword)) {
             throw new WrongIdPasswordException();
-        this.password=newPassword;
+        }
+        this.password = newPassword;
     }
 
 }

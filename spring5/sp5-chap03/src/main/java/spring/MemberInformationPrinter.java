@@ -1,12 +1,13 @@
 package spring;
 
 public class MemberInformationPrinter {
+
     private MemberDao memberDao;
     private MemberPrinter printer;
 
-    public void printMemberInfo(String email){
+    public void printMemberInfo(String email) {
         Member member = memberDao.selectByEmail(email);
-        if (member == null){
+        if (member == null) {
             System.out.println("not found data\n");
             return;
         }
@@ -14,11 +15,11 @@ public class MemberInformationPrinter {
         System.out.println();
     }
 
-    public void setMemberDao(MemberDao memberDao){
+    public void setMemberDao(MemberDao memberDao) {
         this.memberDao = memberDao;
     }
 
-    public void setPrinter(MemberPrinter printer){
+    public void setPrinter(MemberPrinter printer) {
         this.printer = printer;
     }
 }

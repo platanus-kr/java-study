@@ -12,22 +12,22 @@ import spring.RegisterRequest;
 import spring.WrongIdPasswordException;
 
 public class MainForAssembler {
-
+ 
     private static Assembler assembler = new Assembler();
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        while (true){
+        while (true) {
             System.out.println("Input command:");
             String command = reader.readLine();
-            if (command.equalsIgnoreCase("exit")){
+            if (command.equalsIgnoreCase("exit")) {
                 System.out.println("program halt.");
                 break;
             }
-            if (command.startsWith("new ")){
+            if (command.startsWith("new ")) {
                 processNewCommand(command.split(" "));
                 continue;
-            } else if (command.startsWith("change ")){
+            } else if (command.startsWith("change ")) {
                 processChangeCommand(command.split(" "));
                 continue;
             }
@@ -35,8 +35,8 @@ public class MainForAssembler {
         }
     }
 
-    private static void processNewCommand(String[] arg){
-        if(arg.length != 5){
+    private static void processNewCommand(String[] arg) {
+        if (arg.length != 5) {
             printHelp();
             return;
         }
@@ -47,37 +47,37 @@ public class MainForAssembler {
         request.setPassword(arg[3]);
         request.setConfirmPassword(arg[4]);
 
-        if(!request.isPasswordEqualToConfirmPassword()){
+        if (!request.isPasswordEqualToConfirmPassword()) {
             System.out.println("invalid password.");
             return;
         }
         try {
             registerService.register(request);
             System.out.println("added user.");
-        }catch (DuplicateMemberException e){
+        } catch (DuplicateMemberException e) {
             System.out.println("exist email.");
         }
     }
 
-    private static void processChangeCommand(String[] arg){
-        if (arg.length!=4){
+    private static void processChangeCommand(String[] arg) {
+        if (arg.length != 4) {
             printHelp();
             return;
         }
 
-        ChangePasswordService changePasswordService= assembler.getChangePasswordService();
+        ChangePasswordService changePasswordService = assembler.getChangePasswordService();
 
-        try{
+        try {
             changePasswordService.changePassword(arg[1], arg[2], arg[3]);
             System.out.println("changed password");
-        } catch (MemberNotFoundException e){
+        } catch (MemberNotFoundException e) {
             System.out.println("no exist email.");
-        } catch (WrongIdPasswordException e){
+        } catch (WrongIdPasswordException e) {
             System.out.println("invalid id and password.");
         }
     }
 
-    private static void printHelp(){
+    private static void printHelp() {
         System.out.println();
         System.out.println("invalid command. check under arguments");
         System.out.println("new email name password passwordRepeat");

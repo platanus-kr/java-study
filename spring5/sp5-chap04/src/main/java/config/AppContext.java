@@ -23,11 +23,7 @@ public class AppContext {
         return new MemberRegisterService(memberDao());
     }
 
-    @Bean
-    public ChangePasswordService changePasswordService() {
-        ChangePasswordService passwordService = new ChangePasswordService();
-        return passwordService;
-    }
+
 
     @Bean
     public MemberPrinter memberPrinter() {
@@ -50,8 +46,9 @@ public class AppContext {
         // bean 객체를 생성하는 시점에 필요한 객체를 모두 알 수 있다.
         // 그러나 필요한 의존객체를 전달하지 않아도 bean 객체가 생성되기 때문에 NPE가 발생할 수 있다.
         MemberInformationPrinter informationPrinter = new MemberInformationPrinter();
-        informationPrinter.setMemberDao(memberDao());
-        informationPrinter.setPrinter(memberPrinter());
+        // 아래의 경우는 메소드에 자동주입 어노테이션.
+        // informationPrinter.setMemberDao(memberDao());
+        // informationPrinter.setPrinter(memberPrinter());
         return informationPrinter;
     }
 

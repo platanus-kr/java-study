@@ -20,10 +20,13 @@ public class AppContext {
 
     @Bean
     public MemberRegisterService memberRegisterService() {
-        return new MemberRegisterService(memberDao());
+        return new MemberRegisterService();
     }
 
-
+    @Bean
+    public ChangePasswordService changePasswordService(){
+        return new ChangePasswordService();
+    }
 
     @Bean
     public MemberPrinter memberPrinter() {
@@ -37,7 +40,10 @@ public class AppContext {
         // bean 객체를 생성하는 시점에 필요한 모든 의존 객체를 주입받는다.
         // 그래서 객체를 사용할 때 완전한 상태로 사용 할 수 있다.
         // 그러나 넘겨야하는 객체가 많을 때는 일일이 확인해야하는 단점이 있다.
-        return new MemberListPrinter(memberDao(), memberPrinter());
+        // return new MemberListPrinter(memberDao(), memberPrinter());
+
+        // @Autowired 적용
+        return new MemberListPrinter();
     }
 
     @Bean
@@ -45,11 +51,12 @@ public class AppContext {
         // setter 방식
         // bean 객체를 생성하는 시점에 필요한 객체를 모두 알 수 있다.
         // 그러나 필요한 의존객체를 전달하지 않아도 bean 객체가 생성되기 때문에 NPE가 발생할 수 있다.
-        MemberInformationPrinter informationPrinter = new MemberInformationPrinter();
+//        MemberInformationPrinter informationPrinter = new MemberInformationPrinter();
         // 아래의 경우는 메소드에 자동주입 어노테이션.
         // informationPrinter.setMemberDao(memberDao());
         // informationPrinter.setPrinter(memberPrinter());
-        return informationPrinter;
+//        return informationPrinter;
+        return new MemberInformationPrinter();
     }
 
     @Bean

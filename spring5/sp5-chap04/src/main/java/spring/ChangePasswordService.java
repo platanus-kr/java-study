@@ -6,12 +6,12 @@ public class ChangePasswordService {
     @Autowired
     private MemberDao memberDao;
 
-    public void changePassword(String email, String oldPasswod, String newPassword) {
+    public void changePassword(String email, String oldPassword, String newPassword) {
         Member member = memberDao.selectByEmail(email);
         if (member == null) {
             throw new MemberNotFoundException();
         }
-        member.changePassword(oldPasswod, newPassword);
+        member.changePassword(oldPassword, newPassword);
 
         memberDao.update(member);
     }

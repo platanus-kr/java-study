@@ -1,4 +1,4 @@
-package main.java.chap07;
+package chap07;
 
 public class ExecutiveTimeCalculator implements Calculator {
 

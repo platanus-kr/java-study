@@ -1,4 +1,7 @@
-package main.java.chap07;
+package main;
+
+import chap07.ExecutiveTimeCalculator;
+import chap07.ImplementCalculator;
 
 public class MainProxy {
 

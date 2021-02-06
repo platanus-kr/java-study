@@ -1,7 +1,7 @@
-package main.java.chap07;
+package chap07;
 
 public class ReCalculator implements Calculator {
-    
+
     @Override
     public long factorial(long num) {
         if (num == 0) {

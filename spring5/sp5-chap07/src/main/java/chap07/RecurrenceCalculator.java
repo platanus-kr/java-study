@@ -1,6 +1,6 @@
 package chap07;
 
-public class ReCalculator implements Calculator {
+public class RecurrenceCalculator implements Calculator {
 
     @Override
     public long factorial(long num) {

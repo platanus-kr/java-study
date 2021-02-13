@@ -2,13 +2,16 @@ package com.helloworld.helloworld.service;
 
 import com.helloworld.helloworld.domain.Member;
 import com.helloworld.helloworld.repository.MemberRepository;
-import com.helloworld.helloworld.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     public long join(Member member) {
 

@@ -1,9 +1,9 @@
 package com.helloworld.helloworld;
 
-import com.helloworld.helloworld.repository.JdbcTemplateMemberRepository;
+import com.helloworld.helloworld.repository.JpaMemberRepository;
 import com.helloworld.helloworld.repository.MemberRepository;
 import com.helloworld.helloworld.service.MemberService;
-import javax.sql.DataSource;
+import javax.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,12 +11,19 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringConfiguration {
 
-    private DataSource dataSource;
+    private EntityManager em;
 
     @Autowired
-    public SpringConfiguration(DataSource dataSource) {
-        this.dataSource = dataSource;
+    public SpringConfiguration(EntityManager em) {
+        this.em = em;
     }
+
+//    private DataSource dataSource;
+
+//    @Autowired
+//    public SpringConfiguration(DataSource dataSource) {
+//        this.dataSource = dataSource;
+//    }
 
     @Bean
     public MemberService memberService() {
@@ -26,7 +33,8 @@ public class SpringConfiguration {
     @Bean
     public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-        return new JdbcTemplateMemberRepository(dataSource);
+//        return new JdbcTemplateMemberRepository(dataSource);
+        return new JpaMemberRepository(em);
     }
 
 }

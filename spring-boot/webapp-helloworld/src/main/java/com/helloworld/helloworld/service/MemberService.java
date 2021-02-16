@@ -4,7 +4,9 @@ import com.helloworld.helloworld.domain.Member;
 import com.helloworld.helloworld.repository.MemberRepository;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.transaction.annotation.Transactional;
 
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;

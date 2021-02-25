@@ -5,7 +5,7 @@
 
 <mapper namespace="org.platanus.webappboard.mapper.BoardMapper">
   <select id="selectBoardList" resultType="org.platanus.webappboard.dto.BoardDto">
-<![CDATA[
+  <![CDATA[
     SELECT board_idx,
            title,
            hit_cnt,
@@ -13,6 +13,19 @@
     FROM t_board
     WHERE deleted_yn = 'N'
     ORDER BY board_idx DESC
+    ]]>
+  </select>
+
+  <select id="insertBoard" resultType="org.platanus.webappboard.dto.BoardDto">
+  <![CDATA[
+    INSERT INTO t_board (title,
+                         contents,
+                         created_datetime,
+                         creator_id)
+    VALUES (#{title},
+            #{contents},
+            NOW(),
+            'admin')
     ]]>
   </select>
 </mapper>

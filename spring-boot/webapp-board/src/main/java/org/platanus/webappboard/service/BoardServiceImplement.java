@@ -17,4 +17,9 @@ public class BoardServiceImplement implements BoardService {
         return boardMapper.selectBoardList();
     }
 
+    @Override
+    public void insertBoard(BoardDto board) throws Exception {
+        boardMapper.insertBoard(board);
+    }
+
 }

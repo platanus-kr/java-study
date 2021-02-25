@@ -9,7 +9,7 @@
     SELECT board_idx,
            title,
            hit_cnt,
-           DATE_FORMAT(created_datetime, '%Y.%m.%d %H:%i:%s') AS created_datetime
+           FORMATDATETIME(created_datetime, 'yyyy-MM-dd HH-mm-ss') AS created_datetime
     FROM t_board
     WHERE deleted_yn = 'N'
     ORDER BY board_idx DESC

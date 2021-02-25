@@ -6,6 +6,7 @@ import org.platanus.webappboard.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -33,6 +34,16 @@ public class BoardController {
     public String insertBoard(BoardDto board) throws Exception {
         boardService.insertBoard(board);
         return "redirect:/board/openBoardList.do";
+    }
+
+    @RequestMapping("/board/openBoardDetail.do")
+    public ModelAndView openBoardDetail(@RequestParam int boardIdx) throws Exception {
+        ModelAndView modelAndView = new ModelAndView("/board/boardDetail");
+
+        BoardDto board = boardService.selectBoardDetail(boardIdx);
+        modelAndView.addObject("board", board);
+
+        return modelAndView;
     }
 
 }

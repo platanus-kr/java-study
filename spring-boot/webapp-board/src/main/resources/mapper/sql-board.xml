@@ -16,7 +16,7 @@
     ]]>
   </select>
 
-  <select id="insertBoard" resultType="org.platanus.webappboard.dto.BoardDto">
+  <insert id="insertBoard" parameterType="org.platanus.webappboard.dto.BoardDto">
   <![CDATA[
     INSERT INTO t_board (title,
                          contents,
@@ -27,5 +27,31 @@
             NOW(),
             'admin')
     ]]>
+  </insert>
+
+  <update id="updateHitCount" parameterType="int">
+  <![CDATA[
+    UPDATE
+      t_board
+    SET hit_cnt = hit_cnt + 1
+    WHERE board_idx = #{boardIdx}
+    ]]>
+  </update>
+
+  <select id="selectBoardDetail" parameterType="int"
+    resultType="org.platanus.webappboard.dto.BoardDto">
+  <![CDATA[
+    SELECT board_idx,
+           title,
+           contents,
+           hit_cnt,
+           FORMATDATETIME(created_datetime, 'yyyy-MM-dd HH-mm-ss') AS created_datetime,
+           creator_id
+    FROM t_board
+    WHERE board_idx = #{boardIdx}
+      AND deleted_yn = 'N'
+    ]]>
   </select>
+
 </mapper>
+

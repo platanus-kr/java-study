@@ -22,4 +22,13 @@ public class BoardServiceImplement implements BoardService {
         boardMapper.insertBoard(board);
     }
 
+    @Override
+    public BoardDto selectBoardDetail(int boardIdx) throws Exception {
+        boardMapper.updateHitCount(boardIdx);
+
+        BoardDto board = boardMapper.selectBoardDetail(boardIdx);
+
+        return board;
+    }
+
 }

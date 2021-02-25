@@ -40,12 +40,19 @@ public class DatabaseConfiguration {
         sqlSessionFactoryBean.setMapperLocations(
             applicationContext.getResource("class:/mapper/**/sql-*.xml")
         );
+        sqlSessionFactoryBean.setConfiguration(mybatisConfig());
         return sqlSessionFactoryBean.getObject();
     }
 
     @Bean
     public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
+    }
+
+    @Bean
+    @ConfigurationProperties(prefix = "mybatis.configuration")
+    public org.apache.ibatis.session.Configuration mybatisConfig() {
+        return new org.apache.ibatis.session.Configuration();
     }
 
 }

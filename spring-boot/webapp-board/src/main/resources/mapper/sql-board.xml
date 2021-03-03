@@ -3,8 +3,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="org.platanus.webappboard.mapper.BoardMapper">
-  <select id="selectBoardList" resultType="org.platanus.webappboard.dto.BoardDto">
+<mapper namespace="org.platanus.webappboard.app.mapper.BoardMapper">
+  <select id="selectBoardList" resultType="org.platanus.webappboard.app.dto.BoardDto">
   <![CDATA[
     SELECT board_idx,
            title,
@@ -16,7 +16,7 @@
     ]]>
   </select>
 
-  <insert id="insertBoard" parameterType="org.platanus.webappboard.dto.BoardDto">
+  <insert id="insertBoard" parameterType="org.platanus.webappboard.app.dto.BoardDto">
   <![CDATA[
     INSERT INTO t_board (title,
                          contents,
@@ -39,7 +39,7 @@
   </update>
 
   <select id="selectBoardDetail" parameterType="int"
-    resultType="org.platanus.webappboard.dto.BoardDto">
+    resultType="org.platanus.webappboard.app.dto.BoardDto">
   <![CDATA[
     SELECT board_idx,
            title,
@@ -53,7 +53,7 @@
     ]]>
   </select>
 
-  <update id="updateBoard" parameterType="org.platanus.webappboard.dto.BoardDto">
+  <update id="updateBoard" parameterType="org.platanus.webappboard.app.dto.BoardDto">
     <![CDATA[
     UPDATE t_board
     SET title            = #{title},

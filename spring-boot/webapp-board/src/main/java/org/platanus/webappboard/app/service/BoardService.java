@@ -1,7 +1,7 @@
-package org.platanus.webappboard.service;
+package org.platanus.webappboard.app.service;
 
 import java.util.List;
-import org.platanus.webappboard.dto.BoardDto;
+import org.platanus.webappboard.app.dto.BoardDto;
 
 public interface BoardService {
 
@@ -14,6 +14,6 @@ public interface BoardService {
     void updateBoard(BoardDto board) throws Exception;
 
     void deleteBoard(int boardIdx) throws Exception;
-    
+
 
 }

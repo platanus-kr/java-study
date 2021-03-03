@@ -1,8 +1,8 @@
-package org.platanus.webappboard.mapper;
+package org.platanus.webappboard.app.mapper;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
-import org.platanus.webappboard.dto.BoardDto;
+import org.platanus.webappboard.app.dto.BoardDto;
 
 @Mapper
 public interface BoardMapper {

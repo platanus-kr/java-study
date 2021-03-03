@@ -1,8 +1,8 @@
-package org.platanus.webappboard.service;
+package org.platanus.webappboard.app.service;
 
 import java.util.List;
-import org.platanus.webappboard.dto.BoardDto;
-import org.platanus.webappboard.mapper.BoardMapper;
+import org.platanus.webappboard.app.dto.BoardDto;
+import org.platanus.webappboard.app.mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

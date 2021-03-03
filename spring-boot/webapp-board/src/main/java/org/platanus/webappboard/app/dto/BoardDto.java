@@ -1,4 +1,4 @@
-package org.platanus.webappboard.dto;
+package org.platanus.webappboard.app.dto;
 
 import lombok.Data;
 

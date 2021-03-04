@@ -12,11 +12,15 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class BoardController {
 
+//    private Logger log = LoggerFactory.getLogger(this.getClass());
+
     @Autowired
     private BoardService boardService;
 
     @RequestMapping("/board/openBoardList.do")
     public ModelAndView openBoardList() throws Exception {
+//        log.debug("openBoardList");
+
         ModelAndView modelAndView = new ModelAndView("/board/boardList");
 
         List<BoardDto> list = boardService.selectBoardList();

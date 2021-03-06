@@ -8,7 +8,8 @@
 <body>
 <div class="container">
   <h2>게시판 등록</h2>
-  <form id="frm" name="frm" method="post" action="/board/insertBoard.do">
+  <form id="frm" name="frm" method="post" action="/board/insertBoard.do"
+  enctype="multipart/form-data">
     <table class="board_detail">
       <tr>
         <td>제목</td>
@@ -20,6 +21,7 @@
         </td>
       </tr>
     </table>
+    <input type="file" id="files" name="files" multiple="multiple">
     <input type="submit" id="submit" value="글 저장" class="btn">
   </form>
 </div>

@@ -18,6 +18,8 @@ public interface BoardMapper {
 
     BoardDto selectBoardDetail(int boardIdx) throws Exception;
 
+    List<BoardFileDto> selectBoardFileList(int boardIdx) throws Exception;
+
     void updateBoard(BoardDto board);
 
     void deleteBoard(int boardIdx);

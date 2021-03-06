@@ -46,6 +46,15 @@
     <input type="hidden" id="boardIdx" name="boardIdx" th:value="${board.boardIdx }">
   </form>
 
+  <div class="file_list">
+    <a th:each="list : ${board.fileList}"
+       th:text="|${list.originalFileName}(${list.fileSize} KB)|"></a>
+    <a th:each="list : ${board.fileList}"
+       th:href="@{/board/downloadBoardFile.do(idx=${list.idx}, boardIdx=${list.boardIdx})}"
+       th:text="|${list.originalFileName} (${list.fileSize} kb)|"></a>
+
+  </div>
+
   <a href="#this" id="list" class="btn">목록으로</a>
   <a href="#this" id="edit" class="btn">수정하기</a>
   <a href="#this" id="delete" class="btn">삭제하기</a>

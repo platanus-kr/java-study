@@ -3,6 +3,7 @@ package org.platanus.webappboard.app.mapper;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.platanus.webappboard.app.dto.BoardDto;
+import org.platanus.webappboard.app.dto.BoardFileDto;
 
 @Mapper
 public interface BoardMapper {
@@ -10,6 +11,8 @@ public interface BoardMapper {
     List<BoardDto> selectBoardList() throws Exception;
 
     void insertBoard(BoardDto board) throws Exception;
+
+    void insertBoardFileList(List<BoardFileDto> fileList) throws Exception;
 
     void updateHitCount(int boardIdx) throws Exception;
 

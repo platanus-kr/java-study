@@ -8,16 +8,22 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import org.platanus.webappboard.app.dto.BoardFileDto;
-import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-@Component
+
 public class FileUtils {
 
-    public List<BoardFileDto> parseFileInfo(int boardIdx,
-        MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
+    int boardIdx;
+    MultipartHttpServletRequest multipartHttpServletRequest;
+
+    public FileUtils(int boardIdx, MultipartHttpServletRequest multipartHttpServletRequest) {
+        this.boardIdx = boardIdx;
+        this.multipartHttpServletRequest = multipartHttpServletRequest;
+    }
+
+    public List<BoardFileDto> parseFileInfomation() throws Exception {
         if (ObjectUtils.isEmpty(multipartHttpServletRequest)) {
             return null;
 

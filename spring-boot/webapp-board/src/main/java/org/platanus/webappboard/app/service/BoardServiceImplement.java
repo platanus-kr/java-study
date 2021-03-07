@@ -50,7 +50,7 @@ public class BoardServiceImplement implements BoardService {
     }
 
     @Override
-    public BoardFileDto selectBordFileInformation(int idx, int boardIdx) throws Exception {
+    public BoardFileDto selectBoardFileInformation(int idx, int boardIdx) throws Exception {
         return boardMapper.selectBoardFileInformation(idx, boardIdx);
     }
 

@@ -1,5 +1,6 @@
 package org.platanus.webappboard.app.controller;
 
+
 import java.io.File;
 import java.net.URLEncoder;
 import java.util.List;
@@ -11,24 +12,22 @@ import org.platanus.webappboard.app.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ObjectUtils;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class BoardController {
-
-//    private Logger log = LoggerFactory.getLogger(this.getClass());
+public class RestBoardController {
 
     @Autowired
     private BoardService boardService;
 
-    @RequestMapping("/board/openBoardList.do")
+    @RequestMapping(value = "/board", method = RequestMethod.GET)
     public ModelAndView openBoardList() throws Exception {
-//        log.debug("openBoardList");
-
-        ModelAndView modelAndView = new ModelAndView("/board/boardList");
+        ModelAndView modelAndView = new ModelAndView("/board/restBoardList");
 
         List<BoardDto> list = boardService.selectBoardList();
         modelAndView.addObject("list", list);
@@ -36,21 +35,23 @@ public class BoardController {
         return modelAndView;
     }
 
-    @RequestMapping("/board/openBoardWrite.do")
+    @RequestMapping(value = "/board/write", method = RequestMethod.GET)
     public String openBoardWrite() throws Exception {
-        return "/board/boardWrite";
+        return "/board/restBoardWrite";
     }
 
-    @RequestMapping("/board/insertBoard.do")
-    public String insertBoard(BoardDto board,
+
+    @RequestMapping(value = "/board/write", method = RequestMethod.POST)
+    public String insertBoard(
+        BoardDto board,
         MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
         boardService.insertBoard(board, multipartHttpServletRequest);
-        return "redirect:/board/openBoardList.do";
+        return "redirect:/board";
     }
 
-    @RequestMapping("/board/openBoardDetail.do")
-    public ModelAndView openBoardDetail(@RequestParam int boardIdx) throws Exception {
-        ModelAndView modelAndView = new ModelAndView("/board/boardDetail");
+    @RequestMapping(value = "/board/{boardIdx}", method = RequestMethod.GET)
+    public ModelAndView openBoardDetail(@PathVariable("boardIdx") int boardIdx) throws Exception {
+        ModelAndView modelAndView = new ModelAndView("/board/restBoardDetail");
 
         BoardDto board = boardService.selectBoardDetail(boardIdx);
         modelAndView.addObject("board", board);
@@ -58,12 +59,13 @@ public class BoardController {
         return modelAndView;
     }
 
-    @RequestMapping("/board/downloadBoardFile.do")
+    @RequestMapping(value = "/board/file", method = RequestMethod.GET)
     public void downloadBoardFile(
         @RequestParam int idx,
         @RequestParam int boardIdx,
         HttpServletResponse response) throws Exception {
         BoardFileDto boardFile = boardService.selectBoardFileInformation(idx, boardIdx);
+
         if (!ObjectUtils.isEmpty(boardFile)) {
             String fileName = boardFile.getOriginalFileName();
 
@@ -86,16 +88,17 @@ public class BoardController {
         }
     }
 
-    @RequestMapping("/board/updateBoard.do")
+    @RequestMapping(value = "/board/{boardIdx}", method = RequestMethod.PUT)
     public String updateBoard(BoardDto board) throws Exception {
         boardService.updateBoard(board);
-        return "redirect:/board/openBoardList.do";
+        return "redirect:/board";
     }
 
-    @RequestMapping("/board/deleteBoard.do")
-    public String deleteBoard(int boardIdx) throws Exception {
+    @RequestMapping(value = "/board/{boardIdx}", method = RequestMethod.DELETE)
+    public String deleteBoard(@PathVariable("boardIdx") int boardIdx) throws Exception {
         boardService.deleteBoard(boardIdx);
-        return "redirect:/board/openBoardList.do";
+        return "redirect:/board";
     }
+
 
 }

@@ -14,7 +14,7 @@ public interface BoardService {
 
     BoardDto selectBoardDetail(int boardIdx) throws Exception;
 
-    BoardFileDto selectBordFileInformation(int idx, int boardIdx) throws Exception;
+    BoardFileDto selectBoardFileInformation(int idx, int boardIdx) throws Exception;
 
     void updateBoard(BoardDto board) throws Exception;
 

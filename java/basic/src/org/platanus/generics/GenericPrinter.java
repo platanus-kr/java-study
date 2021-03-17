@@ -1,6 +1,6 @@
 package org.platanus.generics;
 
-public class GenericPrinter<T> {
+public class GenericPrinter<T extends Material> {
     private T material;
 
     public void setMaterial(T material) {

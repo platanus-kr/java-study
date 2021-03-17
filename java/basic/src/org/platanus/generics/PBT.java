@@ -1,6 +1,6 @@
 package org.platanus.generics;
 
-public class PBT {
+public class PBT extends Material {
     public void doPrinting() {
         System.out.printf("Using PBT");
     }

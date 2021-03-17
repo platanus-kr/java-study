@@ -1,6 +1,6 @@
 package org.platanus.generics;
 
-public class ABS {
+public class ABS extends Material {
     public void doPrinting() {
         System.out.printf("Using ABS");
     }

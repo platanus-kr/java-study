@@ -3,9 +3,15 @@
 - 2020.11 ~ 2020.12 **Java 기초** 객체지향 설계방법론, Java 기본문법
 - 2021.01 ~ 2021.02 **Spring core** IoC/DI, AOP, Component scan, Bean, Bean lifecycle ...
 - 2021.02 ~ 2021.03 **Spring boot** MVC, Controller, JDBCTemplate, Mybatis ...
-- 2021.03 ~ **JSP 및 Servlet 본격 / Java 자세히 보기**
+- 2021.03 ~ **JSP 및 Servlet 본격 / Java 자세히 보기 / 디자인 패턴**
 
 ---
+
+### 객체지향 프로그래밍
+
+- [Head first, Design pattern](https://www.hanbit.co.kr/store/books/look.php?p_code=B9860513241)(Eric Freeman/Bert Bates/Kathy Sierra/Elisabeth Robson, 한빛미디어)
+- [객체지향적으로 생각하라!](http://www.infopub.co.kr/new/include/detail.asp?sku=06000224) (Matt Weisfeld, 정보문화사)
+- [스프링 입문을 위한 자바 객체 지향의 원리와 이해](https://wikibook.co.kr/java-oop-for-spring/) (김종민, 위키북스)
 
 ### 자바
 
@@ -15,7 +21,6 @@
 ### 스프링
 
 - [초보 웹 개발자를 위한 스프링5 프로그래밍 입문](https://www.kame.co.kr/nkm/detail.php?tcode=306&tbook_jong=3) (최범균, 가메출판사)
-- [스프링 입문을 위한 자바 객체 지향의 원리와 이해](https://wikibook.co.kr/java-oop-for-spring/) (김종민, 위키북스)
 - **강의** [예제로 배우는 스프링 입문](https://www.inflearn.com/course/spring_revised_edition/dashboard) (백기선, 인프런)
 
 ### 스프링 부트

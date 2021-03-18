@@ -3,6 +3,7 @@ package org.platanus.collection.arraylist;
 import org.platanus.collection.dao.Member;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class MemberService {
     private ArrayList<Member> list;
@@ -16,11 +17,12 @@ public class MemberService {
     }
 
     public boolean removeMember(int memberId) {
-        for (int i = 0; i < list.size(); i++) {
-            Member member = list.get(i);
+        Iterator<Member> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            Member member = iterator.next();
             int id = member.getMemberId();
             if (id == memberId) {
-                list.remove(i);
+                list.remove(member);
                 return true;
             }
         }

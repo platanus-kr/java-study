@@ -5,10 +5,10 @@ import org.platanus.collection.dao.MemberComparable;
 import java.util.Iterator;
 import java.util.TreeSet;
 
-public class MemberService {
+public class MemberServiceComparable {
     private TreeSet<MemberComparable> treeSet;
 
-    public MemberService() {
+    public MemberServiceComparable() {
         treeSet = new TreeSet<MemberComparable>();
     }
 

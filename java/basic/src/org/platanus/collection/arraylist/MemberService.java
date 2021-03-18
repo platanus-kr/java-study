@@ -1,4 +1,4 @@
-package org.platanus.collection.arraylist;
+package org.platanus.collection.Arraylist;
 
 import org.platanus.collection.dao.Member;
 

@@ -1,6 +1,6 @@
 package org.platanus.designpattern.singleton;
 
-public class CompanyRun {
+public class CompanyTest {
 
     public static void main(String[] args) {
         Company myCompany1 = Company.getInstance();

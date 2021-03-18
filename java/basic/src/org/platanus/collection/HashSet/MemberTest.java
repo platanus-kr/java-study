@@ -18,10 +18,6 @@ public class MemberTest {
         memberService.addMember(member3_1);
         memberService.addMember(member4);
 
-
-        memberService.showAllMember();
-
-        memberService.removeMember(member1.getMemberId());
         memberService.showAllMember();
 
     }

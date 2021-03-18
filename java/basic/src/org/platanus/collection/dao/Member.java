@@ -4,6 +4,20 @@ public class Member {
     private int memberId;
     private String memberName;
 
+    @Override
+    public int hashCode() {
+        return memberId;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Member) {
+            Member member = (Member) obj;
+            return this.memberId == member.memberId;
+        }
+        return true;
+    }
+
     public Member(int memberId, String memberName) {
         this.memberId = memberId;
         this.memberName = memberName;

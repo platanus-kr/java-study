@@ -1,25 +1,28 @@
 package org.platanus.designpattern.singleton;
 
-public class Company {
+public class CompanyThread {
 
-    private static Company instance = new Company();
+    private static CompanyThread instance = null;
+//    private static CompanyThread instance = new CompanyThread();
+//    private int counter = 0;
 
-    private Company() {
+    private CompanyThread() {
     }
 
-
-    public static Company getInstance() {
+    public static CompanyThread getInstance() {
         if (instance == null) {
             try {
-                Thread.sleep(10);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
             }
-            instance = new Company();
+            instance = new CompanyThread();
         }
         return instance;
     }
 
     public void foodDistribute(String foodDist) {
+//        counter++;
+//        System.out.println(foodDist + ". total counter " + counter);
         System.out.println(foodDist);
     }
 

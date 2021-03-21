@@ -1,15 +1,20 @@
 package org.platanus.designpattern.singleton;
 
-public class CompanyMulti {
-    private static Company instance = null;
+public class Company {
 
-    private CompanyMulti() {
+    private static Company instance = new Company();
+
+    private Company() {
     }
 
 
     public static Company getInstance() {
         if (instance == null) {
-            instance = new CompanyMulti();
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+            }
+            instance = new Company();
         }
         return instance;
     }
@@ -22,4 +27,5 @@ public class CompanyMulti {
     public String toString() {
         return instance.getClass().getSimpleName() + "@" + instance.hashCode();
     }
+
 }

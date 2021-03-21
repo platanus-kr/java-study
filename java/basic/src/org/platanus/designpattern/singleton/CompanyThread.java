@@ -2,21 +2,21 @@ package org.platanus.designpattern.singleton;
 
 public class CompanyThread {
 
-    private static CompanyThread instance = null;
-//    private static CompanyThread instance = new CompanyThread();
+    //        private static CompanyThread instance = null;
+    private static CompanyThread instance = new CompanyThread();
 //    private int counter = 0;
 
     private CompanyThread() {
     }
 
     public static CompanyThread getInstance() {
-        if (instance == null) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-            }
-            instance = new CompanyThread();
-        }
+//        if (instance == null) {
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//            }
+//            instance = new CompanyThread();
+//        }
         return instance;
     }
 

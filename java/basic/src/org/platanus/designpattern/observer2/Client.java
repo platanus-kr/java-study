@@ -9,15 +9,23 @@ public class Client {
         DataSheetView dataSheetView5 = new DataSheetView(scoreRecord, 5);
         MinMaxView minMaxView = new MinMaxView(scoreRecord);
 
-        scoreRecord.attace(dataSheetView3);
-        scoreRecord.attace(dataSheetView5);
-        scoreRecord.attace(minMaxView);
+        StatisticsView statisticsView = new StatisticsView(scoreRecord);
+
+        scoreRecord.attach(dataSheetView3);
+        scoreRecord.attach(dataSheetView5);
+        scoreRecord.attach(minMaxView);
+        scoreRecord.attach(statisticsView);
 
         scoreRecord.addScore(10);
         scoreRecord.addScore(20);
         scoreRecord.addScore(30);
         scoreRecord.addScore(40);
         scoreRecord.addScore(50);
+
+//        scoreRecord.detach(dataSheetView3);
+//        StatisticsView statisticsView = new StatisticsView(scoreRecord);
+//        scoreRecord.attach(statisticsView);
+
     }
 
 }

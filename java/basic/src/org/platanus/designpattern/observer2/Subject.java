@@ -7,7 +7,7 @@ public abstract class Subject {
 
     private List<Observer> observers = new ArrayList<Observer>();
 
-    public void attace(Observer observer) {
+    public void attach(Observer observer) {
         observers.add(observer);
     }
 

@@ -4,6 +4,7 @@
 - 2021.01 ~ 2021.02 **Spring core** IoC/DI, AOP, Component scan, Bean, Bean lifecycle ...
 - 2021.02 ~ 2021.03 **Spring boot** MVC, Controller, JDBCTemplate, Mybatis ...
 - 2021.03 ~ **JSP 및 Servlet 본격 / Java 자세히 보기 / 디자인 패턴**
+- 2021.04 ~ **CS 기초과목** Operating system concepts essentials
 
 ---
 
@@ -43,3 +44,7 @@
 ### 디자인 패턴
 
 - [JAVA 객체지향 디자인 패턴: UML과 GoF 디자인 패턴 핵심 10가지로 배우는](https://www.hanbit.co.kr/store/books/look.php?p_code=B3400922670) (정인상/채홍석, 한빛미디어)
+
+### CS 기본과목
+
+- [Operating System Concepts Essentials : Second Edition](http://www.hongpub.co.kr/shop/item.php?it_id=20181204081002)(Wiley)

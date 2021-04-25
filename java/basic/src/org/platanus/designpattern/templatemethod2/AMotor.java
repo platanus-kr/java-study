@@ -1,5 +1,6 @@
 package org.platanus.designpattern.templatemethod2;
 
+import org.platanus.designpattern.templatemethod.CommonEnum.Direction;
 import org.platanus.designpattern.templatemethod.CommonEnum.DoorStatus;
 import org.platanus.designpattern.templatemethod.CommonEnum.MotorStatus;
 import org.platanus.designpattern.templatemethod.Door;
@@ -14,7 +15,7 @@ public class AMotor extends Motor {
     }
 
     private void moveAMotor(Direction direction) {
-
+        System.out.println("Moving A motor " + direction);
     }
 
     public MotorStatus getMortorStatus() {

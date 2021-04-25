@@ -1,5 +1,7 @@
 package org.platanus.designpattern.templatemethod3;
 
+import org.platanus.designpattern.templatemethod.CommonEnum.Direction;
+
 public class AMotor extends Motor {
 
     public AMotor(Door door) {
@@ -7,6 +9,7 @@ public class AMotor extends Motor {
     }
 
     protected void moveMotor(Direction direction) {
+        System.out.println("Moving A motor " + direction);
 
     }
 }

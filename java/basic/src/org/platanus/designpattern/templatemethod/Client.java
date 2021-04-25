@@ -1,5 +1,7 @@
 package org.platanus.designpattern.templatemethod;
 
+import org.platanus.designpattern.templatemethod.CommonEnum.Direction;
+
 public class Client {
 
     public static void main(String[] args) {

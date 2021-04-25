@@ -1,5 +1,6 @@
 package org.platanus.designpattern.templatemethod3;
 
+import org.platanus.designpattern.templatemethod.CommonEnum.Direction;
 import org.platanus.designpattern.templatemethod.CommonEnum.DoorStatus;
 import org.platanus.designpattern.templatemethod.CommonEnum.MotorStatus;
 
@@ -22,7 +23,7 @@ public abstract class Motor {
     }
 
     public void move(Direction direction) {
-        MotorStatus motorStatus = getMortorStatus();
+        MotorStatus motorStatus = getMotorStatus();
         if (motorStatus == MotorStatus.MOVING) {
             return;
         }
@@ -33,10 +34,10 @@ public abstract class Motor {
         }
 
         moveMotor(direction); ///
-        setMortorStatus(MotorStatus.MOVING);
+        setMotorStatus(MotorStatus.MOVING);
     }
 
-    protected void moveAMotor(Direction direction) {
+    protected void moveMotor(Direction direction) {
 
     }
 

@@ -1,6 +1,6 @@
 package org.platanus.designpattern.templatemethod3;
 
-import org.platanus.designpattern.templatemethod.CommonEnum.DoorStatus;
+import org.platanus.designpattern.templatemethod3.CommonEnum.DoorStatus;
 
 public class Door {
 

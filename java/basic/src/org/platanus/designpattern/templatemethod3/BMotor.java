@@ -1,6 +1,6 @@
 package org.platanus.designpattern.templatemethod3;
 
-import org.platanus.designpattern.templatemethod.CommonEnum.Direction;
+import org.platanus.designpattern.templatemethod3.CommonEnum.Direction;
 
 public class BMotor extends Motor {
 

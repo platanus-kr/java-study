@@ -1,8 +1,8 @@
 package org.platanus.designpattern.templatemethod3;
 
-import org.platanus.designpattern.templatemethod.CommonEnum.Direction;
-import org.platanus.designpattern.templatemethod.CommonEnum.DoorStatus;
-import org.platanus.designpattern.templatemethod.CommonEnum.MotorStatus;
+import org.platanus.designpattern.templatemethod3.CommonEnum.Direction;
+import org.platanus.designpattern.templatemethod3.CommonEnum.DoorStatus;
+import org.platanus.designpattern.templatemethod3.CommonEnum.MotorStatus;
 
 public abstract class Motor {
 

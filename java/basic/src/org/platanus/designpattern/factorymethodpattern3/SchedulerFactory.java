@@ -9,18 +9,18 @@ public class SchedulerFactory {
         ElevatorScheduler scheduler = null;
         switch (strategyID) {
             case RESPONSE_TIME:
-                scheduler = new ResponseTimeScheduler();
+                scheduler = ResponseTimeScheduler.getInstance();
                 break;
             case THROUGHPUT:
-                scheduler = new ThroughputScheduler();
+                scheduler = ThroughputScheduler.getInstance();
                 break;
             case DYNAMIC:
                 int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
 
                 if (hour < 12) {
-                    scheduler = new ResponseTimeScheduler();
+                    scheduler = ResponseTimeScheduler.getInstance();
                 } else {
-                    scheduler = new ThroughputScheduler();
+                    scheduler = ThroughputScheduler.getInstance();
                 }
         }
         return scheduler;

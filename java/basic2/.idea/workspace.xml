@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff5d65b-fe9f-4ef2-a14b-fa75de4e7532" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../spring-boot/webapp-board/images/20210307/40345923933111.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../spring-boot/webapp-board/images/20210307/40345924293537.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/basic2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/basic2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +33,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -50,7 +54,7 @@
       <recent name="CodePractice" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestA">
+  <component name="RunManager" selected="Application.DataClient">
     <configuration name="Application (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Chicken.Application" />
       <module name="basic2" />
@@ -71,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CodePractice.JavaClassAndObjectBasic.Example" />
+    <configuration name="DataClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SocketCommunicate.DataClient" />
       <module name="basic2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CodePractice.JavaClassAndObjectBasic.*" />
+          <option name="PATTERN" value="SocketCommunicate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CodePractice.package3.StudentTest2" />
+    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CodePractice.JavaClassAndObjectBasic.Example" />
       <module name="basic2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CodePractice.package3.*" />
+          <option name="PATTERN" value="CodePractice.JavaClassAndObjectBasic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,31 +110,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.StudentTest2" />
       <item itemvalue="Application.TestA" />
       <item itemvalue="Application.Example" />
       <item itemvalue="Application.Application" />
       <item itemvalue="Application.Application (1)" />
+      <item itemvalue="Application.DataClient" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DataClient" />
         <item itemvalue="Application.TestA" />
         <item itemvalue="Application.Application (1)" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.Example" />
-        <item itemvalue="Application.StudentTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -216,6 +222,7 @@
       <workItem from="1611820416790" duration="504000" />
       <workItem from="1611990171817" duration="585000" />
       <workItem from="1615638904961" duration="112000" />
+      <workItem from="1619500320777" duration="2043000" />
     </task>
     <task id="LOCAL-00001" summary="20200531">
       <created>1590930132423</created>
@@ -280,6 +287,9 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="20200531" />
     <MESSAGE value="20200630" />
     <MESSAGE value="20200709" />

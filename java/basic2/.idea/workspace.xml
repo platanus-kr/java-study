@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ff5d65b-fe9f-4ef2-a14b-fa75de4e7532" name="Default Changelist" comment="" />
+    <list default="true" id="1ff5d65b-fe9f-4ef2-a14b-fa75de4e7532" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../servlet/p7/.idea/artifacts/p7_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../servlet/p7/.idea/artifacts/p7_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../servlet/p7/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../servlet/p7/p7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../servlet/p7/p7.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,19 +105,6 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="CodePractice.virtualfunction.TestA" />
       <module name="basic2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -217,6 +209,9 @@
       <workItem from="1611990171817" duration="585000" />
       <workItem from="1615638904961" duration="112000" />
       <workItem from="1619500320777" duration="2326000" />
+      <workItem from="1619615561392" duration="539000" />
+      <workItem from="1619658067409" duration="23000" />
+      <workItem from="1619661627967" duration="318000" />
     </task>
     <task id="LOCAL-00001" summary="20200531">
       <created>1590930132423</created>

@@ -1,10 +1,11 @@
-package org.platanus.inherit.db;
+package org.jongpak.inherit.db;
 
 import java.lang.reflect.InvocationTargetException;
 
 public class DBTest {
 
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    public static void main(String[] args)
+        throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         String dbDriver = System.getenv("db.driver.className");
         DB db = (DB) Class.forName(dbDriver).getDeclaredConstructor().newInstance();
 //

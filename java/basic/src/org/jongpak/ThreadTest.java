@@ -1,4 +1,4 @@
-package org.platanus;
+package org.jongpak;
 
 public class ThreadTest {
 
@@ -14,7 +14,10 @@ public class ThreadTest {
 //            }
             while (true) {
                 System.out.println("Cronjob-1");
-                try {  Thread.sleep(1000);  } catch (InterruptedException e) {  }
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                }
             }
         });
         Thread thread2 = new Thread(() -> {
@@ -28,7 +31,10 @@ public class ThreadTest {
 //            }
             while (true) {
                 System.out.println("Cronjob-2");
-                try {  Thread.sleep(1000);  } catch (InterruptedException e) {  }
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                }
             }
         });
         thread1.start();

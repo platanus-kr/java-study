@@ -1,4 +1,4 @@
-package org.platanus;
+package org.jongpak;
 
 public class ToStringTest {
 
@@ -9,12 +9,13 @@ public class ToStringTest {
         // tomcat.log
         System.out.println(toStringObject);
 
-        // org.platanus.ToStringTest$ToStringObject@77459877
+        // org.jongpak.ToStringTest$ToStringObject@77459877
         // ToStringObject{a='a', b='b', c='c', d='d', e='e'}
     }
 
     // 모든 객체는 Object를 상속한다 (최상위 객채)
     public static class ToStringObject /*extends Object*/ {
+
         private String a = "a";
         private String b = "b";
         private String c = "c";
@@ -24,12 +25,12 @@ public class ToStringTest {
         @Override
         public String toString() {
             return "ToStringObject{" +
-                    "a='" + a + '\'' +
-                    ", b='" + b + '\'' +
-                    ", c='" + c + '\'' +
-                    ", d='" + d + '\'' +
-                    ", e='" + e + '\'' +
-                    '}';
+                "a='" + a + '\'' +
+                ", b='" + b + '\'' +
+                ", c='" + c + '\'' +
+                ", d='" + d + '\'' +
+                ", e='" + e + '\'' +
+                '}';
         }
     }
 

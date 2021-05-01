@@ -1,4 +1,4 @@
-package org.platanus.inherit;
+package org.jongpak.inherit;
 
 public class Test {
 

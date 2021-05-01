@@ -1,4 +1,4 @@
-package org.platanus;
+package org.jongpak;
 
 public class Basic {
 
@@ -36,10 +36,9 @@ public class Basic {
 
     // java -jar
 
-
     // tomcat
     //
 
-        // int main(char* args) { }
+    // int main(char* args) { }
 
 }

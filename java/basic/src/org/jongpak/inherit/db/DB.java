@@ -1,4 +1,4 @@
-package org.platanus.inherit.db;
+package org.jongpak.inherit.db;
 
 public interface DB {
 

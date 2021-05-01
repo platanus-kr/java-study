@@ -1,4 +1,4 @@
-package org.platanus.otherPackage;
+package org.jongpak.otherPackage;
 
 public class Test {
 

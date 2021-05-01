@@ -1,6 +1,12 @@
-package org.platanus;
+package org.jongpak;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class CollectionTest {
 
@@ -22,7 +28,6 @@ public class CollectionTest {
 
         List<Integer> numberListList = new ArrayList<>();
 
-
         // const char* str = "fdfsdf";
 
         // (1) original
@@ -43,7 +48,6 @@ public class CollectionTest {
 
         System.out.println("-----------------------------------");
 
-
         // --------------------------------------------
         // (2) Set
         Set<String> set = new TreeSet<>();
@@ -60,7 +64,6 @@ public class CollectionTest {
         }
 
         System.out.println("-----------------------------------");
-
 
         // ------------------------------------------
         // (3) Map (mapping / key-value)

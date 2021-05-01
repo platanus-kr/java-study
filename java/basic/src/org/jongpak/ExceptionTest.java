@@ -1,11 +1,9 @@
-package org.platanus;
+package org.jongpak;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.Arrays;
 
 public class ExceptionTest {
@@ -14,7 +12,7 @@ public class ExceptionTest {
     // -> 오류상황에 대한 처리
 
     public static void main(String[] args) throws MalformedURLException {
-        int[] a = { 1, 2, 3 };
+        int[] a = {1, 2, 3};
 
         // AS-IS: [I@38af3868
         // TO-BE: [1, 2, 3]
@@ -55,11 +53,11 @@ public class ExceptionTest {
         try {
             InputStream is = new URL("https://m.naver.com").openConnection().getInputStream();
             System.out.println(
-                    new String(is.readAllBytes())
-                            .substring(0, 32)
-                            .trim()
-                            .toUpperCase()
-                            .replace("<", "[")
+                new String(is.readAllBytes())
+                    .substring(0, 32)
+                    .trim()
+                    .toUpperCase()
+                    .replace("<", "[")
             );
             // -1: malformd
             // -2: io/exception
@@ -83,7 +81,6 @@ public class ExceptionTest {
         System.out.println("Saved Age = " + age);
         return age + 1;
     }
-
 
 
 }

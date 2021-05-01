@@ -1,6 +1,6 @@
-package org.platanus.self;
+package org.jongpak.self;
 
-import org.platanus.self.WebServer.Controller;
+import org.jongpak.self.WebServer.Controller;
 
 public class Work {
 

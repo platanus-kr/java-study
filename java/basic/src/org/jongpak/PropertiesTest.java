@@ -1,4 +1,4 @@
-package org.platanus;
+package org.jongpak;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -8,9 +8,9 @@ public class PropertiesTest {
 
     public static void main(String[] args) throws IOException {
         String conf = "" +
-                "db.url=mysql://gggg.xxxx\n" +
-                "db.userId=jongpak\n" +
-                "db.userPW=test\n";
+            "db.url=mysql://gggg.xxxx\n" +
+            "db.userId=jongpak\n" +
+            "db.userPW=test\n";
 
         Properties properties = new Properties();
         properties.load(new StringReader(conf));

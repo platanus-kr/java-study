@@ -1,4 +1,4 @@
-package org.platanus;
+package org.jongpak;
 
 import java.io.IOException;
 import java.util.Scanner;

@@ -12,6 +12,11 @@ class Student {
     }
 
     @Override
+    public int hashCode() {
+        return studentId;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (obj instanceof Student) {
             Student std = (Student) obj;
@@ -36,5 +41,9 @@ public class EqualsTest {
         Student student2 = new Student(100, "KANG");
         System.out.println(student1 == student2);
         System.out.println(student1.equals(student2));
+        System.out.println(student1.hashCode());
+        System.out.println(student2.hashCode());
+        System.out.println(System.identityHashCode(student1));
+        System.out.println(System.identityHashCode(student2));
     }
 }

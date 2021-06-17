@@ -16,19 +16,27 @@ public class CompanyController {
     @Autowired
     private CompanyMapper companyMapper;
 
+    @Autowired
+    private CompanyService companyService;
+
     @PostMapping("")
-    public Company post(@RequestBody Company company){
+    public Company post(@RequestBody Company company) {
         companyMapper.insert(company);
         return company;
     }
 
     @GetMapping("")
-    public List<Company> getAll(){
+    public List<Company> getAll() {
         return companyMapper.getAll();
     }
 
+    @GetMapping("/allemployees")
+    public List<Company> getAllEmployees() {
+        return companyService.getAll();
+    }
+
     @GetMapping("/{id}")
-    public Company getById(@PathVariable("id") int id){
+    public Company getById(@PathVariable("id") int id) {
         return companyMapper.getById(id);
     }
 }

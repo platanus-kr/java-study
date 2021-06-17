@@ -12,13 +12,14 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface EmployeeMapper {
+
     @Insert("INSERT INTO employee(company_id, employee_name, employee_address) VALUES(#{employee.companyId}, #{employee.name}, #{employee.address})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     int insert(@Param("employee") Employee employee);
     // 반환되는 결과는 입력된 갯수가 반환된다. 실패할 경우 0 반환.
 
     @Select("SELECT * FROM employee")
-    @Results(id="EmployeeMap", value={
+    @Results(id = "EmployeeMap", value = {
         @Result(property = "name", column = "employee_name"),
         @Result(property = "address", column = "employee_address")
     })
@@ -28,4 +29,8 @@ public interface EmployeeMapper {
     @Select("SELECT * FROM employee WHERE id=#{id}")
     @ResultMap("EmployeeMap")
     Company getById(@Param("id") int id);
+
+    @Select("SELECT * FROM employee WHERE company_id=#{companyId}")
+    @ResultMap("EmployeeMap")
+    List<Employee> getByCompanyId(@Param("companyId") int companyId);
 }

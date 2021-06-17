@@ -3,6 +3,7 @@ package com.example.mybatis_01;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class CompanyService {
@@ -21,5 +22,15 @@ public class CompanyService {
             }
         }
         return companyList;
+    }
+
+    @Transactional
+    public Company add(Company company) {
+        companyMapper.insert(company);
+        // add company into legacy system
+        if (true) {
+            throw new RuntimeException("LEGACY EXCEPTION");
+        }
+        return company;
     }
 }

@@ -5,23 +5,22 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
-    runs-on: runs-on: [self-hosted, linux, X64]
+    runs-on: [self-hosted, linux, X64]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
-    - name: Test run (wall)
-      run: wall 'test message'
-    - name: pulling
-      run: git pull
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: "11"
+          distribution: "adopt"
+      - name: Test run (wall)
+        run: wall 'test message'
+      - name: pulling
+        run: git pull

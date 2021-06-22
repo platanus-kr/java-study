@@ -49,3 +49,7 @@
 ### CS 기본과목
 
 - [Operating System Concepts Essentials : Second Edition](http://www.hongpub.co.kr/shop/item.php?it_id=20181204081002) (Wiley)
+
+### 미니 프로젝트
+
+- [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper)

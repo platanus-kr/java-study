@@ -21,5 +21,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build with Maven
+    - name: Test run (wall)
       run: wall 'test message'
+    - name: pulling
+      run: git pull

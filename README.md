@@ -52,4 +52,4 @@
 
 ### 미니 프로젝트
 
-- [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper)
+- [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper) (42 Seoul project)

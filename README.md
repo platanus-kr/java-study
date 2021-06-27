@@ -29,6 +29,7 @@
 
 - **강의** [스프링 부트 입문 강의](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/dashboard) (김영한, 인프런)
 - [스프링 부트 시작하기](https://blog.insightbook.co.kr/2019/03/25/%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B6%80%ED%8A%B8-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/) (김인우, 인사이트)
+- [스프링 부트와 AWS로 혼자 구현하는 웹 서비스](https://freelec.co.kr/book/%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B6%80%ED%8A%B8%EC%99%80-aws%EB%A1%9C-%ED%98%BC%EC%9E%90-%EA%B5%AC%ED%98%84%ED%95%98%EB%8A%94-%EC%9B%B9-%EC%84%9C%EB%B9%84%EC%8A%A4/) (이동욱, 프리렉)
 
 ### JSP, Servlet
 

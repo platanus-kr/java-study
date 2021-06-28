@@ -3,6 +3,7 @@ package org.platanus.webappboard.configuration;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import java.util.Properties;
 import javax.sql.DataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -63,6 +64,12 @@ public class DatabaseConfiguration {
     public PlatformTransactionManager transactionManager() throws Exception {
         return new DataSourceTransactionManager(dataSource());
 
+    }
+
+    @Bean
+    @ConfigurationProperties(prefix="spring.jpa")
+    public Properties hibernateConfig(){
+        return new Properties();
     }
 
 }

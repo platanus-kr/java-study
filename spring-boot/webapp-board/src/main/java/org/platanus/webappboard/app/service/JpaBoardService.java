@@ -1,8 +1,8 @@
 package org.platanus.webappboard.app.service;
 
 import java.util.List;
-import org.platanus.webappboard.entity.BoardEntity;
-import org.platanus.webappboard.entity.BoardFileEntity;
+import org.platanus.webappboard.app.entity.BoardEntity;
+import org.platanus.webappboard.app.entity.BoardFileEntity;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 public interface JpaBoardService {

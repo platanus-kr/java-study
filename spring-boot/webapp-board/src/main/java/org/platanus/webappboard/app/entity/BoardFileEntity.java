@@ -1,4 +1,4 @@
-package org.platanus.webappboard.entity;
+package org.platanus.webappboard.app.entity;
 
 import java.time.LocalDateTime;
 import javax.persistence.Column;

@@ -5,9 +5,9 @@ import java.net.URLEncoder;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.io.FileUtils;
-import org.platanus.webappboard.app.dto.BoardDto;
-import org.platanus.webappboard.app.dto.BoardFileDto;
-import org.platanus.webappboard.entity.BoardEntity;
+import org.platanus.webappboard.app.entity.BoardEntity;
+import org.platanus.webappboard.app.entity.BoardFileEntity;
+import org.platanus.webappboard.app.service.JpaBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -43,7 +43,7 @@ public class JpaBoardController {
     @RequestMapping(value = "/jpa/board/write", method = RequestMethod.POST)
     public String writeBoard(BoardEntity board,
         MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
-        jpaBoardService.saveBaord(board, multipartHttpServletRequest);
+        jpaBoardService.saveBoard(board, multipartHttpServletRequest);
         return "redirect:/jpa/board";
 
     }
@@ -60,7 +60,7 @@ public class JpaBoardController {
 
     @RequestMapping(value = "/jpa/board/{boardIdx}", method = RequestMethod.PUT)
     public String updateBoard(BoardEntity board) throws Exception {
-        jpaBoardService.updateBoard(board);
+        jpaBoardService.saveBoard(board, null);
         return "redirect:/jpa/board";
     }
 
@@ -71,21 +71,12 @@ public class JpaBoardController {
     }
 
 
-    @RequestMapping(value = "/board/write", method = RequestMethod.POST)
-    public String insertBoard(
-        BoardDto board,
-        MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
-        boardService.insertBoard(board, multipartHttpServletRequest);
-        return "redirect:/board";
-    }
-
-
-    @RequestMapping(value = "/board/file", method = RequestMethod.GET)
+    @RequestMapping(value = "/jpa/board/file", method = RequestMethod.GET)
     public void downloadBoardFile(
         @RequestParam int idx,
         @RequestParam int boardIdx,
         HttpServletResponse response) throws Exception {
-        BoardFileDto boardFile = boardService.selectBoardFileInformation(idx, boardIdx);
+        BoardFileEntity boardFile = jpaBoardService.selectBoardFileInformation(idx, boardIdx);
 
         if (!ObjectUtils.isEmpty(boardFile)) {
             String fileName = boardFile.getOriginalFileName();

@@ -5,7 +5,8 @@
 - 2021.02 ~ 2021.03 **Spring boot** MVC, Controller, JDBCTemplate, Mybatis ...
 - 2021.03 ~ **JSP 및 Servlet 본격 / Java 자세히 보기 / 디자인 패턴**
 - 2021.04 ~ 2021.06 **CS 기초과목** Operating system concepts essentials
-- 2021.06 ~ 2021.07 **미니 프로젝트** [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper)
+- 2021.06 ~ 2021.07 **Spring Boot 프로젝트 1** [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper)
+- 2021.07 ~ **Spring Boot 프로젝트 2** [Plata Board](https://github.com/platanus-kr/spring-boot-webboard)
 
 ---
 
@@ -51,6 +52,7 @@
 
 - [Operating System Concepts Essentials : Second Edition](http://www.hongpub.co.kr/shop/item.php?it_id=20181204081002) (Wiley)
 
-### 미니 프로젝트
+### 프로젝트
 
-- [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper) (42 Seoul project)
+- [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper) (42 Seoul 프로젝트 : 멘토링 팀 매칭 서비스)
+- [Plata Board](https://github.com/platanus-kr/spring-boot-webboard) (Spring Boot + JdbcTemplate 개인 프로젝트 : 게시판 웹 서비스)

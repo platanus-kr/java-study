@@ -4,7 +4,7 @@
 - 2021.01 ~ 2021.02 **Spring core** IoC/DI, AOP, Component scan, Bean, Bean lifecycle ...
 - 2021.02 ~ 2021.03 **Spring boot** MVC, Controller, JDBCTemplate, Mybatis ...
 - 2021.03 ~ **JSP 및 Servlet 본격 / Java 자세히 보기 / 디자인 패턴**
-- 2021.04 ~ 2021.06 **CS 기초과목** Operating system concepts essentials
+- 2021.04 ~ 2021.06 **CS 기초과목** Operating system concepts essentials, Database, SQL
 - 2021.06 ~ 2021.07 **Spring Boot 프로젝트 1** [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper)
 - 2021.07 ~ **Spring Boot 프로젝트 2** [Plata Board](https://github.com/platanus-kr/spring-boot-webboard)
 
@@ -23,7 +23,7 @@
 
 ### 스프링
 
-- [초보 웹 개발자를 위한 스프링5 프로그래밍 입문](https://www.kame.co.kr/nkm/detail.php?tcode=306&tbook_jong=3) (최범균, 가메출판사)
+- [스프링5 프로그래밍 입문](https://www.kame.co.kr/nkm/detail.php?tcode=306&tbook_jong=3) (최범균, 가메출판사)
 - **강의** [예제로 배우는 스프링 입문](https://www.inflearn.com/course/spring_revised_edition/dashboard) (백기선, 인프런)
 
 ### 스프링 부트
@@ -40,9 +40,10 @@
 
 ### 스프링 시큐리티, 스프링 클라우드
 
-### JPA / 스프링 데이터 JPA
+### 데이터베이스 / JPA / 스프링 데이터 JPA
 
 - [데이터베이스 개론](https://www.hanbit.co.kr/store/books/look.php?p_code=B8582604063) (김연희, 한빛미디어)
+- [SQL정복](https://www.hanbit.co.kr/store/books/look.php?p_code=B9543045444) (김상형, 한빛미디어)
 
 ### 디자인 패턴
 

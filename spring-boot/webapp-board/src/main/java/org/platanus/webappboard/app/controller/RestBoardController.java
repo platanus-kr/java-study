@@ -1,10 +1,6 @@
 package org.platanus.webappboard.app.controller;
 
 
-import java.io.File;
-import java.net.URLEncoder;
-import java.util.List;
-import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.io.FileUtils;
 import org.platanus.webappboard.app.dto.BoardDto;
 import org.platanus.webappboard.app.dto.BoardFileDto;
@@ -18,6 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.net.URLEncoder;
+import java.util.List;
 
 @Controller
 public class RestBoardController {
@@ -43,8 +44,8 @@ public class RestBoardController {
 
     @RequestMapping(value = "/board/write", method = RequestMethod.POST)
     public String insertBoard(
-        BoardDto board,
-        MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
+            BoardDto board,
+            MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
         boardService.insertBoard(board, multipartHttpServletRequest);
         return "redirect:/board";
     }
@@ -61,27 +62,27 @@ public class RestBoardController {
 
     @RequestMapping(value = "/board/file", method = RequestMethod.GET)
     public void downloadBoardFile(
-        @RequestParam int idx,
-        @RequestParam int boardIdx,
-        HttpServletResponse response) throws Exception {
+            @RequestParam int idx,
+            @RequestParam int boardIdx,
+            HttpServletResponse response) throws Exception {
         BoardFileDto boardFile = boardService.selectBoardFileInformation(idx, boardIdx);
 
         if (!ObjectUtils.isEmpty(boardFile)) {
             String fileName = boardFile.getOriginalFileName();
 
             byte[] files = FileUtils.readFileToByteArray(
-                new File(boardFile.getStoredFilePath()));
+                    new File(boardFile.getStoredFilePath()));
 
             response.setContentType("application/octet-stream");
             response.setContentLength(files.length);
             response.setHeader(
-                "Content-Disposition",
-                "attachment; fileName=\"" +
-                    URLEncoder.encode(fileName, "UTF-8") +
-                    "\";");
+                    "Content-Disposition",
+                    "attachment; fileName=\"" +
+                            URLEncoder.encode(fileName, "UTF-8") +
+                            "\";");
             response.setHeader(
-                "Content-Transfer-Encoding",
-                "binary");
+                    "Content-Transfer-Encoding",
+                    "binary");
             response.getOutputStream().write(files);
             response.getOutputStream().flush();
             response.getOutputStream().close();

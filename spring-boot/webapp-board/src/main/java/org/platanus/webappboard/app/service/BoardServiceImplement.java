@@ -1,12 +1,13 @@
 package org.platanus.webappboard.app.service;
 
-import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.platanus.webappboard.app.dto.BoardDto;
 import org.platanus.webappboard.app.dto.BoardFileDto;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -20,7 +21,7 @@ public class BoardServiceImplement implements BoardService {
 
     @Override
     public void insertBoard(BoardDto board, MultipartHttpServletRequest multipartHttpServletRequest)
-        throws Exception {
+            throws Exception {
 
     }
 

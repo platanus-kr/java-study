@@ -1,14 +1,29 @@
 # 자바 웹 개발자가 되기 위한 나의 로드맵
 
-- 2020.11 ~ 2020.12 **Java 기초** 객체지향 설계방법론, Java 기본문법
-- 2021.01 ~ 2021.02 **Spring core** IoC/DI, AOP, Component scan, Bean, Bean lifecycle ...
-- 2021.02 ~ 2021.03 **Spring boot** MVC, Controller, JDBCTemplate, Mybatis ...
-- 2021.03 ~ 2021.06 **JSP 및 Servlet, Java 자세히 보기, 디자인 패턴**
-- 2021.04 ~ 2021.06 **CS 기초과목** Operating system concepts essentials, Database, SQL
-- 2021.06 ~ 2021.07 **Spring Boot 프로젝트 1** [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper)
-- 2021.07 ~ **Spring Boot 프로젝트 2** [Plata Board](https://github.com/platanus-kr/spring-boot-webboard)
+## 로드맵
+
+| 기간            | 주제                     | 내용                                                                                                       |
+| --------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| 2020.11~2020.12 | Java                     | 객체지향 설계방법론, Java 기본문법 (우아한테크코스)                                                        |
+| 2021.01~2021.02 | Spring                   | IoC/DI, AOP, Component scan, Bean, Bean lifecycle ...                                                      |
+| 2021.02~2021.03 | Spring boot              | MVC, Controller, JDBCTemplate, Mybatis ...                                                                 |
+| 2021.02~2021.04 | 자료구조/알고리즘        | Linked List, Stack/Queue, Graph, Tree, Greedy, DFS/BFS ...                                                 |
+| 2021.03~        | C                        | libc/string.h 구현 그외 OS, Network, Linux (42 서울)                                                       |
+| 2021.03~2021.06 | JSP/Servlet, 디자인 패턴 | 서적참고                                                                                                   |
+| 2021.04~2021.06 | CS 기초과목              | Operating system, Database, SQL                                                                            |
+| 2021.06~2021.07 | Spring Boot 프로젝트     | [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper)                                         |
+| 2021.07~        | Spring Boot 프로젝트     | [Plata Board](https://github.com/platanus-kr/spring-boot-webboard)                                         |
+| 2021.08~        | 코딩 인터뷰              | [코딩 테스트 준비](https://github.com/platanus-kr/coding-interview) (강의, 서적, 백준, 리트코드, 기출문제) |
+| 2021.10~        | Java, Spring 자세히 보기 | 토비스프링, 이펙티브자바, 자바성능튜닝이야기, Practical모던자바 등                                         |
+| 2021.12~        | Spring Boot 프로젝트     | Spring Boot, Spring Security, Vue.js, RDB, Redis (계획중)                                                  |
 
 ---
+
+## 정리노트
+
+- blog: [stack from platanus](https://platanus.me/post/category/til)
+
+## 참고 서적 및 강의
 
 ### 객체지향 프로그래밍
 

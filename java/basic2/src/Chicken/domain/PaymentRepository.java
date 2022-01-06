@@ -13,11 +13,13 @@ public class PaymentRepository {
 
     private int cashPay() {
         //discount 5%.
+        return 0;
 
     }
 
     private int creditCardPay() {
         // no discount
+        return 0;
 
     }
 

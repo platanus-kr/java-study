@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff5d65b-fe9f-4ef2-a14b-fa75de4e7532" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/HttpPost/HttpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/basic2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/basic2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/src/main/java/hellojpa/JpaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chicken/domain/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chicken/domain/PaymentRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +32,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1cfH30c1nPZDSNXt6Bgd2CJcudU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -32,19 +43,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="PointOfSalesSystem.model" />
@@ -213,6 +218,8 @@
       <workItem from="1619615561392" duration="539000" />
       <workItem from="1619658067409" duration="23000" />
       <workItem from="1619661627967" duration="318000" />
+      <workItem from="1651588125244" duration="614000" />
+      <workItem from="1653315344377" duration="921000" />
     </task>
     <task id="LOCAL-00001" summary="20200531">
       <created>1590930132423</created>

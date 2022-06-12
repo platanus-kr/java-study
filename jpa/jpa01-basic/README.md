@@ -13,3 +13,11 @@ docker run --detach --name jpa-mariadb\
 CREATE DATABASE jpa;
 GRANT ALL ON jpa.* TO 'jpa'@'%';
 ```
+
+
+docker run --detach --name sql-mariadb\
+ -p 3306:3306\
+ --env MARIADB_USER=sql\
+ --env MARIADB_PASSWORD=sqldb\
+ --env MARIADB_ROOT_PASSWORD=sql\
+   mariadb

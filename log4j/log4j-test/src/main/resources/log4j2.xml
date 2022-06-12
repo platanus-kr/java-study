@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Properties>
+        <Property name="logFileName">log4jtest</Property>
+        <Property name="consoleLayout">%style{%d{ISO8601}} %highlight{%-5level }[%style{%t}{bright,blue}] %style{%C{1.}}{bright,yellow}: %msg%n%throwable</Property>
+        <Property name="fileLayout">%d [%t] %-5level %c(%M:%L) - %m%n</Property>
+    </Properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${consoleLayout}" />
+        </Console>
+        <RollingFile name="file" fileName="logs/${logFileName}.log" filePattern="logs/%d{yyyy}/%d{MM}/%d{dd}/${logFileName}.%d{yyyy-MM-dd-hh-mm}.log">
+            <PatternLayout pattern="${fileLayout}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1" />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="logs" maxDepth="4">
+                    <IfAccumulatedFileCount exceeds="5"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <logger name="org.springframework" level="debug" additivity="false" >
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </logger>
+        <logger name="com.huisam.springstudy" additivity="true" >
+            <AppenderRef ref="console" level="debug" />
+            <AppenderRef ref="file" level="debug" />
+        </logger>
+    </Loggers>
+</Configuration>

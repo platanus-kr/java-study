@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff5d65b-fe9f-4ef2-a14b-fa75de4e7532" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/log4j-test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/src/main/java/com/example/log4jtest/Log4jTestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/src/main/java/com/example/log4jtest/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/src/main/java/com/example/log4jtest/TestThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../log4j/log4j-test/src/test/java/com/example/log4jtest/Log4jTestApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../jpa/jpa01-basic/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../jpa/jpa01-basic/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +209,9 @@
       <workItem from="1651588125244" duration="614000" />
       <workItem from="1653315344377" duration="1399000" />
       <workItem from="1653319224669" duration="162000" />
-      <workItem from="1655032339884" duration="735000" />
+      <workItem from="1655032339884" duration="1333000" />
+      <workItem from="1655204661660" duration="598000" />
+      <workItem from="1656242187359" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="20200531">
       <created>1590930132423</created>

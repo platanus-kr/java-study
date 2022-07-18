@@ -2,29 +2,29 @@
 
 ## 로드맵
 
-| 기간                | 주제              | 내용                                                                                                     |
-| ------------------- | ----------------- | -------------------------------------------------------------------------------------------------------- |
-| 2022.08~            | Java 심화         | 이펙티브 자바 3/E, JUnit                                                                                 |
-| 2022.07~            | Spring, Java 심화 | ORM(JPA), Spring Security, Spring Batch, Concurrent                                                      |
-| 2022.06~            | 개발방법, 설계론  | DDD, Cloud Native, MSA                                                                                   |
-| ~~2022.03~~~        | ~~프로젝트~~      | ~~(가칭) FOR PHOTOGRAPHER LIFE 프로젝트~~                                                                |
-| 2022.02~            |                   | **한빛미디어 2022 서평단**                                                                               |
-| ~~2022.02~2022.03~~ | ~~Spring 심화~~   | ~~이펙티브 자바 3/E, 토비의 스프링~~                                                                     |
-| 2021.12~2021.02     | JS, SQL 기본      | Javascript ES6, jQuery, SQL, Query tuning                                                                |
-| 2021.11~2022.02     | 인턴              | **이커머스 서비스 인턴**                                                                                 |
-| 2021.10~2021.11     | Java 심화         | 자바 성능 튜닝 이야기, Practical 모던 자바                                                               |
-| 2021.08~2021.11     | 코딩 인터뷰       | [코딩 테스트 준비](https://github.com/platanus-kr/coding-interview) 강의, 서적, 백준, 리트코드, 기출문제 |
-| 2021.07~            | 프로젝트          | [Plata Board](https://github.com/platanus-kr/spring-boot-webboard) 프로젝트                              |
-| 2021.06~2021.07     | 프로젝트          | [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper) 프로젝트                              |
-| 2021.04~2021.06     | CS 기초           | Operating system, Database, SQL                                                                          |
-| 2021.03~2021.06     | JSP, 디자인 패턴  | JSP, JSTL, Servlet, 디자인 패턴                                                                          |
-| 2021.03~2022.03     | C                 | **42 Seoul 4기** libc/string.h 구현, OS 기초, Network, Linux                                             |
-| 2021.02~2021.04     | CS 기초           | 자료구조, 알고리즘                                                                                       |
-| 2021.02~2021.03     | Spring boot 기본  | MVC, Controller, JDBCTemplate, MyBatis ...                                                               |
-| 2021.01~2021.02     | Spring 기본       | IoC/DI, AOP, Component scan, Bean, Bean lifecycle ...                                                    |
-| 2020.11~2020.12     | Java 기본         | **우아한테크코스 3기** 객체지향 설계방법론, Java 기본문법                                                |
+| 기간  | 주제  | 내용  |
+| --- | --- | --- |
+| 2022.08~ | Java 심화 | 이펙티브 자바 3/E, JUnit |
+| 2022.07~ | Spring, Java 심화 | ORM(JPA), Spring Security, Spring Batch, Concurrent |
+| 2022.04~ | 개발방법, 설계론 | DDD, Cloud Native, MSA |
+| ~~2022.03~~ | ~~프로젝트~~ | ~~(가칭) FOR PHOTOGRAPHER LIFE 프로젝트~~ |
+| 2022.02~ |     | **한빛미디어 2022 서평단** |
+| ~~2022.02~2022.03~~ | ~~Spring 심화~~ | ~~이펙티브 자바 3/E, 토비의 스프링~~ |
+| 2021.12~2021.02 | JS, SQL 기본 | Javascript ES6, jQuery, SQL, Query tuning |
+| 2021.11~2022.02 | 인턴  | **이커머스 서비스 인턴** |
+| 2021.10~2021.11 | Java 심화 | 자바 성능 튜닝 이야기, Practical 모던 자바 |
+| 2021.08~2021.11 | 코딩 인터뷰 | [코딩 테스트 준비](https://github.com/platanus-kr/coding-interview) 강의, 서적, 백준, 리트코드, 기출문제 |
+| 2021.07~ | 프로젝트 | [Plata Board](https://github.com/platanus-kr/spring-boot-webboard) 프로젝트 |
+| 2021.06~2021.07 | 프로젝트 | [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper) 프로젝트 |
+| 2021.04~2021.06 | CS 기초 | Operating system, Database, SQL |
+| 2021.03~2021.06 | JSP, 디자인 패턴 | JSP, JSTL, Servlet, 디자인 패턴 |
+| 2021.03~2022.03 | C   | **42 Seoul 4기** libc/string.h 구현, OS 기초, Network, Linux |
+| 2021.02~2021.04 | CS 기초 | 자료구조, 알고리즘 |
+| 2021.02~2021.03 | Spring boot 기본 | MVC, Controller, JDBCTemplate, MyBatis ... |
+| 2021.01~2021.02 | Spring 기본 | IoC/DI, AOP, Component scan, Bean, Bean lifecycle ... |
+| 2020.11~2020.12 | Java 기본 | **우아한테크코스 3기** 객체지향 설계방법론, Java 기본문법 |
 
----
+* * *
 
 ## 정리노트
 
@@ -54,6 +54,7 @@
 - [Spring in Action 스프링 인 액션](https://jpub.tistory.com/539) (Craig Walls, 제이펍)
 - [Hands-On Microservices with Spring Boot and Spring Cloud 스프링으로 하는 마이크로서비스 구축 ](http://www.acornpub.co.kr/book/microservices-spring) (Magnus Larsson, 에이콘)
 - [Cloud Native Java 클라우드 네이티브 자바](https://www.onlybook.co.kr/entry/cloud-native-java) (Kenny Bastani, Josh Long, 책만)
+
 
 ### Servlet / JSP
 
@@ -86,7 +87,6 @@
 - ✅ [도메인 주도 개발 시작하기](https://hanbit.co.kr/store/books/look.php?p_code=B4309942517) (최범균, 한빛미디어)
 
 ### Cloud Native
-
 - ✅ [SRE with Java Microservices 자바 마이크로서비스를 활용한 SRE](https://hanbit.co.kr/store/books/look.php?p_code=B2761632078) (Jonathan Schneider, 한빛미디어)
 - ✅ [Fundamentals of Software Architecture 소프트웨어 아키텍처 101](https://hanbit.co.kr/store/books/look.php?p_code=B1494466807) (Mark Richards, Neal Ford, 한빛미디어)
 - ✅ [Design Patterns for Cloud Native Applications 클라우드 네이티브 애플리케이션 디자인 패턴](https://hanbit.co.kr/store/books/look.php?p_code=B3886303135)
@@ -107,7 +107,7 @@
 ### Mini-project
 
 - [42 Helper](https://github.com/innovationacademy-kr/swlabs-helper) (Spring Boot + Spring Data JPA + Thymleaf 프로젝트 : 멘토링 팀 매칭 서비스)
-- [Plata Board](https://github.com/platanus-kr/spring-boot-webboard) (Spring Boot + JDBC 프로젝트 : 게시판 웹 서비스)
+- [Plata Board](https://github.com/platanus-kr/spring-boot-webboard) (Spring Boot + JDBC  프로젝트 : 게시판 웹 서비스)
 
 ---
 
@@ -125,4 +125,5 @@
 2. 분류 내 책 및 강의를 본 순서는 위에서 아래로 입니다.
 3. 왠만하면 직접 서점에서 보고 경쟁 도서 대비 괜찮은 책으로 담았습니다.
 4. 이 목록은 협찬 및 선물 도서가 포함되어 있습니다.
+5. 
 ```

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/basic/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/.idea/modules/basic.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/.idea/modules/basic.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/Basic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/CollectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/ExceptionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/JavaApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/MyClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/PropertiesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/ThreadTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/ToStringTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/inherit/Child.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/inherit/Parent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/inherit/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/inherit/db/DB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/inherit/db/DBTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/inherit/db/MySqlDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/inherit/db/OracleDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/otherPackage/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/self/WebServer/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/jongpak/self/Work.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/classes/CloneTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/classes/EqualsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/classes/StringBuilderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/classes/TestClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/Arraylist/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/Arraylist/MemberTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/HashMap/MemberHashMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/HashMap/MemberHashMapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/HashSet/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/HashSet/MemberTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/TreeMap/MemberTreeMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/TreeMap/MemberTreeMapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/TreeSet/ComparatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/TreeSet/MemberServiceComparable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/TreeSet/MemberTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/dao/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/collection/dao/MemberComparable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/ClientAbstractFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/Direction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/Door.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/DoorFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/DoorStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/ElevatorFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/HyundaiDoor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/HyundaiElevatorFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/HyundaiMotor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/Motor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/MotorFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/MotorStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/OtisDoor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/OtisElevatorFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/OtisMotor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/abstractfactory/VendorID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command/Alarm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command/Button.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command/Lamp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command2/Alarm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command2/AlarmOnCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command2/Button.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command2/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command2/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command2/Lamp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command2/LampOffCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/command2/LampOnCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite/CPU.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite/Computer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite/SSD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite/VGA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite2/CPU.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite2/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite2/Computer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite2/ComputerDevice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite2/SSD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/composite2/VGA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator/RoadDisplay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator/RoadDisplayWithLane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator2/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator2/CrossingDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator2/Display.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator2/DisplayDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator2/LaneDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator2/RoadDisplay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/decorator2/TrafficDecorator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern/CommonEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern/ElevatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern/ElevatorManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern/ThroughputScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern2/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern2/CommonEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern2/ElevatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern2/ElevatorManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern2/ElevatorScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern2/ResponseTimeScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern2/ThroughputScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern3/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern3/Direction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern3/ElevatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern3/ElevatorManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern3/ElevatorScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern3/ResponseTimeScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern3/SchedulerFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern3/SchedulingStrategyID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/factorymethodpattern3/ThroughputScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer/DataSheetView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer/MinMaxView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer/ScoreRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer2/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer2/DataSheetView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer2/MinMaxView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer2/Observer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer2/ScoreRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer2/StatisticsView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/observer2/Subject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/proxy/ClientWithProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/proxy/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/proxy/ServiceInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/proxy/ServiceProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/singleton/Company.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/singleton/CompanyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/singleton/CompanyThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/singleton/CompanyWorkerLaunchTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/singleton/CompanyWorkerLaunchThreadTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/singleton/Worker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/singleton/WorkerMultiLine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/state/Lamp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/state/LampTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/state2/Lamp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/state2/LampTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/state2/Off.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/state2/On.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/state2/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy/Guitar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy/GuitarPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy/Strat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy/SuperStrat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/Guitar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/GuitarPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/HumberckerStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/PalmmuteStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/PickingStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/PickupStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/PlayStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/SingleStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/Strat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/strategy2/SuperStrat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod/AMotor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod/CommonEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod/Door.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod2/AMotor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod2/BMotor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod2/Motor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod3/AMotor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod3/BMotor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod3/CommonEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod3/Door.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/designpattern/templatemethod3/Motor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/exception/ArrayExceptionHandling.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/exception/AurtoCloseableTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/exception/AutoCloseableObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/exception/CustomFormatException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/exception/CustomFormatTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/exception/StreamExceptionFinallyHandling.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/exception/StreamExceptionHandling.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/exception/ThrowsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/generics/ABS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/generics/GenericPrinter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/generics/GenericPrinterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/generics/Material.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/generics/PBT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/genericsmethods/CompareMethodExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/genericsmethods/Pair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/genericsmethods/Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/innerclass/AnonymousInnerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/innerclass/InnerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/innerclass/LocalInnerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/innerclass/OutClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/Buffered/BufferedStreamTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/Buffered/FileCopyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/Console/ConsoleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/DataStream/DataStreamTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/File/FileTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/FileInputStream/FileInputStreamTest1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/FileInputStream/FileInputStreamTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/FileInputStream/FileInputStreamTest3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/FileOutputStream/FileOutputStreamTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/FileOutputStream/FileOutputStreamTest3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/FileReader/FileReaderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/FileWriter/FileWriterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/InputStreamReader/InputStreamReaderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/Scanner/ScannerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/Serialization/SerialTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/SystemIn/SystemInTest1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/io/SystemIn/SystemInTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/lambda/FunctionalInterfaceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/lambda/ParameterLambda.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/lambda/ReturnLambda.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/lambda/StringConcatenateImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/lambda/StringConcatenateLambda.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/lambda/StringConcatgenate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/stream/ArrayListStreamTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/stream/IntArrayTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/stream/ReduceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/stream/TravelCustomer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/stream/TravelTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/thread/jcip/_01/Sequence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/thread/jcip/_01/UnsafeSequence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/thread/osce/Driver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/thread/osce/Sum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/platanus/thread/osce/Summation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/.idea/basic2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/basic2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/domain/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/domain/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/domain/MenuRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/domain/PaymentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/domain/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/domain/TableRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/view/InputView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/view/OrderView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/view/OutputView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/Chicken/view/PaymentView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/JavaClassAndObjectBasic/StaticTest/SchoolRegister.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/JavaClassAndObjectBasic/StaticTest/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/JavaClassAndObjectBasic/StaticTest/StudentId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/JavaClassAndObjectBasic/StaticTest/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/JavaClassAndObjectBasic/ThisExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package1/HelloJava2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package2/CharacterEx1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package2/ContinueExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package2/DoWhileExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package2/ForExample1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package2/IntegerVariable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package2/SwitchCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package2/Variable2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package2/WhileExample1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package3/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package3/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package3/StudentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/package3/StudentTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/CodePractice/virtualfunction/TestA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/DateClass/DateToString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/HttpPost/HttpController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/JavaTrick/findDuplicateArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/JavaTrick/hashCodeAndEqualsOverride.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/JavaTrick/validateInteger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/SocketCommunicate/DataClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/SocketCommunicate/DataServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic2/src/package-info.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Bl1T4h6Lnnne2kSbrKJQToBirD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/platanus/Development/repo/java-study/java/basic/src/main/java/org/codepractice&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/codepractice" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.codepractice.HttpPost" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="" />
+      <created>1657465861743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657465861743</updated>
+      <workItem from="1657465862887" duration="1109000" />
+      <workItem from="1657882082865" duration="361000" />
+      <workItem from="1658234615172" duration="306000" />
+      <workItem from="1658234996383" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

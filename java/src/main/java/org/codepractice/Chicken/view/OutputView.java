@@ -1,7 +1,9 @@
 package org.codepractice.Chicken.view;
 
-import Chicken.domain.Menu;
-import Chicken.domain.Table;
+;
+
+import org.codepractice.Chicken.domain.Menu;
+import org.codepractice.Chicken.domain.Table;
 
 import java.util.List;
 

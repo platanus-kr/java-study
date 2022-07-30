@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Create slot data">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/codepractice/DatePractice/CreateSlotTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/codepractice/DatePractice/DateHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,27 +42,42 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/platanus/Development/repo/java-study/java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/platanus/Development/repo/java-study/java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/org/codepractice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.codepractice.DatePractice" />
       <recent name="org.codepractice.HttpPost" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.CreateSlotTest">
+    <configuration name="CreateSlotTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.codepractice.DatePractice.CreateSlotTest" />
+      <module name="basic.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.codepractice.DatePractice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StreamCompareTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.fundamental.collection.compare.StreamCompareTest" />
       <module name="basic.main" />
@@ -72,6 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CreateSlotTest" />
         <item itemvalue="Application.StreamCompareTest" />
       </list>
     </recent_temporary>
@@ -92,6 +114,7 @@
       <workItem from="1658656111874" duration="619000" />
       <workItem from="1658657961507" duration="598000" />
       <workItem from="1658757745982" duration="597000" />
+      <workItem from="1659157456711" duration="6711000" />
     </task>
     <servers />
   </component>
@@ -102,5 +125,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
+    <MESSAGE value="add: Create slot data" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: Create slot data" />
   </component>
 </project>

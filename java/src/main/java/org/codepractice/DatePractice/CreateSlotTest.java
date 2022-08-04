@@ -111,12 +111,15 @@ public class CreateSlotTest {
         if (afterDays < 1) {
             throw new Exception("추가 일수가 유효하지 않습니다.");
         }
+        teamFreshLogger.info(">> TEAM FRESH TODAY SLOT CREATE" + startDate);
         System.out.println(">> TEAM FRESH TODAY SLOT CREATE " + slot.getDlvDd());
         for (int i = 1; i <= afterDays; i++) { // dlvDd 에는  존재하는 슬롯으로 간주한다. 예외 처리는 슬롯이 존재하지 않을때만!
             slot.setDlvDd(DateHelper.getAddDay(slot.getDlvDd(), 1)); // 날짜는 하루씩 더해야 한다.
             // 여기에 insertMapper
+            teamFreshMapper.insertTeamFreshTodaySlotByLastSlot(tfsVO);
             System.out.println("Create dlvDd : " + slot.getDlvDd());
         }
+        teamFreshLogger.info("<< TEAM FRESH TODAY SLOT CREATE" + DateHelper.getAddDay(startDate, afterDays));
         System.out.println("<< TEAM FRESH TODAY SLOT CREATE " + slot.getDlvDd());
     }
 

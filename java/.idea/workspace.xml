@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Create slot data">
-      <change afterPath="$PROJECT_DIR$/../spring-boot/security-test1/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-boot/security-test1/http/first.http" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot/security-test1/http/first.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-boot/security-test1/src/main/java/com/example/securitytest1/filter/CustomAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot/security-test1/src/main/java/com/example/securitytest1/filter/CustomAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-boot/security-test1/src/main/java/com/example/securitytest1/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot/security-test1/src/main/java/com/example/securitytest1/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

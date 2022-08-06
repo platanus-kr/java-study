@@ -8,7 +8,6 @@ import com.example.securitytest1.domain.AppUser;
 import com.example.securitytest1.domain.Role;
 import com.example.securitytest1.service.AppUserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -51,7 +50,7 @@ public class UserResource {
     }
 
     @PostMapping("/role/addtouser")
-    public ResponseEntity<?> addToUser(@RequestBody RoleToUserForm roleToUser) {
+    public ResponseEntity<?> addToUser(@RequestBody RoleToUserFormDTO roleToUser) {
         appUserService.addRoleToUser(roleToUser.getUsername(), roleToUser.getRoleName());
         return ResponseEntity.ok().build();
     }
@@ -92,8 +91,3 @@ public class UserResource {
     }
 }
 
-@Data
-class RoleToUserForm {
-    private String username;
-    private String roleName;
-}

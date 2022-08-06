@@ -13,7 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.example.securitytest1.domain.Role;
 import com.example.securitytest1.domain.AppUser;
-import com.example.securitytest1.service.UserService;
+import com.example.securitytest1.service.AppUserService;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -22,28 +22,28 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api")
 @RequiredArgsConstructor
 public class UserResource {
-    private final UserService userService;
+    private final AppUserService appUserService;
 
     @GetMapping("/users")
     public ResponseEntity<List<AppUser>> getUser() {
-        return ResponseEntity.ok().body(userService.getUsers());
+        return ResponseEntity.ok().body(appUserService.getUsers());
     }
 
     @PostMapping("/user/save")
     public ResponseEntity<AppUser> save(@RequestBody AppUser appUser) {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/user/save").toUriString());
-        return ResponseEntity.created(uri).body(userService.saveUser(appUser));
+        return ResponseEntity.created(uri).body(appUserService.saveUser(appUser));
     }
 
     @PostMapping("/role/save")
     public ResponseEntity<Role> saveRole(@RequestBody Role role) {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/role/save").toUriString());
-        return ResponseEntity.created(uri).body(userService.saveRole(role));
+        return ResponseEntity.created(uri).body(appUserService.saveRole(role));
     }
 
     @PostMapping("/role/addtouser")
     public ResponseEntity<?> addToUser(@RequestBody RoleToUserForm roleToUser) {
-        userService.addRoleToUser(roleToUser.getUsername(), roleToUser.getRoleName());
+        appUserService.addRoleToUser(roleToUser.getUsername(), roleToUser.getRoleName());
         return ResponseEntity.ok().build();
     }
 }

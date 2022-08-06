@@ -7,8 +7,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.securitytest1.domain.Role;
-import com.example.securitytest1.domain.User;
+import com.example.securitytest1.domain.AppUser;
 import com.example.securitytest1.service.UserService;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SecurityTest1Application {
@@ -17,6 +18,7 @@ public class SecurityTest1Application {
         SpringApplication.run(SecurityTest1Application.class, args);
     }
 
+    @Bean
     CommandLineRunner run(UserService userService) {
         return args -> {
             userService.saveRole(new Role(null, "ROLE_USER"));
@@ -24,10 +26,10 @@ public class SecurityTest1Application {
             userService.saveRole(new Role(null, "ROLE_ADMIN"));
             userService.saveRole(new Role(null, "ROLE_SUPER_ADMIN"));
 
-            userService.saveUser(new User(null, "MINCHEOL KANG", "pla", "1234", new ArrayList<>()));
-            userService.saveUser(new User(null, "JONGHUN PARK", "jongpak", "1234", new ArrayList<>()));
-            userService.saveUser(new User(null, "JINHYUK LEE", "jin-lee", "1234", new ArrayList<>()));
-            userService.saveUser(new User(null, "JAEYOUNG SONG", "kkamac", "1234", new ArrayList<>()));
+            userService.saveUser(new AppUser(null, "MINCHEOL KANG", "pla", "1234", new ArrayList<>()));
+            userService.saveUser(new AppUser(null, "JONGHUN PARK", "jongpak", "1234", new ArrayList<>()));
+            userService.saveUser(new AppUser(null, "JINHYEOK LEE", "jin-lee", "1234", new ArrayList<>()));
+            userService.saveUser(new AppUser(null, "JAEYEONG SONG", "kkamac", "1234", new ArrayList<>()));
 
             userService.addRoleToUser("pla", "ROLE_USER");
             userService.addRoleToUser("pla", "ROLE_MANAGER");
@@ -40,5 +42,4 @@ public class SecurityTest1Application {
 
         };
     }
-
 }

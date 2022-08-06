@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.example.securitytest1.domain.Role;
-import com.example.securitytest1.domain.User;
+import com.example.securitytest1.domain.AppUser;
 import com.example.securitytest1.service.UserService;
 
 import lombok.Data;
@@ -25,14 +25,14 @@ public class UserResource {
     private final UserService userService;
 
     @GetMapping("/users")
-    public ResponseEntity<List<User>> getUser() {
+    public ResponseEntity<List<AppUser>> getUser() {
         return ResponseEntity.ok().body(userService.getUsers());
     }
 
     @PostMapping("/user/save")
-    public ResponseEntity<User> save(@RequestBody User user) {
+    public ResponseEntity<AppUser> save(@RequestBody AppUser appUser) {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/user/save").toUriString());
-        return ResponseEntity.created(uri).body(userService.saveUser(user));
+        return ResponseEntity.created(uri).body(userService.saveUser(appUser));
     }
 
     @PostMapping("/role/save")

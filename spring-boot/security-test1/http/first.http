@@ -4,3 +4,15 @@ GET http://localhost:8080/api/users
 
 POST http://localhost:8080/api/login?username=pla&password=1234
 Content-Type: application/x-www-form-urlencoded
+
+###
+GET http://localhost:8080/api/users
+Authorization: Bearer asdfasdfasdf
+
+###
+GET http://localhost:8080/api/users
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwbGEiLCJyb2xlcyI6WyJST0xFX0FETUlOIiwiUk9MRV9NQU5BR0VSIiwiUk9MRV9TVVBFUl9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjU5NzcwNjYxfQ.oeVgG39k7rkH95M2ECot8xKFlpR-yC2mVpNsqbc-9mk
+
+###
+GET http://localhost:8080/api/token/refresh
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwbGEiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjU5NzcyNDc0fQ.Qm9KAZfNVEhXXh1iXh9K7yJ4QcBhmO3xr9i97cpDJoo

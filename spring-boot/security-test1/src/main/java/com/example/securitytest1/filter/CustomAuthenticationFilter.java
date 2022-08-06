@@ -4,6 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -22,8 +23,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
-
 /**
  * 인가를 위한 커스텀 필터
  */
@@ -38,9 +37,9 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
     /**
      * 응답 받아서 인증을 위한 메소드 <br />
      *
-     * @param request from which to extract parameters and perform the authentication
+     * @param request  from which to extract parameters and perform the authentication
      * @param response the response, which may be needed if the implementation has to do a
-     * redirect as part of a multi-stage authentication process (such as OpenID).
+     *                 redirect as part of a multi-stage authentication process (such as OpenID).
      * @return
      * @throws AuthenticationException
      */
@@ -60,7 +59,7 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
      * @param response
      * @param chain
      * @param authentication the object returned from the <tt>attemptAuthentication</tt>
-     * method.
+     *                       method.
      * @throws IOException
      * @throws ServletException
      */
@@ -85,7 +84,7 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
         Map<String, String> tokens = new HashMap<>();
         tokens.put("access_token", access_token);
         tokens.put("refresh_token", refresh_token);
-        response.setContentType(APPLICATION_JSON_VALUE);
+        response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         new ObjectMapper().writeValue(response.getOutputStream(), tokens);
     }
 }

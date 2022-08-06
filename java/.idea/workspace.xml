@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Create slot data">
-      <change afterPath="$PROJECT_DIR$/../spring-boot/security-test1/src/main/java/com/example/securitytest1/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-07-29__11_49__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-07-29_오전_11_49_[Changes]/shelved.patch" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-boot/security-test1/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-boot/security-test1/http/first.http" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot/security-test1/http/first.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-boot/security-test1/src/main/java/com/example/securitytest1/filter/CustomAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot/security-test1/src/main/java/com/example/securitytest1/filter/CustomAuthenticationFilter.java" afterDir="false" />
@@ -123,8 +121,16 @@
       <workItem from="1659157456711" duration="6711000" />
       <workItem from="1659341440146" duration="1171000" />
       <workItem from="1659607284406" duration="18000" />
-      <workItem from="1659779280990" duration="882000" />
+      <workItem from="1659779280990" duration="1783000" />
     </task>
+    <task id="LOCAL-00001" summary="-">
+      <created>1659780737225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659780737225</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +141,7 @@
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
     <MESSAGE value="add: Create slot data" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: Create slot data" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
 </project>

@@ -24,21 +24,22 @@ public class TxLevelTest {
     }
 
     @TestConfiguration
-    static class TxLevelTestConfig{
+    static class TxLevelTestConfig {
         @Bean
-        LevelTest levelTest(){
+        LevelTest levelTest() {
             return new LevelTest();
         }
     }
 
     @Slf4j
     @Transactional(readOnly = true)
-    static class LevelTest{
+    static class LevelTest {
         @Transactional(readOnly = false)
         public void write() {
             log.info("Call write");
             printTxInfo();
         }
+
         public void read() {
             log.info("Call read");
             printTxInfo();

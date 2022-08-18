@@ -49,7 +49,7 @@ public class TxLevelTest {
             boolean isTxActive = TransactionSynchronizationManager.isActualTransactionActive();
             log.info("TX Active : {}", isTxActive);
             boolean isReadOnly = TransactionSynchronizationManager.isCurrentTransactionReadOnly();
-            log.info("TX ReadOnly : {}", isTxActive);
+            log.info("TX ReadOnly : {}", isReadOnly);
         }
     }
 }

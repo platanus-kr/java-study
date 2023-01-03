@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Create slot data">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/collection/IteratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/thread/Thread01Runnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/thread/Thread01Thread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +46,19 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/platanus/Development/repo/java-study/java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Pla/Development/repo/java-study/java/build.gradle",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/org/codepractice" />
@@ -64,13 +68,26 @@
       <recent name="org.codepractice.HttpPost" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CreateSlotTest">
+  <component name="RunManager" selected="Application.IteratorTest">
     <configuration name="CreateSlotTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.codepractice.DatePractice.CreateSlotTest" />
       <module name="basic.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.codepractice.DatePractice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IteratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fundamental.collection.IteratorTest" />
+      <module name="basic.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fundamental.collection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,8 +108,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Thread01Runnable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fundamental.thread.Thread01Runnable" />
+      <module name="basic.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fundamental.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Thread01Thread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fundamental.thread.Thread01Thread" />
+      <module name="basic.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fundamental.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IteratorTest" />
+        <item itemvalue="Application.Thread01Runnable" />
+        <item itemvalue="Application.Thread01Thread" />
         <item itemvalue="Application.CreateSlotTest" />
         <item itemvalue="Application.StreamCompareTest" />
       </list>
@@ -119,6 +165,7 @@
       <workItem from="1659607284406" duration="18000" />
       <workItem from="1659779280990" duration="1783000" />
       <workItem from="1659845679727" duration="598000" />
+      <workItem from="1672712903643" duration="2117000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1659780737225</created>

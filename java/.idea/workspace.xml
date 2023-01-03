@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Create slot data">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/collection/IteratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/thread/Thread01Runnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/thread/Thread01Thread.java" afterDir="false" />
+    <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Collection">
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/collection/Arraylist/ListCheatsheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/collection/DequeCheatsheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/collection/HashSet/HashSetCheatsheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +55,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Pla/Development/repo/java-study/java/build.gradle",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "project.structure.side.proportion": "0.24580336",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -68,13 +70,13 @@
       <recent name="org.codepractice.HttpPost" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IteratorTest">
-    <configuration name="CreateSlotTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.codepractice.DatePractice.CreateSlotTest" />
+  <component name="RunManager" selected="Application.DequeCheatsheet">
+    <configuration name="DequeCheatsheet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fundamental.collection.DequeCheatsheet" />
       <module name="basic.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.codepractice.DatePractice.*" />
+          <option name="PATTERN" value="org.fundamental.collection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamCompareTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.fundamental.collection.compare.StreamCompareTest" />
+    <configuration name="ListCheatsheet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fundamental.collection.Arraylist.ListCheatsheet" />
       <module name="basic.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fundamental.collection.compare.*" />
+          <option name="PATTERN" value="org.fundamental.collection.Arraylist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DequeCheatsheet" />
+        <item itemvalue="Application.ListCheatsheet" />
         <item itemvalue="Application.IteratorTest" />
         <item itemvalue="Application.Thread01Runnable" />
         <item itemvalue="Application.Thread01Thread" />
-        <item itemvalue="Application.CreateSlotTest" />
-        <item itemvalue="Application.StreamCompareTest" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +167,7 @@
       <workItem from="1659607284406" duration="18000" />
       <workItem from="1659779280990" duration="1783000" />
       <workItem from="1659845679727" duration="598000" />
-      <workItem from="1672712903643" duration="2117000" />
+      <workItem from="1672712903643" duration="6354000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1659780737225</created>
@@ -174,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659780737225</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add: Thread">
+      <created>1672719553795</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672719553795</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +195,7 @@
     </ignored-roots>
     <MESSAGE value="add: Create slot data" />
     <MESSAGE value="-" />
-    <option name="LAST_COMMIT_MESSAGE" value="-" />
+    <MESSAGE value="add: Thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: Thread" />
   </component>
 </project>

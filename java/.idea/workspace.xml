@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Collection">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fundamental/collection/Arraylist/ListCheatsheet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fundamental/collection/DequeCheatsheet.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +163,9 @@
       <workItem from="1659845679727" duration="598000" />
       <workItem from="1672712903643" duration="6436000" />
       <workItem from="1672742949079" duration="223000" />
+      <workItem from="1672796458705" duration="1052000" />
+      <workItem from="1672799681502" duration="596000" />
+      <workItem from="1672861590407" duration="682000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1659780737225</created>

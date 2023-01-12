@@ -1,8 +1,10 @@
-package com.example.payroll;
+package com.example.payroll.model.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.security.access.prepost.PreAuthorize;
+
+import com.example.payroll.model.Employee;
 
 @PreAuthorize("hasRole('ROLE_MANAGER')")
 public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {

@@ -1,4 +1,4 @@
-package com.example.payroll;
+package com.example.payroll.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Arrays;
@@ -29,7 +29,7 @@ public class Manager {
         this.password = PASSWORD_ENCODER.encode(password);
     }
 
-    protected Manager() {
+    public Manager() {
     }
 
     public Manager(String name, String password, String... roles) {

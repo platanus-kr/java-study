@@ -1,6 +1,4 @@
-package com.example.payroll;
-
-import static com.example.payroll.WebSocketConfiguration.MESSAGE_PREFIX;
+package com.example.payroll.model.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.core.annotation.HandleAfterCreate;
@@ -11,10 +9,14 @@ import org.springframework.hateoas.server.EntityLinks;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
 
+import com.example.payroll.constants.CustomConstants;
+import com.example.payroll.model.Employee;
+
 @Component
 @RepositoryEventHandler(Employee.class)
 public class EventHandler {
 
+    private static final String MESSAGE_PREFIX = CustomConstants.MESSAGE_PREFIX;
     private final SimpMessagingTemplate websocket;
 
     private final EntityLinks entityLinks;

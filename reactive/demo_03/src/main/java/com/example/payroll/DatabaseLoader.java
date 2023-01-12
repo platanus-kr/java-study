@@ -7,6 +7,11 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
+import com.example.payroll.model.Employee;
+import com.example.payroll.model.Manager;
+import com.example.payroll.model.repository.EmployeeRepository;
+import com.example.payroll.model.repository.ManagerRepository;
+
 @Component
 public class DatabaseLoader implements CommandLineRunner {
 

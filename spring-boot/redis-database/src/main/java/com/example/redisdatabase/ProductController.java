@@ -56,8 +56,15 @@ public class ProductController {
 	
 	@ResponseBody
 	@GetMapping("/findByName")
-	public List<Product> retrieveProducts(@RequestParam(name = "name", required = true) String search) {
+	public List<Product> retrieveProductsByName(@RequestParam(name = "name", required = true) String search) {
 		List<Product> findProducts = productService.retrieveProducts(search);
+		return findProducts;
+	}
+	
+	@ResponseBody
+	@GetMapping("/findAll")
+	public List<Product> retrieveProducts(){
+		List<Product> findProducts = productService.retrieveProducts();
 		return findProducts;
 	}
 	

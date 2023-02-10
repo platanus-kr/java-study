@@ -1,5 +1,6 @@
 package com.example.redisdatabase;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.RequiredArgsConstructor;
@@ -34,7 +35,16 @@ public class ProductServiceImpl implements ProductService {
 	
 	@Override
 	public List<Product> retrieveProducts(String search) {
-		return productCrudRepository.findAllByName(search);
+		return productCrudRepository.findByNameContains(search);
+	}
+	
+	@Override
+	public List<Product> retrieveProducts(){
+		List<Product> finds = productCrudRepository.findAll();
+		for (Product find : finds) {
+			System.out.println(find);
+		}
+		return finds;
 	}
 	
 	public List<String> retrieveProductsTest(String search) {

@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProductCrudRepository extends CrudRepository<Product, String> {
 	
-	public List<Product> findAllByName(String searchName);
+	List<Product> findAll();
+	List<Product> findByNameContains(String searchName);
 }

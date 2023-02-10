@@ -3,6 +3,9 @@ package com.example.redisdatabase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.HashOperations;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.MediaType;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,6 +21,9 @@ class RedisDatabaseApplicationTests {
 
     @Autowired
     private ProductService productService;
+    
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @Test
     void contextLoads() {
@@ -50,11 +56,19 @@ class RedisDatabaseApplicationTests {
     
     @Test
     void RedisTemplate_SCAN_쿼리테스트() {
-        final String search = "상품";
+        final String search = "사과";
         List<String> strings = productService.retrieveProductsTest(search);
+        System.out.println(strings.size());
         for (String string : strings) {
             System.out.println(string);
         }
+    }
+    
+    @Test
+    void ResdisTemplate_GetHashKey(){
+        HashOperations hashOperations = redisTemplate.opsForHash();
+        String what = (String) hashOperations.get("사과", "?");
+        System.out.println(what);
     }
 
 }

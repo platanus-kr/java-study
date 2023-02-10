@@ -1,5 +1,7 @@
 package com.example.redisdatabase;
 
+import java.util.List;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -7,15 +9,35 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
 
-    private final ProductRepository productRepository;
+    private final ProductCrudRepository productCrudRepository;
+	private final ProductRedisTemplateRepository productRedisTemplateRepository;
 
     @Override
     public Product getProduct(String id) {
-        return productRepository.findById(id).orElse(null);
+        return productCrudRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void createProduct(Product product) {
-        productRepository.save(product);
+    public Product createProduct(Product product) {
+        return productCrudRepository.save(product);
     }
+    
+	@Override
+    public void deleteProduct(Product product) {
+		productCrudRepository.delete(product);
+    }
+	
+	@Override
+	public Product updateProduct(Product product) {
+		return productCrudRepository.save(product);
+	}
+	
+	@Override
+	public List<Product> retrieveProducts(String search) {
+		return productCrudRepository.findAllByName(search);
+	}
+	
+	public List<String> retrieveProductsTest(String search) {
+		return productRedisTemplateRepository.findByNameLike(search);
+	}
 }

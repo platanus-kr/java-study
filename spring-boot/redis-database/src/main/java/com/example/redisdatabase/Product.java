@@ -2,16 +2,25 @@ package com.example.redisdatabase;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+
+import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.redis.core.index.Indexed;
 
 import java.io.Serializable;
 
 @Getter
 @AllArgsConstructor
+@Builder
 @RedisHash("product")
 public class Product implements Serializable {
-    private String id;
-    private String name;
+    @Id private String id;
+    @Indexed private String name;
     private double price;
+    
+    public Product(byte[] actualKey) {
+    
+    }
 }

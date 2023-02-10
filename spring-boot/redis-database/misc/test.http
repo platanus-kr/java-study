@@ -1,0 +1,15 @@
+### 상품 삽입
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "name": "테스트상품요청차차차",
+  "price": "10000"
+}
+
+### 상품 조회 (아이디)
+GET http://localhost:8080/product?id=ae9e888a-3c77-4844-a1a7-2af07c889793
+
+### 상품 조회 (상품명)
+GET http://localhost:8080/product/findByName?name=차차차
+

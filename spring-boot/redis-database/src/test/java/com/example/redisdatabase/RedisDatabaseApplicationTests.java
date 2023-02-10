@@ -3,7 +3,15 @@ package com.example.redisdatabase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.List;
+
+import io.restassured.RestAssured;
+import io.restassured.response.ExtractableResponse;
+import io.restassured.response.Response;
 
 @SpringBootTest
 class RedisDatabaseApplicationTests {
@@ -23,6 +31,30 @@ class RedisDatabaseApplicationTests {
         assertEquals("1", productFromDb.getId());
         assertEquals("테스트 상품", productFromDb.getName());
         assertEquals(10.0, productFromDb.getPrice());
+    }
+    
+    //@Test
+    void 상품생성요청(){
+        CreateProductDto request = CreateProductDto.builder()
+                .name("테스트상품")
+                .price(1000L)
+                .build();
+        ExtractableResponse<Response> response = RestAssured.given().log().all()
+                .contentType(MediaType.APPLICATION_JSON_VALUE)
+                .body(request)
+                .when()
+                .post("/product")
+                .then()
+                .log().all().extract();
+    }
+    
+    @Test
+    void RedisTemplate_SCAN_쿼리테스트() {
+        final String search = "상품";
+        List<String> strings = productService.retrieveProductsTest(search);
+        for (String string : strings) {
+            System.out.println(string);
+        }
     }
 
 }

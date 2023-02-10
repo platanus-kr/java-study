@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  demoapp-redis:
+    image: redis:7.0
+    ports:
+      - 19701:6379

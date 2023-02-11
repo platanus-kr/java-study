@@ -57,9 +57,9 @@ class RedisDatabaseApplicationTests {
     @Test
     void RedisTemplate_SCAN_쿼리테스트() {
         final String search = "사과";
-        List<String> strings = productService.retrieveProductsTest(search);
+        List<Product> strings = productService.retrieveProductsTest(search);
         System.out.println(strings.size());
-        for (String string : strings) {
+        for (Product string : strings) {
             System.out.println(string);
         }
     }

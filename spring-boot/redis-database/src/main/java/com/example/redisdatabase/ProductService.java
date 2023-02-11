@@ -17,5 +17,5 @@ public interface ProductService {
     
     List<Product> retrieveProducts();
     
-    List<String> retrieveProductsTest(String search);
+    List<Product> retrieveProductsTest(String search);
 }

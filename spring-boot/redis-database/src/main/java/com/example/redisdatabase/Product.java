@@ -6,6 +6,7 @@ import lombok.Getter;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.redis.core.index.Indexed;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -20,7 +21,7 @@ public class Product implements Serializable {
 
 
     @Id private String id;
-    private String name;
+    @Indexed private String name;
     private double price;
 
     public void setId() {

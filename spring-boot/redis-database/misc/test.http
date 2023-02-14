@@ -56,7 +56,7 @@ Content-Type: application/json
 GET http://localhost:8080/product/findAll
 
 ### 상품 조회 (아이디)
-GET http://localhost:8080/product?id=1fef82a3-577f-468e-8018-7fa24858720a
+GET http://localhost:8080/product?id=8e0db2ae-0bfa-4fd1-ad02-6c236348f8a5
 
 ### 상품 조회 (상품명)
 GET http://localhost:8080/product/findByName?name=사과

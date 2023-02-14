@@ -23,6 +23,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void createProduct(Product product) {
 //        return productCrudRepository.save(product);
+//        productCrudRepository.save(product);
 		productRedisTemplateRepository.save(product);
 	}
     
@@ -55,13 +56,13 @@ public class ProductServiceImpl implements ProductService {
 		Map<String, Product> all = productRedisTemplateRepository.findAll();
 		List<Product> products = new ArrayList<>();
 		for (Map.Entry<String, Product> stringProductEntry : all.entrySet()) {
-			products.add(stringProductEntry.getValue());
+//			products.add(stringProductEntry.getValue());
 		}
 		return products;
 	}
 	
 	public List<Product> retrieveProductsTest(String search) {
-		String likeSearch = "*" + search + "*";
+		String likeSearch = search;
 		return productRedisTemplateRepository.findByNameLike(likeSearch);
 	}
 }

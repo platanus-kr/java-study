@@ -6,12 +6,11 @@ import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.*;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Repository
 @RequiredArgsConstructor
@@ -19,15 +18,8 @@ public class ProductRedisTemplateRepository {
     private final StringRedisTemplate redisTemplate;
 
     private final RedisTemplate<String, Product> productRedisTemplate;
+    private final HashOperations<String, String, Product> hashOps;
 
-    private HashOperations<String, String, Product> productHashOperations;
-    private SetOperations<String, Product> productSetOperations;
-
-    @PostConstruct
-    public void init() {
-        productHashOperations = productRedisTemplate.opsForHash();
-        productSetOperations = productRedisTemplate.opsForSet();
-    }
 
     // 이렇게 하면 검색은 되는데 key를 검색하는거지 value를 검색하는게 아님.
     // 모 부트캠프에서 이렇게 하라고 가르치는듯.....
@@ -60,7 +52,6 @@ public class ProductRedisTemplateRepository {
     }
 
 
-
     // 사용 안함
     private String getHashKey(String key, String mapkey) {
         // https://www.programcreek.com/java-api-examples/?class=org.springframework.data.redis.core.HashOperations&method=get
@@ -72,45 +63,35 @@ public class ProductRedisTemplateRepository {
     public void save(Product product) {
 //        productHashOperations.put(product.getClass().getSimpleName(), product.getId(), product);
         product.setId();
-        productHashOperations.put("product", product.getId(), product);
+//        productHashOperations.put("product", product.getId(), product);
+//        productHashOperations.put("product:" + product.getId(), "name", product.getName());
+//        productHashOperations.put("product:" + product.getId(), "price", product.getPrice());
+        String key = "product";
+        String id = product.getId();
+        hashOps.put(key, id, product);
     }
 
     public Long delete(Product product) {
-        return productHashOperations.delete("product", product.getId());
+//        return productHashOperations.delete("product", product.getId());
+        return 0L;
     }
 
     public Product findById(String id) {
-        return productHashOperations.get("product", id);
+        String key = "product";
+        return hashOps.get(key, id);
     }
 
     public List<Product> findByNameLike(String pattern) {
-        Cursor<Entry<String, Product>> cursor = productHashOperations.scan("product", ScanOptions.scanOptions().match(pattern).build());
-        List<Product> products = new ArrayList<>();
-        while (cursor.hasNext()) {
-            Entry<String, Product> entry = cursor.next();
-            products.add(entry.getValue());
-        }
-        return products;
+        String key = "product";
+        List<Product> results = hashOps.scan(key, ScanOptions.scanOptions().match("*" + pattern + "*").build())
+                .stream().map(Map.Entry::getValue)
+                .collect(Collectors.toList());
+        return results;
     }
 
     public Map<String, Product> findAll() {
-        return productHashOperations.entries("product");
+        return hashOps.entries("product");
     }
 
 
-    public List<Product> findByNameLike_old(String pattern) {
-        final String PRODUCT_KEY = "product";
-        List<Product> products = new ArrayList<>();
-
-        Cursor<Product> cursor = productSetOperations.scan(
-                PRODUCT_KEY,
-                ScanOptions.scanOptions().match(pattern).build()
-        );
-
-        while (cursor.hasNext()) {
-            Product next = cursor.next();
-            products.add(next);
-        }
-        return products;
-    }
 }

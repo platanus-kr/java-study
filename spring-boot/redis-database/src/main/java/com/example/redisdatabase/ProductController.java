@@ -1,5 +1,6 @@
 package com.example.redisdatabase;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -57,15 +58,16 @@ public class ProductController {
 	@ResponseBody
 	@GetMapping("/findByName")
 	public List<Product> retrieveProductsByName(@RequestParam(name = "name", required = true) String search) {
-		List<Product> findProducts = productService.retrieveProducts(search);
-		return findProducts;
+//		List<Product> findProducts = productService.retrieveProducts(search);
+//		return findProducts;
+		return new ArrayList<>();
 	}
 	
 	@ResponseBody
 	@GetMapping("/findAll")
 	public List<Product> retrieveProducts(){
-		List<Product> findProducts = productService.retrieveProducts();
-		return findProducts;
+		return productService.retrieveProducts();
+//		return new ArrayList<>();
 	}
 	
 }

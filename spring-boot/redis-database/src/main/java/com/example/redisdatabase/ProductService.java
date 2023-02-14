@@ -7,15 +7,17 @@ public interface ProductService {
 
     public Product getProduct(String id);
 
-    Product createProduct(Product product);
+    void createProduct(Product product);
     
-    void deleteProduct(Product product);
+    Long deleteProduct(Product product);
     
-    Product updateProduct(Product product);
+//    Product updateProduct(Product product);
     
-    List<Product> retrieveProducts(String search);
+//    List<Product> retrieveProducts(String search);
     
-    List<Product> retrieveProducts();
+//    List<Product> retrieveProducts();
     
     List<Product> retrieveProductsTest(String search);
+
+    List<Product> retrieveProducts();
 }

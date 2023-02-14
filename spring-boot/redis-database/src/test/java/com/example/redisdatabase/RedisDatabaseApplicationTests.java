@@ -56,18 +56,24 @@ class RedisDatabaseApplicationTests {
     
     @Test
     void RedisTemplate_SCAN_쿼리테스트() {
-        final String search = "사과";
+        final String search = "apple";
         List<Product> strings = productService.retrieveProductsTest(search);
         System.out.println(strings.size());
         for (Product string : strings) {
             System.out.println(string);
         }
     }
+
+    @Test
+    void RedisTemplate_SCAN_전체쿼리테스트() {
+        List<Product> products = productService.retrieveProducts();
+        products.forEach(v -> System.out.println(v.toString()));
+    }
     
     @Test
     void ResdisTemplate_GetHashKey(){
         HashOperations hashOperations = redisTemplate.opsForHash();
-        String what = (String) hashOperations.get("사과", "?");
+        String what = (String) hashOperations.get("", "?");
         System.out.println(what);
     }
 

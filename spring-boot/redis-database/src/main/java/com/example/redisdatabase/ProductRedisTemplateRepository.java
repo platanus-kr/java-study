@@ -9,7 +9,9 @@ import org.springframework.stereotype.Repository;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
+import java.util.UUID;
 
 @Repository
 @RequiredArgsConstructor
@@ -28,6 +30,7 @@ public class ProductRedisTemplateRepository {
     }
 
     // 이렇게 하면 검색은 되는데 key를 검색하는거지 value를 검색하는게 아님.
+    // 모 부트캠프에서 이렇게 하라고 가르치는듯.....
     public List<String> findByNameLikeOld(String search) {
         List<String> result = new ArrayList<>();
 
@@ -56,7 +59,46 @@ public class ProductRedisTemplateRepository {
         return result;
     }
 
+
+
+    // 사용 안함
+    private String getHashKey(String key, String mapkey) {
+        // https://www.programcreek.com/java-api-examples/?class=org.springframework.data.redis.core.HashOperations&method=get
+        HashOperations<String, String, String> hashOperations = redisTemplate.opsForHash();
+        return hashOperations.get(key, mapkey);
+    }
+
+
+    public void save(Product product) {
+//        productHashOperations.put(product.getClass().getSimpleName(), product.getId(), product);
+        product.setId();
+        productHashOperations.put("product", product.getId(), product);
+    }
+
+    public Long delete(Product product) {
+        return productHashOperations.delete("product", product.getId());
+    }
+
+    public Product findById(String id) {
+        return productHashOperations.get("product", id);
+    }
+
     public List<Product> findByNameLike(String pattern) {
+        Cursor<Entry<String, Product>> cursor = productHashOperations.scan("product", ScanOptions.scanOptions().match(pattern).build());
+        List<Product> products = new ArrayList<>();
+        while (cursor.hasNext()) {
+            Entry<String, Product> entry = cursor.next();
+            products.add(entry.getValue());
+        }
+        return products;
+    }
+
+    public Map<String, Product> findAll() {
+        return productHashOperations.entries("product");
+    }
+
+
+    public List<Product> findByNameLike_old(String pattern) {
         final String PRODUCT_KEY = "product";
         List<Product> products = new ArrayList<>();
 
@@ -70,11 +112,5 @@ public class ProductRedisTemplateRepository {
             products.add(next);
         }
         return products;
-    }
-
-    private String getHashKey(String key, String mapkey) {
-        // https://www.programcreek.com/java-api-examples/?class=org.springframework.data.redis.core.HashOperations&method=get
-        HashOperations<String, String, String> hashOperations = redisTemplate.opsForHash();
-        return hashOperations.get(key, mapkey);
     }
 }

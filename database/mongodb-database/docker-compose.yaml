@@ -8,6 +8,5 @@ services:
 #    volumes:
 #      - ./mongodb:/data/db
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=root
-      - MONGO_INITDB_DATABASE=db
+      MONGO_INITDB_ROOT_USERNAME: papapapap
+      MONGO_INITDB_ROOT_PASSWORD: wef24f

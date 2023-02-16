@@ -25,7 +25,7 @@ public class ProductRestController {
 		if (product.getName().isBlank() || product.getPrice() < 1) {
 			return null;
 		}
-		Product created = productService.createProduct(product);
+		Product created = productService.createProductFromSD(product);
 		return created;
 	}
 	
@@ -35,14 +35,14 @@ public class ProductRestController {
 		if (id.isBlank()) {
 			return null;
 		}
-		Product find = productService.getProductById(id);
+		Product find = productService.getProductByIdFromSD(id);
 		return find;
 	}
 	
 	@GetMapping("/findAll")
 	@ResponseBody
 	public List<Product> getAllProduct() {
-		return productService.getAllProducts();
+		return productService.getAllProductsFromSD();
 	}
 	
 	@GetMapping("/search")
@@ -51,6 +51,6 @@ public class ProductRestController {
 		if (name.isBlank()) {
 			return new ArrayList<>();
 		}
-		return productService.searchProductsByName(name);
+		return productService.searchProductsByNameFromSD(name);
 	}
 }

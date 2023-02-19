@@ -9,14 +9,19 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.web.header.writers.frameoptions.WhiteListedAllowFromStrategy;
+import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter;
+
+import java.util.Arrays;
 
 @EnableWebSecurity
-//@RequiredArgsConstructor
+@RequiredArgsConstructor
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SpringSecurityConfig {
 
 	//private final AuthenticationConfiguration authConfig;
 
+//	private final CustomO
 	//@Bean
 	public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
 		return authConfig.getAuthenticationManager();
@@ -25,8 +30,13 @@ public class SpringSecurityConfig {
 	@Bean
 	public SecurityFilterChain configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.antMatchers("/oauth_login", "/nice/test", "/error").permitAll()
-				.anyRequest().authenticated();
+				.antMatchers("/oauth_login", "/nice/test", "/error", "/h2-console/**").permitAll()
+				.anyRequest().authenticated()
+				.and()
+				.csrf()
+				.ignoringAntMatchers("/h2-console/**")
+				.and()
+				.headers().frameOptions().sameOrigin();
 		http.oauth2Login();
 		return http.build();
 	}

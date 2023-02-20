@@ -3,6 +3,8 @@ package com.example.securitytest2.service;
 import com.example.securitytest2.model.Member;
 import com.example.securitytest2.model.MemberRepository;
 import com.example.securitytest2.model.MemberRole;
+import com.example.securitytest2.model.SessionMemberDto;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -30,26 +32,26 @@ public class CustomOAuth2MemberService implements OAuth2UserService {
         OAuth2User oAuth2User = service.loadUser(userRequest);
 
         String registrationId = userRequest.getClientRegistration().getRegistrationId();
-        String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails().getUserInfoEndpoint().getUserNameAttributeName();
-//
-//        OAuthAttributes attributes = OAuthAttributes.of(registrationId,
-//                userNameAttributeName,
-//                oAuth2User.getAttributes());
+        //String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails().getUserInfoEndpoint().getUserNameAttributeName();
 
-        Member member = upsert(oAuth2User);
+        Member member = upsert(oAuth2User, registrationId);
 
         session.setAttribute("oAuthToken", userRequest.getAccessToken().getTokenValue());
-        return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(member.getRole().getKey())),
+        session.setAttribute("memberInfo", new SessionMemberDto(member.getUsername(), member.getProvider(), member.getProfileImage(), member.getRole()));
+        return new DefaultOAuth2User(
+                Collections.singleton(new SimpleGrantedAuthority(member.getRole().getKey())),
                 oAuth2User.getAttributes(),
-                "id");
+                "id"
+        );
     }
 
-    private Member upsert(OAuth2User oAuth2User) {
+    private Member upsert(OAuth2User oAuth2User, String provider) {
         Member oAuthMember = Member.builder()
                 .username(oAuth2User.getAttribute("login"))
                 .name(oAuth2User.getAttribute("name"))
                 .providerId(String.valueOf((Integer) (oAuth2User.getAttribute("id"))))
-                .avatarUrl(oAuth2User.getAttribute("avatar_url"))
+                .provider(provider)
+                .profileImage(oAuth2User.getAttribute("avatar_url"))
                 .email(oAuth2User.getAttribute("email"))
                 .role(MemberRole.ROLE_USER)
                 .build();
@@ -59,6 +61,5 @@ public class CustomOAuth2MemberService implements OAuth2UserService {
                 .orElse(oAuthMember);
 
         return memberRepository.save(m);
-
     }
 }

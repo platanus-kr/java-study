@@ -3,7 +3,6 @@ package com.example.securitytest2.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -11,29 +10,28 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "members")
-public class Member {
+@Table(name = "members",
+        indexes = {@Index(columnList = "providerId")}
+)
+public class Member extends BaseTime {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
-
+    
     private String providerId;
+    private String provider;
     private String username;
-    private String avatarUrl;
+    private String profileImage;
     private String htmlUrl;
     private String name;
     private String email;
     private MemberRole role;
-    private LocalDateTime joinDate;
-    private LocalDateTime updateDate;
-
     public Member update(Member m) {
         this.name = m.getName();
-        this.avatarUrl = m.getAvatarUrl();
+        this.profileImage = m.getProfileImage();
         this.username = m.getUsername();
         this.htmlUrl = m.getHtmlUrl();
-        this.updateDate = LocalDateTime.now();
         return this;
     }
 }

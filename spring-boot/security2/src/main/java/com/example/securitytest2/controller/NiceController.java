@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/nice")
-public class TestController {
+public class NiceController {
 
 	@GetMapping("/test")
 	public String test() {

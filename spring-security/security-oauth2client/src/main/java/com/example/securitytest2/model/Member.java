@@ -26,6 +26,8 @@ public class Member extends BaseTime {
     private String htmlUrl;
     private String name;
     private String email;
+
+    @Enumerated(value = EnumType.STRING)
     private MemberRole role;
     public Member update(Member m) {
         this.name = m.getName();

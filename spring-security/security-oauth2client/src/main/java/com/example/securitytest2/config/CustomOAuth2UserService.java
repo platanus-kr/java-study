@@ -1,10 +1,8 @@
-package com.example.securitytest2.service;
+package com.example.securitytest2.config;
 
 import com.example.securitytest2.model.Member;
 import com.example.securitytest2.model.MemberRepository;
 import com.example.securitytest2.model.MemberRole;
-import com.example.securitytest2.model.SessionMemberDto;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -20,7 +18,7 @@ import java.util.Collections;
 
 @Service
 @RequiredArgsConstructor
-public class CustomOAuth2MemberService implements OAuth2UserService {
+public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
 
     private final MemberRepository memberRepository;
     private final HttpSession session;
@@ -32,34 +30,26 @@ public class CustomOAuth2MemberService implements OAuth2UserService {
         OAuth2User oAuth2User = service.loadUser(userRequest);
 
         String registrationId = userRequest.getClientRegistration().getRegistrationId();
-        //String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails().getUserInfoEndpoint().getUserNameAttributeName();
+        String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails().getUserInfoEndpoint().getUserNameAttributeName();
+        CustomOAuthMember attributes = CustomOAuthMember.ofGitHub(registrationId, userNameAttributeName, oAuth2User.getAttributes());
 
-        Member member = upsert(oAuth2User, registrationId);
+        Member member = upsert(attributes);
 
         session.setAttribute("oAuthToken", userRequest.getAccessToken().getTokenValue());
-        session.setAttribute("memberInfo", new SessionMemberDto(member.getUsername(), member.getProvider(), member.getProfileImage(), member.getRole()));
-        return new DefaultOAuth2User(
-                Collections.singleton(new SimpleGrantedAuthority(member.getRole().getKey())),
-                oAuth2User.getAttributes(),
-                "id"
-        );
+        session.setAttribute("member", new SessionMember(member.getUsername(), member.getProvider(), member.getProfileImage(), member.getRole()));
+        return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(member.getRole().getKey())), oAuth2User.getAttributes(), attributes.getNameAttributeKey());
     }
 
-    private Member upsert(OAuth2User oAuth2User, String provider) {
-        Member oAuthMember = Member.builder()
-                .username(oAuth2User.getAttribute("login"))
-                .name(oAuth2User.getAttribute("name"))
-                .providerId(String.valueOf((Integer) (oAuth2User.getAttribute("id"))))
-                .provider(provider)
-                .profileImage(oAuth2User.getAttribute("avatar_url"))
-                .email(oAuth2User.getAttribute("email"))
+    private Member upsert(CustomOAuthMember m) {
+        Member oAuthMember = Member.builder().username(m.getUsername()).name(m.getName()).providerId(m.getProviderId()).provider(m.getProvider()).profileImage(m.getProfileImage()).email(m.getEmail())
                 .role(MemberRole.ROLE_USER)
                 .build();
 
-        Member m = memberRepository.findByProviderId(oAuthMember.getProviderId())
-                .map(e -> e.update(oAuthMember))
-                .orElse(oAuthMember);
+        Member findMember = memberRepository.findByProviderId(oAuthMember.getProviderId()).map(e -> e.update(oAuthMember)).orElse(oAuthMember);
+        if (findMember == null) {
+            Member defaultMember = m.toMember();
+        }
 
-        return memberRepository.save(m);
+        return memberRepository.save(findMember);
     }
 }

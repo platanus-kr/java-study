@@ -3,16 +3,11 @@ package com.example.securitytest2.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.web.header.writers.frameoptions.WhiteListedAllowFromStrategy;
-import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter;
-
-import java.util.Arrays;
 
 @EnableWebSecurity
 @RequiredArgsConstructor
@@ -20,6 +15,7 @@ import java.util.Arrays;
 public class SpringSecurityConfig {
 
 	//private final AuthenticationConfiguration authConfig;
+	private final CustomOAuth2UserService customOAuth2MemberService;
 
 //	private final CustomO
 	//@Bean
@@ -30,14 +26,16 @@ public class SpringSecurityConfig {
 	@Bean
 	public SecurityFilterChain configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.antMatchers("/oauth_login", "/nice/test", "/error", "/h2-console/**").permitAll()
+				.antMatchers("/oauth_login", "/nice/test", "/", "/error", "/h2-console/**").permitAll()
 				.anyRequest().authenticated()
 				.and()
 				.csrf()
 				.ignoringAntMatchers("/h2-console/**")
 				.and()
 				.headers().frameOptions().sameOrigin();
-		http.oauth2Login();
+		http.oauth2Login().defaultSuccessUrl("/", true)
+				.and()
+				.logout().logoutSuccessUrl("/");
 		return http.build();
 	}
 }

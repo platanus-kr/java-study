@@ -1,4 +1,4 @@
-package com.example.securitytest2.config;
+package com.example.securitytest2.config.oauth2;
 
 import com.example.securitytest2.model.Member;
 import lombok.Builder;
@@ -8,10 +8,9 @@ import java.util.Map;
 
 @Getter
 @Builder
-public class CustomOAuthMember {
+public class CustomOAuth2MemberDto {
     private Map<String, Object> attributes;
     private String nameAttributeKey;
-
     private String provider;
     private String providerId;
     private String username;
@@ -19,8 +18,8 @@ public class CustomOAuthMember {
     private String name;
     private String email;
 
-    public static CustomOAuthMember ofGitHub(String registrationId, String userNameAttributeKey, Map<String, Object> attributes) {
-        return CustomOAuthMember.builder()
+    public static CustomOAuth2MemberDto ofGitHub(String registrationId, String userNameAttributeKey, Map<String, Object> attributes) {
+        return CustomOAuth2MemberDto.builder()
                 .attributes(attributes)
                 .nameAttributeKey(userNameAttributeKey)
                 .provider(registrationId)

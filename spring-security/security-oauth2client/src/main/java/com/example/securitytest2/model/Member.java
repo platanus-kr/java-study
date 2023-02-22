@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Builder
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "members",
@@ -22,6 +23,7 @@ public class Member extends BaseTime {
     private String providerId;
     private String provider;
     private String username;
+    private String password;
     private String profileImage;
     private String htmlUrl;
     private String name;

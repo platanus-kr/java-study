@@ -9,11 +9,12 @@
 
 | 분야            | 이름            | 주제                     | 내용                                                                |
 | --------------- | --------------- | ------------------------ | ------------------------------------------------------------------- |
-| Language        | Java            | 프로그래밍 기초          | 자바, OOP, 스레딩, I/O                                              |
+| Language        | Java            | 프로그래밍 기초          | 자바, OOP, 스레딩, 동시성, I/O 처리F                                |
 | Framework       | Spring 5        | Spring Framework Core    | AOP, DI, Bean Lifecycle, Interceptor, Validation, Logging, MVC, JSP |
-| Web Application | Spring Boot     | Spring Boot 기본         | Web Backend Architecture, Multipart, RestController                 |
+| Web Application | Spring Boot     | Spring Web MVC           | Web Backend Architecture, Multipart, RestController                 |
 | Web Application | Spring Security | Session, Token, OAuth2   | Payload 커스터마이징, JWT 인증/인가, 세션 인증, OAuth2 인증         |
-| Concurrent      | Spring WebFlux  | Async, Non-Blocking      | Spring의 비동기 처리                                                |
+| Reactive        | Spring WebFlux  | Async, Non-Blocking      | 비동기 처리 Spring                                                  |
+| Meassge         | WebSocket       | WebSocketHandler         | MVC와 WebFlux에서 WebSocket 연결과 처리                             |
 | Message Broker  | Kafka           | Pub-sub, Messaging Queue | Publisher-Subscriber 패턴, Publishing, Listening                    |
 | Database        | Mapper          | Database Mapper          | Spring Data JDBC, MyBatis, 동적 쿼리                                |
 | Database        | ORM             | JPA                      | Spring Data JPA                                                     |

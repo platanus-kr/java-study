@@ -2,6 +2,7 @@ package com.example.securitytest2.model;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 
@@ -16,8 +17,10 @@ import lombok.Getter;
 @EntityListeners(AuditingEntityListener.class)
 public abstract class BaseTime {
 	@CreatedDate
+	@Column(name = "created")
 	private LocalDateTime createdDate;
 	
 	@LastModifiedDate
+	@Column(name = "updated")
 	private LocalDateTime modifiedDate;
 }

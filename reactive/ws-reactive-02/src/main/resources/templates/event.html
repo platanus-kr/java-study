@@ -48,14 +48,44 @@
 
 <script>
     // WebSocket 연결을 생성합니다.
-    const Stomp = window.StompJs.Stomp;
-    const client = Stomp.client("ws://localhost:8081/events");
 
-    client.connect({}, () => {
-        client.subscribe('/topic/events', (message) => {
-            console.log("수신: ${message.body}")
-        })
-    })
+
+    // const socket = new WebSocket('ws://localhost:8081/events');
+    // const Stomp = window.StompJs.Stomp;
+    // const client = Stomp.over(socket);
+    //
+    // client.connect({}, () => {
+    //     client.subscribe('/topic/events', (message) => {
+    //         console.log("수신: ${message.body}")
+    //     })
+    // })
+
+
+    const socket = new WebSocket('ws://localhost:8081/events');
+
+    socket.onopen = function(event) {
+        // 연결이 열리면 실행되는 코드
+        console.log('WebSocket 연결이 열렸습니다.');
+        socket.send('/topic/events');
+    };
+
+    socket.onmessage = function(event) {
+        // 메시지가 도착하면 실행되는 코드
+        console.log('서버로부터 받은 메시지:', event.data);
+    };
+
+
+
+    function sendMessageWrap(){
+        const chatText = $("#chat-text").val();
+        socket.send(chatText);
+        // if (client && client.connected) {
+        //     const chatText = $("#chat-text").val();
+        //     client.send('/topic/events', {}, chatText);
+        // } else {
+        //     console.log('WebSocket connection is not established yet.');
+        // }
+    }
 
     // STOMP 클라이언트를 생성하고 연결합니다.
     // const client = new Client({
@@ -91,10 +121,7 @@
     //     client.publish({ destination: '/chat/simpleTopic', body: chatMessageJson });
     // }
 
-    function sendMessageWrap(){
-        const chatText = $("#chat-text").val();
-        client.send('/chat/simpleTopic', {}, chatText);
-    }
+
 
 
 </script>

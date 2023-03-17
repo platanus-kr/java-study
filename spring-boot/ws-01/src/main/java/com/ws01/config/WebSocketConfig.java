@@ -11,6 +11,8 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 	// AbstractWebSocketMessageBrokerConfigurer 는 Deprecated.
 
+	//https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#websocket-stomp-message-flow
+
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry config) {
 		// 먼저 메모리 내 메시지 브로커가 "/topic" 접두사가 붙은 대상에서 클라이언트로 메시지를 다시 전달할 수 있습니다.
@@ -27,5 +29,15 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 		// WebSocket을 사용할 수 없는 경우 대체 메시징 옵션을 사용할 수 있도록 SockJS 폴백 옵션 을 활성화합니다 .
 		registry.addEndpoint("/chat").withSockJS();
 		//WebSocketMessageBrokerConfigurer.super.registerStompEndpoints(registry);
+
+		/**
+		 * 위의 WebSocket 생성자에서 전달된 경로는 registerStompEndpoints() 메소드에서 등록한 WebSocket 엔드포인트와 동일해야 합니다.
+		 *
+		 * 그러나 위의 코드에서는 withSockJS() 메서드를 사용하여 SockJS를 지원하도록 WebSocket을 구성하고 있습니다. SockJS는 브라우저가 웹 소켓을 지원하지 않는 경우 대체 방법으로 HTTP Streaming, Long Polling 등을 사용하여 웹 소켓과 유사한 기능을 제공합니다.
+		 *
+		 * 따라서 위의 registerStompEndpoints() 메서드에서는 "/message" 경로를 등록하지만, SockJS를 사용하는 경우 /sockjs 엔드포인트도 함께 등록됩니다.
+		 *
+		 * 따라서 SockJS를 사용하는 경우 다음과 같이 WebSocket 경로 대신 SockJS 엔드포인트 경로를 사용해야합니다.
+		 */
 	}
 }

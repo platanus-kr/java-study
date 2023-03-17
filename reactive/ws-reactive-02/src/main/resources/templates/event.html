@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>event test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+
+</head>
+<body>
+
+<div class="wrap">
+    <div class="chat-service">
+        <div class="room-action-menu">
+            <span>작동</span>
+        </div>
+        <div class="stream-box">
+            <div class="inner-box">
+                <div class="chat-line"> <!-- overflow add check! -->
+                    <div class="member-profile">
+                        <div class="member-profile-image">
+
+                        </div>
+                        <div class="member-nickname">
+                            <span>닉네임</span>
+                        </div>
+                    </div>
+                    <div class="member-text">
+                        <span>채팅 내용</span>
+                    </div>
+                    <div class="chat-action-menu">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-text" class="chat-input-text"/>
+            <input type="button" class="chat-input-send-button" value="전송" onclick="sendMessageWrap()"/>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    // WebSocket 연결을 생성합니다.
+    const Stomp = window.StompJs.Stomp;
+    const client = Stomp.client("ws://localhost:8081/events");
+
+    client.connect({}, () => {
+        client.subscribe('/topic/events', (message) => {
+            console.log("수신: ${message.body}")
+        })
+    })
+
+    // STOMP 클라이언트를 생성하고 연결합니다.
+    // const client = new Client({
+    //     webSocketFactory: () => socket,
+    //     connectHeaders: {
+    //         // 세션키를 헤더에 추가합니다.
+    //         sessionKey: 'your-session-key'
+    //     },
+    //     onConnect: () => {
+    //         // 채팅방 토픽을 구독합니다.
+    //         client.subscribe('/subscribe', message => {
+    //             // 메시지를 받으면 화면에 표시합니다.
+    //             console.log(message.body);
+    //         });
+    //     }
+    // });
+    //
+    // client.activate();
+    //
+    // // 메시지를 보내는 함수입니다.
+    // function sendMessage(message) {
+    //     // 메시지 객체를 생성합니다.
+    //     const chatMessage = {
+    //         content: message,
+    //         sender: 'your-name',
+    //         timestamp: new Date()
+    //     };
+    //
+    //     // 메시지 객체를 JSON 형식으로 변환합니다.
+    //     const chatMessageJson = JSON.stringify(chatMessage);
+    //
+    //     // 채팅방 토픽으로 메시지를 발행합니다.
+    //     client.publish({ destination: '/chat/simpleTopic', body: chatMessageJson });
+    // }
+
+    function sendMessageWrap(){
+        const chatText = $("#chat-text").val();
+        client.send('/chat/simpleTopic', {}, chatText);
+    }
+
+
+</script>
+
+
+</body>
+</html>

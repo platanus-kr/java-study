@@ -1,4 +1,4 @@
-package com.example.wsreactive02;
+package com.example.wsreactive02.echo;
 
 import org.springframework.web.reactive.socket.WebSocketHandler;
 import org.springframework.web.reactive.socket.WebSocketMessage;
@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
 
 @Slf4j
-public class CustomWebSocketHandler implements WebSocketHandler {
+public class EchoWebSocketHandler implements WebSocketHandler {
 	@Override
 	public Mono<Void> handle(WebSocketSession session) {
 		return session // WebSocketSession

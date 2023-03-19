@@ -6,7 +6,10 @@ import reactor.core.scheduler.Schedulers;
 import java.util.List;
 
 public class FlatMap01 {
+
     // http://javatechnicalwealth.com/blog/reactive-flatmap
+
+
     // .map()       Sync
     // .flatMap()   Async
     // BlockHound - blocking 코드 찾기
@@ -18,9 +21,12 @@ public class FlatMap01 {
 
     public static void main(String[] args) {
         FlatMap01 o = new FlatMap01();
-//        o.flatMap01();
-//        o.flatMap02();
-//        o.flatMap03();
+        o.flatMap01();
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-");
+        o.flatMap02();
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-");
+        o.flatMap03();
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-");
         o.flatMap04();
     }
 

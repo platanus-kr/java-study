@@ -4,6 +4,8 @@ import reactor.core.publisher.Mono;
 
 public class MonoComponent {
 
+    // https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/Mono
+
     // 항목을 방출하지 않고 완료되는 Mono를 만듭니다.
     Mono<Object> empty = Mono.empty();
 

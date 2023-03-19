@@ -10,6 +10,8 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class ReactorTest {
 
+    // https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/StepVerifier
+
     @Test
     void test(){
         Flux<String> flux = Flux.just("foo", "bar");

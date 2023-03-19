@@ -5,6 +5,9 @@ import reactor.core.publisher.Flux;
 import java.time.Duration;
 
 public class Merge01 {
+
+    // https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/Merge
+
     public static void main(String[] args) {
         Flux<String> flux1 = Flux.interval(Duration.ofMillis(1000)).take(5).map(v -> v.toString());
         Flux<String> flux2 = Flux.just("A","B","C","D","E");

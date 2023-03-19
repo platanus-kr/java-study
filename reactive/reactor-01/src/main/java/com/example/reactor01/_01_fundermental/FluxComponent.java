@@ -6,6 +6,9 @@ import java.time.Duration;
 import java.util.Arrays;
 
 public class FluxComponent {
+
+    // https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/Flux
+
     public static void main(String[] args) {
         Flux<Object> empty1 = Flux.empty();
 

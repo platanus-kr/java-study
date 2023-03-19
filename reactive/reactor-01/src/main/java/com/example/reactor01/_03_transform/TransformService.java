@@ -4,6 +4,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public class TransformService {
+    // https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/transform
 
     Mono<User> capitalizeOne(Mono<User> mono) {
         return mono.map(u -> new User(u.getUsername().toUpperCase(),

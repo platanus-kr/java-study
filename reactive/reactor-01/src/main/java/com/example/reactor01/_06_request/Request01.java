@@ -34,6 +34,8 @@ public class Request01 {
                 .subscribe(); // 데몬 스레드에서 도는것이 찍힌다.
 
         Thread.sleep(1000);
+    
+        
     }
 
     // 21:35

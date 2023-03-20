@@ -9,6 +9,9 @@ import java.util.List;
 
 public class Request01 {
 
+//    ReactiveRepository<RequestUser> repository = new ReactiveUserRepository();
+
+
     // https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/Request
 
     /**
@@ -34,12 +37,28 @@ public class Request01 {
                 .subscribe(); // 데몬 스레드에서 도는것이 찍힌다.
 
         Thread.sleep(1000);
-    
-        
+
+
+        Request01 o = new Request01();
+
+
+//        Flux<User> fluxWithLog() {}
+        o.findAll().log();
+
+        //Flux<User> fluxWithDoOnPrintln() {}
+        o.findAll().log()
+                .doOnSubscribe(v -> System.out.println("Starring:"))
+                .doOnNext(p -> System.out.println(p.getFirstname() + p.getLastname()))
+                .doOnComplete(() -> System.out.println("The end!"));
+
+        // 나머지 StepVerifier 테스트는 RequestTest 테스트코드에 있음.
     }
 
     // 21:35
 
+    private Flux<RequestUser> findAll() {
+        return null;
+    }
 
 
 

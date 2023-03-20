@@ -8,7 +8,7 @@ import java.time.Duration;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class ReactorTest {
+public class StepVerifierTest {
 
     // https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/StepVerifier
 

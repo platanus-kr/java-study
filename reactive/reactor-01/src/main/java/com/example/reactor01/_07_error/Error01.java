@@ -5,6 +5,9 @@ import reactor.core.Exceptions;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * https://www.codingame.com/playgrounds/929/reactive-programming-with-reactor-3/Error
+ */
 public class Error01 {
 //========================================================================================
 	

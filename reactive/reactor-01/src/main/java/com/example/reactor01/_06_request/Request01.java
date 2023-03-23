@@ -20,6 +20,8 @@ public class Request01 {
      *
      * request()는 backpressure 와 매우 밀접하다.
      * subscription backpressure 조절
+     *
+     * subscribe 구현은 테스트 코드에 있음.
      */
 
     public static void main(String[] args) throws InterruptedException {

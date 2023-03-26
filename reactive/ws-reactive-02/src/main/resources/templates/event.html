@@ -66,25 +66,28 @@
     socket.onopen = function(event) {
         // 연결이 열리면 실행되는 코드
         console.log('WebSocket 연결이 열렸습니다.');
-        socket.send('/topic/events');
+        let message = {
+            command: "subscribe",
+            identifier: "{\"channel\":\"eventTopic\"}"
+        }
+        socket.send(JSON.stringify(message));
     };
 
-    socket.onmessage = function(event) {
-        // 메시지가 도착하면 실행되는 코드
-        console.log('서버로부터 받은 메시지:', event.data);
-    };
+    socket.addEventListener('message', function (event) {
+        console.log('Message from server: ', event.data);
+        $('.chat-line').append('<p>' + event.data + '</p>');
+    });
 
 
 
     function sendMessageWrap(){
         const chatText = $("#chat-text").val();
-        socket.send(chatText);
-        // if (client && client.connected) {
-        //     const chatText = $("#chat-text").val();
-        //     client.send('/topic/events', {}, chatText);
-        // } else {
-        //     console.log('WebSocket connection is not established yet.');
-        // }
+        let message = {
+            command: "message",
+            identifier: "{\"channel\":\"eventTopic\"}",
+            data: JSON.stringify({"message": chatText})
+        }
+        socket.send(JSON.stringify(message));
     }
 
     // STOMP 클라이언트를 생성하고 연결합니다.

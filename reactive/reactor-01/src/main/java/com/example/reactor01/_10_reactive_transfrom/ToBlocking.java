@@ -1,8 +1,30 @@
-package com.example.reactor01._03_transform;
+package com.example.reactor01._10_reactive_transfrom;
 
-public class User {
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
-    // https://www.codingame.com/playgrounds/929/reactive-programming-with-reactor-3/transform
+/**
+ * https://www.codingame.com/playgrounds/929/reactive-programming-with-reactor-3/ReactiveToBlocking
+ */
+public class ToBlocking {
+
+    //========================================================================================
+
+    // TODO Return the user contained in that Mono
+    User monoToValue(Mono<User> mono) {
+        return mono.block();
+    }
+
+//========================================================================================
+
+    // TODO Return the users contained in that Flux
+    Iterable<User> fluxToValues(Flux<User> flux) {
+        return flux.toIterable();
+    }
+
+}
+
+class User {
 
     public static final User SKYLER = new User("swhite", "Skyler", "White");
     public static final User JESSE = new User("jpinkman", "Jesse", "Pinkman");

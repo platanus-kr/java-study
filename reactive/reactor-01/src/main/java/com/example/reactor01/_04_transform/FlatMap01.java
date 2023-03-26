@@ -1,4 +1,4 @@
-package com.example.reactor01._04_flatmap;
+package com.example.reactor01._04_transform;
 
 import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;

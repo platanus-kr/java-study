@@ -1,4 +1,4 @@
-package com.example.reactor01._01_fundermental;
+package com.example.reactor01._02_fundermental;
 
 import reactor.core.publisher.Flux;
 

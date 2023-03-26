@@ -1,4 +1,4 @@
-package com.example.reactor01._02_stepverifier;
+package com.example.reactor01._03_stepverifier;
 
 public class StepVerifierTest {
     // go to StepVerifierTest

@@ -2,17 +2,15 @@ package com.example.reactor01._06_request;
 
 import reactor.core.publisher.Flux;
 
-import java.time.Duration;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/Request
+ */
 public class Request01 {
 
 //    ReactiveRepository<RequestUser> repository = new ReactiveUserRepository();
-
-
-    // https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/Request
 
     /**
      * Publisher - Subscriber 도식

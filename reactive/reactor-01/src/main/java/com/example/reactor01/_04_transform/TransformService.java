@@ -1,10 +1,13 @@
-package com.example.reactor01._03_transform;
+package com.example.reactor01._04_transform;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/transform
+ */
+
 public class TransformService {
-    // https://tech.io/playgrounds/929/reactive-programming-with-reactor-3/transform
 
     Mono<User> capitalizeOne(Mono<User> mono) {
         return mono.map(u -> new User(u.getUsername().toUpperCase(),

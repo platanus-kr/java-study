@@ -1,7 +1,6 @@
-package com.example.reactor01._08_adapt;
+package com.example.reactor01._09_adapt;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Flow;
 
 import io.reactivex.rxjava3.core.BackpressureStrategy;
 import io.reactivex.rxjava3.core.Flowable;

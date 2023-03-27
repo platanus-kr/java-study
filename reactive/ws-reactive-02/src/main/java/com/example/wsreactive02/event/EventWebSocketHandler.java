@@ -12,17 +12,14 @@ import org.springframework.web.reactive.socket.WebSocketSession;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.io.IOException;
 
 @Slf4j
 @Component
 @RequiredArgsConstructor
 public class EventWebSocketHandler implements WebSocketHandler {
 
-    private final Set<String> eventSubscription;
-
-//    public static Flux<String> eventFlux;
+    private final EventSubscription eventSubscription;
 
     @Override
     public Mono<Void> handle(WebSocketSession session) {
@@ -30,19 +27,17 @@ public class EventWebSocketHandler implements WebSocketHandler {
 
         return session.receive()
                 .map(WebSocketMessage::getPayloadAsText)
-                .flatMap(payload -> {  // JSON 형식으로 메시지를 파싱하여 명령과 식별자를 추출
+                .flatMap(payload -> {
                     try {
-                        // JSON 형식으로 메시지를 파싱하여 명령과 식별자를 추출
                         JSONObject message = new JSONObject(payload);
                         String command = message.getString("command");
                         String identifier = message.getString("identifier");
                         JSONObject identifier1 = new JSONObject(identifier);
-                        String channel =  identifier1.getString("channel");
+                        String channel = identifier1.getString("channel");
 
-                        // 명령이 'subscribe'이면 식별자를 Set에 추가
                         if ("subscribe".equals(command)) {
-                            eventSubscription.add(channel);
-                            log.info(eventSubscription.toString());
+                            eventSubscription.addSubscription(channel);
+                            log.info(eventSubscription.getSubscriptions().toString());
                             return Mono.empty();
                         }
 
@@ -51,19 +46,17 @@ public class EventWebSocketHandler implements WebSocketHandler {
                             JSONObject dataJson = new JSONObject(data);
                             String messageData = dataJson.getString("message");
                             log.info("message: " + messageData);
-                            return Flux.just(messageData);
+                            return Flux.just(messageData)
+                                    .map(payload1 -> session.textMessage(payload1))
+                                    .as(messages -> session.send(Mono.just(messages.blockFirst())));
                         }
                     } catch (JSONException e) {
                         log.error("Error parsing WebSocket message", e);
                     }
                     return Mono.error(new IllegalArgumentException("Invalid WebSocket message"));
                 })
-//                .thenMany(eventFlux)
-//                .map(evt -> "Event: " + evt)
-                .filter(evt -> eventSubscription.stream().anyMatch(evt::contains))
-                .map(session::textMessage)
-                .as(session::send)
-                .then();
+                .then()
+                ;
     }
 
 }

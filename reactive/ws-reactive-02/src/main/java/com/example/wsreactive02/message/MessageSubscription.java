@@ -1,13 +1,12 @@
-package com.example.wsreactive02.event;
+package com.example.wsreactive02.message;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Repository
-public class EventSubscription {
+public class MessageSubscription {
 
     private Set<String> subscriptions = new HashSet<>();
 

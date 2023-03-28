@@ -2,7 +2,7 @@ package com.example.wsreactive02.config;
 
 
 import com.example.wsreactive02.echo.EchoWebSocketHandler;
-import com.example.wsreactive02.event.EventWebSocketHandler;
+import com.example.wsreactive02.message.EventWebSocketHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,7 +28,7 @@ public class CustomWebSocketConfig {
         SimpleUrlHandlerMapping mapping = new SimpleUrlHandlerMapping();
         mapping.setUrlMap(
                 Map.of("/ws/echo", new EchoWebSocketHandler(),
-                        "/events/**", eventWebSocketHandler));
+                        "/message/**", eventWebSocketHandler));
         mapping.setOrder(10);
 //        mapping.setCorsConfigurations(corsConfigurationMap);
         return mapping;

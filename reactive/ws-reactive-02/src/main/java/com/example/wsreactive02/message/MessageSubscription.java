@@ -18,44 +18,37 @@ import java.util.concurrent.CopyOnWriteArraySet;
 public class MessageSubscription {
 
     private final Map<String, Set<WebSocketSession>> subscriptions = new ConcurrentHashMap<>();
-//    private final Map<String, FluxSink<String>> sinks = new ConcurrentHashMap<>();
     private final Map<String, FluxSink<WebSocketMessage>> sinks = new ConcurrentHashMap<>();
 
 
-    public void addSubscription(String identifier, String clientId, WebSocketSession session) {
-        String uniqueKey = identifier + "-" + clientId;
+    public void addSubscription(String identifier, String nickname, WebSocketSession session) {
+        String uniqueKey = identifier + "-" + session.getId();
         subscriptions.computeIfAbsent(identifier, key -> new CopyOnWriteArraySet<>()).add(session);
-//        log.info(subscriptions.get(uniqueKey).toString());
         Flux<WebSocketMessage> flux = Flux.create(sink -> sinks.put(uniqueKey, sink));
-//        Flux<String> flux = Flux.create(sink -> sinks.put(uniqueKey, sink));
         session.send(flux).subscribe();
-//        session.send(flux.map(session::textMessage)).subscribe();
-        broadcastMessageToSubscribers(identifier, clientId, "subscribe success");
+        broadcastMessageToSubscribers(identifier, nickname, "subscribe success");
     }
 
-    public void broadcastMessageToSubscribers(String identifier, String clientId, String message) {
-        String uniqueKey = identifier + "-" + clientId;
-        FluxSink<WebSocketMessage> sink = sinks.get(uniqueKey);
-        if (sink != null) {
-            getSubscriptions(identifier).forEach(session -> {
-                if (session.isOpen()) {
+    public void broadcastMessageToSubscribers(String identifier, String nickname, String message) {
+        getSubscriptions(identifier).forEach(session -> {
+            if (session.isOpen()) {
+                String currentClientId = session.getId();
+                String uniqueKey = identifier + "-" + currentClientId;
+                FluxSink<WebSocketMessage> sink = sinks.get(uniqueKey);
+                if (sink != null) {
                     sink.next(session.textMessage(message));
-                } else {
-                    removeSubscription(uniqueKey, session);
                 }
-            });
-        }
-//        getSubscriptions(uniqueKey).forEach(session -> {
-//            if (session.isOpen()) {
-//                FluxSink<String> sink = sinks.get(uniqueKey);
-//                if (sink != null) {
-//                    sink.next(message);
-//                }
-//            } else {
-//                removeSubscription(identifier + "-" + clientId, session);
-//            }
-//        });
+            } else {
+                removeSubscription(identifier, session);
+            }
+        });
     }
+
+
+    public Set<WebSocketSession> getSubscriptions(String identifier) {
+        return subscriptions.getOrDefault(identifier, Collections.emptySet());
+    }
+
 
     public void removeSubscription(String identifier, WebSocketSession session) {
         if (subscriptions.containsKey(identifier)) {
@@ -66,31 +59,5 @@ public class MessageSubscription {
             }
         }
     }
-
-    public Set<WebSocketSession> getSubscriptions(String identifier) {
-        return subscriptions.getOrDefault(identifier, Collections.emptySet());
-    }
-
-//    public void removeSession(WebSocketSession session) {
-//        subscriptions.forEach((identifier, sessions) -> {
-//            sessions.remove(session);
-//            if (sessions.isEmpty()) {
-//                sinks.remove(identifier);
-//            }
-//        });
-//    }
-
-//    public void broadcastMessageToSubscribers(String identifier, String message) {
-//        getSubscriptions(identifier).forEach(session -> {
-//            if (session.isOpen()) {
-//                session.send(Mono.just(session.textMessage(message)).doOnError(e -> {
-//                    log.error("Error sending message to WebSocket session", e);
-//                }).onErrorResume(e -> Mono.empty())).subscribe();
-//            } else {
-//                removeSubscription(identifier, session);
-//            }
-//        });
-//    }
-
 
 }

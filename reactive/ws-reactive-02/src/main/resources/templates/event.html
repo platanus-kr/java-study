@@ -51,7 +51,7 @@
 <script>
 
     let socket = '';
-    const clientId = makeId(5);
+    const nickname = makeId(5);
     $(document).ready(function () {
         socket = new WebSocket('ws://localhost:8081/message');
 
@@ -60,7 +60,7 @@
             console.log('WebSocket 연결이 열렸습니다.');
             let identifier = {
                 channel: "eventTopic",
-                clientId: clientId
+                nickname: nickname
             }
             let message = {
                 command: "subscribe",
@@ -70,7 +70,7 @@
             socket.send(JSON.stringify(message));
         };
 
-        $(".chat-input-id").val(clientId);
+        $(".chat-input-id").val(nickname);
 
         socket.addEventListener('message', function (event) {
             console.log('Message from server: ', event.data);
@@ -95,7 +95,7 @@
         const chatText = $("#chat-text").val();
         let identifier = {
             channel: "eventTopic",
-            clientId: clientId
+            nickname: nickname
         }
         let message = {
             command: "message",

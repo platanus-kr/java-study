@@ -44,12 +44,10 @@ public class MessageWebSocketHandler implements WebSocketHandler {
                         String command = message.getString("command");
                         JSONObject identifier = message.getJSONObject("identifier");
                         String channel = identifier.getString("channel");
-                        String clientId = identifier.getString("clientId");
+                        String nickname = identifier.getString("nickname");
                         channelSub.set(channel);
                         if ("subscribe".equals(command)) {
-                            messageSubscription.addSubscription(channel, clientId, session);
-//                            Mono.just(session).flatMap(s -> s.send(Mono.just(s.textMessage("subscribe success"))));
-//                            messageSubscription.broadcastMessageToSubscribers(channel, "subscribe success");
+                            messageSubscription.addSubscription(channel, nickname, session);
                             return Mono.empty();
                         }
 
@@ -58,7 +56,7 @@ public class MessageWebSocketHandler implements WebSocketHandler {
                             JSONObject dataJson = new JSONObject(data);
                             String messageData = dataJson.getString("message");
                             // 채팅방에 있는 모든 사용자에게 메시지를 전달합니다.
-                            messageSubscription.broadcastMessageToSubscribers(channel, clientId, messageData);
+                            messageSubscription.broadcastMessageToSubscribers(channel, nickname, messageData);
                             return Mono.empty();
                         }
                     } catch (JSONException e) {
@@ -69,7 +67,6 @@ public class MessageWebSocketHandler implements WebSocketHandler {
                 .doFinally(signalType -> {
                     // 연결 종료 시, 구독 취소 처리를 합니다.
                     if (SignalType.ON_COMPLETE.equals(signalType) || SignalType.ON_ERROR.equals(signalType)) {
-//                        messageSubscription.removeSession(session);
                         messageSubscription.removeSubscription(channelSub.get(), session);
                     }
                 })

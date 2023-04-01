@@ -1,10 +1,11 @@
-package com.example.wsreactive02.message;
+package com.example.wsreactive02.message.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
-@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class IdentifierDto {
     private String channel;
     private String nickname;

@@ -72,9 +72,10 @@
 
         $(".chat-input-id").val(nickname);
 
-        socket.addEventListener('message', function (event) {
-            console.log('Message from server: ', event.data);
-            $('.chat-line').append('<p>' + event.data + '</p>');
+        socket.addEventListener('message', function (data) {
+            let response = JSON.parse(data.data);
+            console.log('Message from server: ', response);
+            $('.chat-line').append('<p><b>' + response.identifier.nickname + '</b> : ' + response.message + ' | <span>'+ response.timestamp +'</span></p>');
         });
     })
 
@@ -99,8 +100,8 @@
         }
         let message = {
             command: "message",
-            identifier: identifier,
-            data: JSON.stringify({"message": chatText})
+            message: chatText,
+            identifier: identifier
         }
         socket.send(JSON.stringify(message));
     }

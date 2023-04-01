@@ -1,4 +1,4 @@
-package com.example.securitytest2.config.oauth2;
+package com.example.securitytest2.config.dto;
 
 import com.example.securitytest2.model.Member;
 import lombok.Builder;

@@ -3,6 +3,8 @@ package com.example.securitytest2.controller.rest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.example.securitytest2.controller.dto.MemberJoinRequestDto;
+import com.example.securitytest2.controller.dto.MemberLoginRequestDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -16,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.securitytest2.config.SessionMember;
+import com.example.securitytest2.config.dto.SessionMemberDto;
 import com.example.securitytest2.model.Member;
 import com.example.securitytest2.service.MemberService;
 
@@ -43,12 +45,6 @@ public class MemberLoginRestController {
 		} catch (IllegalArgumentException e) {
 			throw new IllegalArgumentException(e);
 		}
-		//SessionMember sMember = SessionMember.from(joinMember);
-		//HttpSession session = request.getSession(true);
-		//session.setAttribute("member", sMember);
-		//log.debug(mJoin.toString());
-		//log.debug(joinMember.toString());
-		//return session.getId();
 		return ResponseEntity.ok().build();
 	}
 	
@@ -63,7 +59,7 @@ public class MemberLoginRestController {
 	 */
 	@PostMapping("/login")
 	@ResponseBody
-	public SessionMember login(@RequestBody MemberLoginRequestDto requestLoginDto, HttpServletRequest request, HttpSession session) {
+	public SessionMemberDto login(@RequestBody MemberLoginRequestDto requestLoginDto, HttpServletRequest request, HttpSession session) {
 		
 		//log.info(requestLoginDto.toString());
 		Member loginMember;
@@ -79,23 +75,9 @@ public class MemberLoginRestController {
 		session.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY,
 				SecurityContextHolder.getContext()); // 이건 왜 해주는지 한번 찾아보기
 		
-		session.setAttribute("member", new SessionMember(loginMember.getId(), loginMember.getProvider(), loginMember.getUsername(), loginMember.getProfileImage(), loginMember.getHtmlUrl(), loginMember.getName(), loginMember.getEmail(), loginMember.getRole(), request.getSession().getId()));
-		
+		session.setAttribute("member", new SessionMemberDto(loginMember.getId(), loginMember.getProvider(), loginMember.getUsername(), loginMember.getProfileImage(), loginMember.getHtmlUrl(), loginMember.getName(), loginMember.getEmail(), loginMember.getRole(), request.getSession().getId()));
 		// 왜그런지 모르겠는데 빌더패턴으로 할당을 할 수 없네?
-		//session.setAttribute(
-		//		"member",
-		//		SessionMember.builder()
-		//				.id(loginMember.getId())
-		//				.provider(loginMember.getProvider())
-		//				.username(loginMember.getUsername())
-		//				.profileImage(loginMember.getProfileImage())
-		//				.htmlUrl(loginMember.getHtmlUrl())
-		//				.name(loginMember.getName())
-		//				.email(loginMember.getEmail())
-		//				.role(loginMember.getRole())
-		//				.token(request.getSession().getId())
-		//);
-		return new SessionMember(loginMember, session.getId());
+		return new SessionMemberDto(loginMember, session.getId());
 	}
 	
 	@GetMapping("/logout")

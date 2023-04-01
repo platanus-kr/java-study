@@ -4,7 +4,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.securitytest2.model.Member;
-import com.example.securitytest2.controller.rest.MemberJoinRequestDto;
+import com.example.securitytest2.controller.dto.MemberJoinRequestDto;
 import com.example.securitytest2.model.MemberRepository;
 
 import lombok.RequiredArgsConstructor;

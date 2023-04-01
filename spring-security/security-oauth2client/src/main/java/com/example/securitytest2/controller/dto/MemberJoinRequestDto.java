@@ -1,4 +1,4 @@
-package com.example.securitytest2.controller.rest;
+package com.example.securitytest2.controller.dto;
 
 
 import com.example.securitytest2.model.Member;

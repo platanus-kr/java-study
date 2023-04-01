@@ -1,5 +1,6 @@
-package com.example.securitytest2.config;
+package com.example.securitytest2.argumentresolver;
 
+import com.example.securitytest2.config.dto.SessionMemberDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
@@ -18,7 +19,7 @@ public class LoginMemberArgumentResolver implements HandlerMethodArgumentResolve
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
         boolean isLoginMemberAnnotation = parameter.getParameterAnnotation(HasMember.class) != null;
-        boolean isMemberClass = SessionMember.class.equals(parameter.getParameterType());
+        boolean isMemberClass = SessionMemberDto.class.equals(parameter.getParameterType());
         return isLoginMemberAnnotation && isMemberClass;
     }
     

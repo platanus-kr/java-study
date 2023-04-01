@@ -8,8 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.securitytest2.config.HasMember;
-import com.example.securitytest2.config.SessionMember;
+import com.example.securitytest2.argumentresolver.HasMember;
+import com.example.securitytest2.config.dto.SessionMemberDto;
 
 @Controller
 @RequestMapping("/nice")
@@ -30,7 +30,7 @@ public class NiceController {
 	 * @return
 	 */
 	@GetMapping("/auth")
-	public String requiredAuth(Model model, @HasMember SessionMember member, HttpServletRequest request) {
+	public String requiredAuth(Model model, @HasMember SessionMemberDto member, HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		model.addAttribute("member", member);
 		return "required_auth";

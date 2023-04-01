@@ -1,4 +1,4 @@
-package com.example.securitytest2.config.session;
+package com.example.securitytest2.config.app;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

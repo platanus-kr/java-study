@@ -1,4 +1,4 @@
-package com.example.securitytest2.config;
+package com.example.securitytest2.config.dto;
 
 import java.io.Serializable;
 
@@ -19,7 +19,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class SessionMember implements Serializable {
+public class SessionMemberDto implements Serializable {
 	private Long id;
 	private String provider;
 	private String username;
@@ -30,7 +30,7 @@ public class SessionMember implements Serializable {
 	private MemberRole role;
 	private String token;
 	
-	public SessionMember(Member m, String token) {
+	public SessionMemberDto(Member m, String token) {
 		this.id = m.getId();
 		this.provider = m.getProvider();
 		this.username = m.getUsername();

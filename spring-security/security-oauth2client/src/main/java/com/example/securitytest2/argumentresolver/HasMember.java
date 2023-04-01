@@ -1,4 +1,4 @@
-package com.example.securitytest2.config;
+package com.example.securitytest2.argumentresolver;
 
 import java.lang.annotation.*;
 

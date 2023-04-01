@@ -1,6 +1,7 @@
 package com.example.securitytest2.config.oauth2;
 
-import com.example.securitytest2.config.SessionMember;
+import com.example.securitytest2.config.dto.CustomOAuth2MemberDto;
+import com.example.securitytest2.config.dto.SessionMemberDto;
 import com.example.securitytest2.model.Member;
 import com.example.securitytest2.model.MemberRepository;
 import com.example.securitytest2.model.MemberRole;
@@ -41,7 +42,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         session.setAttribute("oAuthToken", userRequest.getAccessToken().getTokenValue());
         //session.setAttribute("member", SessionMember.builder().username(m.getUsername()).provider(m.getProvider()).profileImage(m.getProfileImage()).role(m.getRole()));
-        session.setAttribute("member", new SessionMember(m.getId(),m.getProvider(),m.getUsername(),m.getProfileImage(),m.getHtmlUrl(),m.getName(),m.getEmail(),m.getRole(),userRequest.getAccessToken().getTokenValue()));
+        session.setAttribute("member", new SessionMemberDto(m.getId(),m.getProvider(),m.getUsername(),m.getProfileImage(),m.getHtmlUrl(),m.getName(),m.getEmail(),m.getRole(),userRequest.getAccessToken().getTokenValue()));
         return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(m.getRole().getKey())), oAuth2User.getAttributes(), attributes.getNameAttributeKey());
     }
 

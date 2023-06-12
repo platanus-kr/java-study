@@ -23,7 +23,7 @@ Content-Type: application/json
 
 ### authorization test
 GET http://localhost:8080/nice/auth
-Cookie: JSESSIONID=1304946D24395313CBA3E46AF1EE99A5;
+Cookie: JSESSIONID=C6F7D276FC21166BDDFB4CAACEBA3517;
 
 
 ### logout test

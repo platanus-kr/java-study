@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Collection">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/concurrent/baeldung/_01_executor/CustomExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/concurrent/baeldung/_01_executor/CustomInvoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/concurrent/baeldung/_02_executorservice/CustomExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/concurrent/baeldung/_02_executorservice/CustomTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/concurrent/countdownlatch/CustomExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/concurrent/countdownlatch/CustomWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../messagebroker/kafka-01/src/main/java/org/kafka01/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../messagebroker/kafka-01/src/main/java/org/kafka01/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../messagebroker/kafka-01/src/main/java/org/kafka01/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../messagebroker/kafka-01/src/main/java/org/kafka01/config/KafkaProducerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-security/security-oauth2client/misc/sessionlogin.http" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/security-oauth2client/misc/sessionlogin.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-security/security-oauth2client/src/main/java/com/example/securitytest2/config/app/CustomOncePerRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/security-oauth2client/src/main/java/com/example/securitytest2/config/app/CustomOncePerRequestFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,20 +103,7 @@
       <recent name="org.codepractice.HttpPost" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CustomExecutor">
-    <configuration name="CompanyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.designpattern.singleton.CompanyTest" />
-      <module name="basic.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.designpattern.singleton.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.org.concurrent.countdownlatch.CustomExecutor">
     <configuration name="CompanyWorkerLaunchTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.designpattern.singleton.CompanyWorkerLaunchTest" />
       <module name="basic.main" />
@@ -176,13 +156,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="org.concurrent.countdownlatch.CustomExecutor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.concurrent.countdownlatch.CustomExecutor" />
+      <module name="basic.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.concurrent.countdownlatch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.org.concurrent.countdownlatch.CustomExecutor" />
         <item itemvalue="Application.CustomExecutor" />
         <item itemvalue="Application.org.concurrent.baeldung._02_executorservice.CustomExecutor" />
         <item itemvalue="Application.CompanyWorkerLaunchThreadTest" />
         <item itemvalue="Application.CompanyWorkerLaunchTest" />
-        <item itemvalue="Application.CompanyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +211,8 @@
       <workItem from="1686201023798" duration="1472000" />
       <workItem from="1686202540880" duration="593000" />
       <workItem from="1686530703667" duration="1696000" />
-      <workItem from="1686532815823" duration="291000" />
+      <workItem from="1686532815823" duration="657000" />
+      <workItem from="1686536931631" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1659780737225</created>

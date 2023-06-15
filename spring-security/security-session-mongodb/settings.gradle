@@ -1,0 +1,4 @@
+rootProject.name = 'security-session-mongodb'
+include 'central'
+include 'app-apple'
+include 'app-banana'

@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  session-test-mongo:
+    image: mongo:6.0
+    ports:
+      - 37017:37017
+    volumes:
+      - ./db/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: localtest
+      MONGO_INITDB_ROOT_PASSWORD: localtest
+
+  session-test-mariadb:
+    image: mariadb:10.11.2
+    ports:
+      - "33306:3306"
+    environment:
+      TZ: Asia/Seoul
+    env_file: ./db/env
+    volumes:
+      - ./db/conf.d:/etc/mysql/conf.d

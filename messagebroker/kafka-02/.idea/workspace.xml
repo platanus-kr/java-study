@@ -5,41 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390c524-ea28-45ac-9796-04b62f20561c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/src/main/java/com/example/both/BothApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/both/src/test/java/com/example/both/BothApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/com/example/consumer/ConsumerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/src/test/java/com/example/consumer/ConsumerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/com/example/producer/ProducerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/test/java/com/example/producer/ProducerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +20,13 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -59,17 +34,19 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2RXWbbsW1ATAhH5o1uRhcU010v5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "temurin-17"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-17&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687396979887</updated>
       <workItem from="1687396982031" duration="272000" />
+      <workItem from="1687402111526" duration="1835000" />
     </task>
     <servers />
   </component>

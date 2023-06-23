@@ -11,6 +11,7 @@
     첨부파일: <a th:if="${item.attachFile}" th:href="|/attach/${item.id}|"
              th:text="${item.getAttachFile().getUploadFileName()}"/><br/>
     <img th:each="imageFile : ${item.imageFiles}" th:src="|/images/${imageFile.getStoreFileName()}|" width="300" height="300"/>
+    <p><img th:src="|/attach/${item.id}|" /></p>
 </div> <!-- /container -->
 </body>
 </html>

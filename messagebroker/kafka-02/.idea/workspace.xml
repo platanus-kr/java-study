@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390c524-ea28-45ac-9796-04b62f20561c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/misc/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../spring-boot/webapp-test3/src/main/resources/templates/item-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../spring-boot/webapp-test3/src/main/resources/templates/item-view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +45,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-17&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "temurin-17",
+    "last_opened_file_path": "/Users/platanus/Development/repo/java-study/messagebroker/kafka-02",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ProducerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.kafkabasics.ProducerDemo" />
+      <module name="kafka-02.kafka-basics.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.kafkabasics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProducerDemo" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,6 +86,7 @@
       <updated>1687396979887</updated>
       <workItem from="1687396982031" duration="272000" />
       <workItem from="1687402111526" duration="1835000" />
+      <workItem from="1687530446708" duration="6676000" />
     </task>
     <servers />
   </component>

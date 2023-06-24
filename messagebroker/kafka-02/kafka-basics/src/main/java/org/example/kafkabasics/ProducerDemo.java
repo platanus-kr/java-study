@@ -21,15 +21,8 @@ public class ProducerDemo {
         Properties properties = new Properties();
 //        properties.setProperty("key", "value");
 
-        /**
-         * 일단 마음에 안들지만 우선.
-         * vi /etc/hosts
-         * 198.19.196.5 kafka1
-         * 198.19.196.2 kafka2
-         * 198.19.196.4 kafka3
-         */
         // 일반연결
-        properties.setProperty("bootstrap.servers", "kafka1:39092,kafka2:39093,kafka3:39094"); // kraft container
+        properties.setProperty("bootstrap.servers", "localhost:39092,localhost:39093,localhost:39094"); // kraft container
 
         // 보안연결
 //        properties.setProperty("bootstrap.servers", "");

@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390c524-ea28-45ac-9796-04b62f20561c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerDemoWithCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/misc/kui/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ConsumerDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ConsumerDemoWithShutdown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerDemoKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/misc/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +58,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -68,8 +71,47 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.ProducerDemoWithCallback">
+    <configuration name="ConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.kafkabasics.ConsumerDemo" />
+      <module name="kafka-02.kafka-basics.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.kafkabasics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerDemoWithShutdown" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.kafkabasics.ConsumerDemoWithShutdown" />
+      <module name="kafka-02.kafka-basics.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.kafkabasics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProducerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.kafkabasics.ProducerDemo" />
+      <module name="kafka-02.kafka-basics.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.kafkabasics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerDemoKeys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.kafkabasics.ProducerDemoKeys" />
       <module name="kafka-02.kafka-basics.main" />
       <extension name="coverage">
         <pattern>
@@ -94,9 +136,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ConsumerDemo" />
+      <item itemvalue="Application.ConsumerDemoWithShutdown" />
+      <item itemvalue="Application.ProducerDemo" />
+      <item itemvalue="Application.ProducerDemoKeys" />
+      <item itemvalue="Application.ProducerDemoWithCallback" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ProducerDemoWithCallback" />
+        <item itemvalue="Application.ConsumerDemoWithShutdown" />
+        <item itemvalue="Application.ConsumerDemo" />
+        <item itemvalue="Application.ProducerDemoKeys" />
         <item itemvalue="Application.ProducerDemo" />
       </list>
     </recent_temporary>
@@ -112,7 +164,7 @@
       <workItem from="1687396982031" duration="272000" />
       <workItem from="1687402111526" duration="1835000" />
       <workItem from="1687530446708" duration="6734000" />
-      <workItem from="1687609350595" duration="3422000" />
+      <workItem from="1687609350595" duration="7877000" />
     </task>
     <task id="LOCAL-00001" summary="messagebroker: producer">
       <created>1687537842587</created>
@@ -121,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687537842587</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="messagebroker: callback producer">
+      <created>1687620281334</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687620281334</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +188,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="messagebroker: producer" />
-    <option name="LAST_COMMIT_MESSAGE" value="messagebroker: producer" />
+    <MESSAGE value="messagebroker: callback producer" />
+    <option name="LAST_COMMIT_MESSAGE" value="messagebroker: callback producer" />
   </component>
 </project>

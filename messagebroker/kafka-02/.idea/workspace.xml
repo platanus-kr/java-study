@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390c524-ea28-45ac-9796-04b62f20561c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ConsumerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ConsumerDemoWithShutdown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerDemoKeys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/org/example/kafkabasics/ProducerDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +53,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   }
@@ -164,7 +160,7 @@
       <workItem from="1687396982031" duration="272000" />
       <workItem from="1687402111526" duration="1835000" />
       <workItem from="1687530446708" duration="6734000" />
-      <workItem from="1687609350595" duration="7877000" />
+      <workItem from="1687609350595" duration="8232000" />
     </task>
     <task id="LOCAL-00001" summary="messagebroker: producer">
       <created>1687537842587</created>
@@ -180,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687620281334</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="messagebroker: consumer">
+      <created>1687627805423</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687627805423</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +192,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="messagebroker: producer" />
     <MESSAGE value="messagebroker: callback producer" />
-    <option name="LAST_COMMIT_MESSAGE" value="messagebroker: callback producer" />
+    <MESSAGE value="messagebroker: consumer" />
+    <option name="LAST_COMMIT_MESSAGE" value="messagebroker: consumer" />
   </component>
 </project>

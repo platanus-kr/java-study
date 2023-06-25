@@ -28,3 +28,4 @@ docker-compose -f docker-compose.yml up -d
 > https://www.conduktor.io/kafka/advanced-kafka-consumer-with-java/
 > https://github.com/provectus/kafka-ui   
 > https://docs.kafka-ui.provectus.io/configuration/quick-start   
+> https://github.com/katyagorshkova/kafka-kraft

@@ -7,27 +7,28 @@
 
 ## Backend
 
-| 분야            | 이름            | 주제                     | 내용                                                                |
-| --------------- | --------------- | ------------------------ | ------------------------------------------------------------------- |
-| Language        | Java            | 프로그래밍 기초          | 자바, OOP, 스레딩, I/O 처리                                         |
-| Framework       | Spring 5        | Spring Framework Core    | AOP, DI, Bean Lifecycle, Interceptor, Validation, Logging, MVC, JSP |
-| Web Application | Spring Boot     | Spring Web MVC           | Web Backend Architecture, Multipart, RestController                 |
-| Web Application | Spring Security | Session, Token, OAuth2   | Payload 커스터마이징, JWT 인증/인가, 세션 인증, OAuth2 인증         |
-| Reactive        | Spring WebFlux  | Reactor, Concurrent      | Spring의 비동기 처리를 위한 netty기반 서블릿                        |
-| Meassge         | WebSocket       | WebSocketHandler         | MVC와 WebFlux에서 WebSocket 연결과 처리                             |
-| Message Broker  | Kafka           | Pub-sub, Messaging Queue | Publisher-Subscriber 패턴, Publishing, Listening                    |
-| Database        | Mapper          | Database Mapper          | Spring Data JDBC, MyBatis, 동적 쿼리                                |
-| Database        | ORM             | JPA                      | Spring Data JPA                                                     |
-| Database        | NoSQL           | Redis                    | k-v 데이터베이스 CRUD, RedisTemplate, Spring Data Redis (Lecttuce)  |
-| Database        | NoSQL           | MongoDB                  | Document 데이터베이스 CRUD, MongoTemplate, Spring Data MongoDB      |
+| 분야            | 이름            | 주제                     | 내용                                                               |
+| --------------- | --------------- | ------------------------ | ------------------------------------------------------------------ |
+| Language        | Java            | Programming              | 자바, OOP, 스레딩, I/O 처리, JVM                                   |
+| Framework       | Spring          | Spring Framework Core    | AOP, DI, Bean Lifecycle, Interceptor, Validation, MVC, JSP         |
+| Web Application | Spring Boot     | Spring Web MVC           | Web Backend Architecture, Multipart, RestController                |
+| Web Application | Spring Security | Session, Token, OAuth2   | Payload 커스터마이징, JWT 인증/인가, 세션 인증, OAuth2 인증        |
+| Reactive        | Spring WebFlux  | Reactor                  | netty기반 비동기 처리 서블릿을 사용하는 Spring                     |
+| Meassge         | WebSocket       | WebSocket                | MVC와 WebFlux에서 WebSocket 연결과 처리                            |
+| Message Broker  | Kafka           | Pub-sub, Messaging Queue | Publisher-Subscriber 패턴, Producer, Comsumer, Topic, Offset, ISP  |
+| Database        | Mapper          | Database Mapper          | Spring Data JDBC, MyBatis, 매퍼를 사용한 동적 쿼리                 |
+| Database        | ORM             | JPA                      | Spring Data JPA, QueryDSL                                          |
+| Database        | NoSQL           | Redis                    | k-v 데이터베이스 CRUD, RedisTemplate, Spring Data Redis (Lecttuce) |
+| Database        | NoSQL           | MongoDB                  | Document 데이터베이스 CRUD, MongoTemplate, Spring Data MongoDB     |
 
 ## Deploy and Infrastructure
 
 | 분야  | 이름           | 주제                | 내용                                |
 | ----- | -------------- | ------------------- | ----------------------------------- |
+| OS    | Linux          | Infrastructure      | RedHat, Rocky, CentOS               |
 | Cloud | Container      | Docker              | Dockerfile, docker-compose          |
+| Cloud | Ochestration   | Kubernetes          |                                     |
 | SCM   | git            | git, GitHub, GitLab | 소프트웨어 형상 관리 및 브랜치 관리 |
-| CI/CD | JUnit          | 테스트 코드         | 테스트 주도 개발                    |
 | CI/CD | GitHub Actions | 어플리케이션 배포   | 어플리케이션 빌드 및 배포 자동화    |
 
 <!--# 웹 개발자가 되기 위한 나의 로드맵

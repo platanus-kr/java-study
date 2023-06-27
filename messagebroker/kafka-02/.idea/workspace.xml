@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0390c524-ea28-45ac-9796-04b62f20561c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../kafka-03/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kafka-03/misc/scripts/create_cluster_id.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kafka-03/misc/scripts/update_run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-03/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-03/.idea/modules/both/kafka-03.both.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-03/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-03/both/src/main/java/com/example/both/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-03/both/src/main/java/com/example/both/MessageRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-03/both/src/main/java/com/example/both/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-03/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-03/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-03/both/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-03/both/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-03/both/src/test/java/com/example/both/MessageRestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-03/both/src/test/java/com/example/both/MessageRestTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../kafka-03/misc/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-03/misc/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +75,7 @@
       <recent name="org.example.kafkabasics" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProducerDemoWithCallback">
+  <component name="RunManager" selected="Application.ConsumerDemoWithShutdown">
     <configuration name="ConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.kafkabasics.ConsumerDemo" />
       <module name="kafka-02.kafka-basics.main" />
@@ -147,8 +150,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProducerDemoWithCallback" />
         <item itemvalue="Application.ConsumerDemoWithShutdown" />
+        <item itemvalue="Application.ProducerDemoWithCallback" />
         <item itemvalue="Application.ConsumerDemo" />
         <item itemvalue="Application.ProducerDemoKeys" />
         <item itemvalue="Application.ProducerDemo" />
@@ -169,6 +172,7 @@
       <workItem from="1687609350595" duration="9323000" />
       <workItem from="1687665220982" duration="598000" />
       <workItem from="1687700821091" duration="270000" />
+      <workItem from="1687860743497" duration="2384000" />
     </task>
     <task id="LOCAL-00001" summary="messagebroker: producer">
       <created>1687537842587</created>

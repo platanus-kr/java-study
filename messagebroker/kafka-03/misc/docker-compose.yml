@@ -5,7 +5,9 @@ services:
     container_name: kafka-ui
     image: provectuslabs/kafka-ui:latest
     ports:
-      - 38080:8080
+      - "38080:8080"
+    networks:
+      - kafka-03-network
     environment:
       DYNAMIC_CONFIG_ENABLED: true
       KAFKA_CLUSTERS_0_NAME: local
@@ -17,6 +19,8 @@ services:
     image: confluentinc/cp-kafka:7.3.3
     hostname: kafka-gen
     container_name: kafka-gen
+    networks:
+      - kafka-03-network
     volumes:
       - ./scripts/create_cluster_id.sh:/tmp/create_cluster_id.sh
       - ./clusterID:/tmp/clusterID
@@ -28,6 +32,8 @@ services:
     container_name: kafka1
     ports:
       - "39092:39092"
+    networks:
+      - kafka-03-network
     environment:
       KAFKA_LISTENERS: BROKER://kafka1:19092,EXTERNAL://kafka1:39092,CONTROLLER://kafka1:9093
       KAFKA_ADVERTISED_LISTENERS: BROKER://kafka1:19092,EXTERNAL://kafka1:39092
@@ -54,6 +60,8 @@ services:
     container_name: kafka2
     ports:
       - "39093:39093"
+    networks:
+      - kafka-03-network
     environment:
       KAFKA_LISTENERS: BROKER://kafka2:19093,EXTERNAL://kafka2:39093,CONTROLLER://kafka2:9093
       KAFKA_ADVERTISED_LISTENERS: BROKER://kafka2:19093,EXTERNAL://kafka2:39093
@@ -80,6 +88,8 @@ services:
     container_name: kafka3
     ports:
       - "39094:39094"
+    networks:
+      - kafka-03-network
     environment:
       KAFKA_LISTENERS: BROKER://kafka3:19094,EXTERNAL://kafka3:39094,CONTROLLER://kafka3:9093
       KAFKA_ADVERTISED_LISTENERS: BROKER://kafka3:19094,EXTERNAL://kafka3:39094
@@ -103,3 +113,6 @@ volumes:
   kafka1-data:
   kafka2-data:
   kafka3-data:
+
+networks:
+  kafka-03-network:

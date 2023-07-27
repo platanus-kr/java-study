@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0390c524-ea28-45ac-9796-04b62f20561c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../kafka-03/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kafka-03/.idea/modules/both/kafka-03.both.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kafka-03/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kafka-03/both/src/main/java/com/example/both/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kafka-03/both/src/main/java/com/example/both/MessageRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kafka-03/both/src/main/java/com/example/both/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-03/both/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-03/both/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-03/both/src/test/java/com/example/both/MessageRestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-03/both/src/test/java/com/example/both/MessageRestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kafka-03/misc/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-03/misc/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="0390c524-ea28-45ac-9796-04b62f20561c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

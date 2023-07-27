@@ -1,4 +1,4 @@
-package com.example.both;
+package com.example.stringkafka;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/message")
+@RequestMapping("/string")
 @RequiredArgsConstructor
-public class MessageRestController {
+public class StringBrokerRestController {
 
-    private final Producer kafkaProducer;
+    private final StringProducer stringProducer;
 
     @GetMapping
     public ResponseEntity<Void> sendMessage(@RequestParam("text") String message) {
         if (message == null || message.length() < 1) {
             return ResponseEntity.badRequest().build();
         }
-        kafkaProducer.sendMessage(message);
+        stringProducer.sendMessage(message);
         return ResponseEntity.ok().build();
     }
 }

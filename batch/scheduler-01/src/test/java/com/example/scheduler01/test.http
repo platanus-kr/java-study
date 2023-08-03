@@ -1,0 +1,11 @@
+###
+POST http://localhost:8080/log
+Content-Type: application/json
+
+{
+  "log": "어쩌구 저쩌구",
+  "created": "2023-01-18T11:22:33"
+}
+
+###
+GET http://localhost:8080/log

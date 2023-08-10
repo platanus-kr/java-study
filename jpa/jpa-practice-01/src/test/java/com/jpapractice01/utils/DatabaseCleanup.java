@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Profile("test")
+//@Profile("test")
 @Service
 public class DatabaseCleanup implements InitializingBean {
     @PersistenceContext

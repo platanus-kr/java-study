@@ -3,7 +3,6 @@ package com.jpapractice01.byreference.order;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.OneToMany;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
@@ -13,7 +12,18 @@ import java.util.List;
 @Embeddable
 @NoArgsConstructor
 public class OrderItems {
-    @OneToMany(mappedBy = "order", cascade = CascadeType.PERSIST, orphanRemoval = true)
+    @OneToMany(mappedBy = "orders", cascade = CascadeType.PERSIST, orphanRemoval = true)
     private final List<Item> items = new ArrayList<>();
+
+    public void add(Item item, Orders orders) {
+        // validate already added item....
+
+        item.setOrders(orders);
+        this.items.add(item);
+    }
+
+    public List<Item> getItems() {
+        return this.items;
+    }
 
 }

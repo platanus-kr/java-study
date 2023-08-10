@@ -11,17 +11,17 @@ import lombok.NoArgsConstructor;
 public class ReceiveCustomer {
 
 
-    private String name;
+    private String receiveName;
 
-    private String celPhoneNumber;
+    private String receiveCelPhoneNumber;
 
-    private String telPhoneNumber;
+    private String receiveTelPhoneNumber;
 
-    private String zipCode;
+    private String receiveZipCode;
 
-    private String baseAddress;
+    private String receiveBaseAddress;
 
-    private String additionalAddress;
+    private String receiveAdditionalAddress;
 
-    private String deliveryComment;
+    private String receiveDeliveryComment;
 }

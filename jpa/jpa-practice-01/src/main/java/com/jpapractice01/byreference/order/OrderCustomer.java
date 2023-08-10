@@ -8,11 +8,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderCustomer {
-    private String name;
+    private String orderName;
 
-    private String celPhoneNumber;
+    private String orderCelPhoneNumber;
 
-    private String telPhoneNumber;
-    
-    private String orderCustomer;
+    private String orderTelPhoneNumber;
 }

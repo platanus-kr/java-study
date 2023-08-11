@@ -1,9 +1,9 @@
 package com.jpapractice01.byreference.order;
 
-import com.jpapractice01.byreference.sku.Sku;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -13,23 +13,20 @@ import java.util.List;
 public class OrderService {
     private final OrderRepository orderRepository;
 
-    public void create() {
-        OrderCustomer o = new OrderCustomer();
-        ReceiveCustomer r = new ReceiveCustomer();
+    @Transactional
+    public void save(Orders order) {
+        orderRepository.save(order);
+    }
 
-        Orders newOrder = new Orders(o, r, OrderStatus.PURCHASED);
+    public Orders findById(long id) {
+        return orderRepository.findById(id)
+                .orElseThrow(IllegalArgumentException::new);
+    }
 
-        orderRepository.save(newOrder);
-
-        Sku firstSku = new Sku("SKU_CODE_1", "코카콜라", 700L);
-        Item firstItem = new Item( newOrder, firstSku, 600L, 100L, 3);
-
-        Sku secondSku = new Sku( "SKU_CODE_2", "팹시제로", 500L);
-        Item secondItem = new Item( newOrder, secondSku, 500L, 0, 3);
-
-        newOrder.addItem(firstItem);
-        newOrder.addItem(secondItem);
-
+    @Transactional
+    public void appendItem(long orderId, Item item) {
+         Orders findOrder = orderRepository.findById(orderId).orElseThrow(IllegalArgumentException::new);
+         findOrder.addItem(item);
     }
 
     public void retrieveAll() {

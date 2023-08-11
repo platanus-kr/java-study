@@ -13,7 +13,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 
 @Getter
@@ -33,7 +32,7 @@ public class Item {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn
-    private Sku item;
+    private Sku sku;
 
     private long purchasePrice;
 
@@ -44,9 +43,8 @@ public class Item {
     @Embedded
     private final ItemExports export = new ItemExports();
 
-    public Item(Orders newOrder, Sku sku, long purchasePrice, long discountPrice, int amount) {
-        this.orders = newOrder;
-        this.item = sku;
+    public Item(Sku sku, long purchasePrice, long discountPrice, int amount) {
+        this.sku = sku;
         this.amount= amount;
         this.discountPrice = discountPrice;
         this.purchasePrice = purchasePrice;

@@ -7,11 +7,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 
+@Getter
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,7 +23,7 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Embedded
-    private OrderItems items = new OrderItems();
+    private OrderItems orderItems = new OrderItems();
 
     @Embedded
     private OrderCustomer orderCustomer;
@@ -46,14 +48,10 @@ public class Orders {
     }
 
     public List<Item> getItems() {
-        return items.getItems();
-    }
-
-    public OrderStatus getStatus() {
-        return status;
+        return this.orderItems.getItems();
     }
 
     public void addItem(Item item) {
-        this.items.add(item, this);
+        this.orderItems.add(item, this);
     }
 }

@@ -9,7 +9,6 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
 public class Sku {
     @Id
@@ -23,6 +22,13 @@ public class Sku {
     private long price;
 
     public Sku(String code, String name, long price) {
+        this.code = code;
+        this.name = name;
+        this.price= price;
+    }
+
+    public Sku(long id, String code, String name, long price) {
+        this.id = id;
         this.code = code;
         this.name = name;
         this.price= price;

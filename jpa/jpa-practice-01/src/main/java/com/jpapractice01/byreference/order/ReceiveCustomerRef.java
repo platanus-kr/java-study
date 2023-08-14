@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
-public class ReceiveCustomer {
+public class ReceiveCustomerRef {
 
 
     private String receiveName;

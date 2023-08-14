@@ -1,6 +1,5 @@
-package com.jpapractice01.byreference.order;
+package com.jpapractice01.byidentifier.order;
 
-import com.jpapractice01.byreference.sku.Sku;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -8,28 +7,26 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-
+@Table(name = "ITEMIDF")
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Item {
+public class ItemIdf {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // 직접 참조
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
-    private Orders orders;
+    private OrdersIdf ordersIdf;
 
-    // 직접 참조
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn
-    private Sku sku;
+    // 간접 참조
+    private Long skuNo;
 
     private long purchasePrice;
 
@@ -37,8 +34,8 @@ public class Item {
 
     private long amount;
 
-    public Item(Sku sku, long purchasePrice, long discountPrice, int amount) {
-        this.sku = sku;
+    public ItemIdf(Long skuNo, long purchasePrice, long discountPrice, int amount) {
+        this.skuNo = skuNo;
         this.amount = amount;
         this.discountPrice = discountPrice;
         this.purchasePrice = purchasePrice;
@@ -48,16 +45,20 @@ public class Item {
         return id;
     }
 
-    public Orders getOrders() {
-        return orders;
+    public OrdersIdf getOrdersIdf() {
+        return ordersIdf;
     }
 
-    public void setOrders(Orders orders) {
-        this.orders = orders;
+    public void setOrdersIdf(OrdersIdf ordersIdf) {
+        this.ordersIdf = ordersIdf;
     }
 
-    public Sku getSku() {
-        return sku;
+    public Long getSkuNo() {
+        return skuNo;
+    }
+
+    public void setSkuNo(long skuNo) {
+        this.skuNo = skuNo;
     }
 
     public long getPurchasePrice() {

@@ -1,15 +1,17 @@
 package com.jpapractice01.unit.byreference;
 
 
-import com.jpapractice01.byreference.delivery.Delivery;
-import com.jpapractice01.byreference.order.Item;
-import com.jpapractice01.byreference.order.OrderCustomer;
-import com.jpapractice01.byreference.order.OrderService;
-import com.jpapractice01.byreference.order.OrderStatus;
-import com.jpapractice01.byreference.order.Orders;
-import com.jpapractice01.byreference.order.ReceiveCustomer;
-import com.jpapractice01.byreference.sku.Sku;
-import com.jpapractice01.byreference.sku.SkuRepository;
+import com.jpapractice01.byreference.delivery.DeliveryRef;
+import com.jpapractice01.byreference.delivery.DeliveryServiceRef;
+import com.jpapractice01.byreference.order.ItemRef;
+import com.jpapractice01.byreference.order.ItemServiceRef;
+import com.jpapractice01.byreference.order.OrderCustomerRef;
+import com.jpapractice01.byreference.order.OrderServiceRef;
+import com.jpapractice01.byreference.order.OrderStatusRef;
+import com.jpapractice01.byreference.order.OrdersRef;
+import com.jpapractice01.byreference.order.ReceiveCustomerRef;
+import com.jpapractice01.byreference.sku.SkuRef;
+import com.jpapractice01.byreference.sku.SkuRepositoryRef;
 import com.jpapractice01.utils.JpaTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,46 +26,52 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ByReferenceTest extends JpaTest {
 
     @Autowired
-    private OrderService orderService;
+    private OrderServiceRef orderServiceRef;
 
     @Autowired
-    private SkuRepository skuRepository;
+    private ItemServiceRef itemServiceRef;
+
+    @Autowired
+    private DeliveryServiceRef deliveryServiceRef;
+
+    @Autowired
+    private SkuRepositoryRef skuRepositoryRef;
 
     @BeforeEach
     @Transactional
     void beforeEach() {
-        Sku 첫번째_상품 = new Sku("SKU_CODE_1", "코카콜라", 700L);
-        Sku 두번째_상품 = new Sku("SKU_CODE_2", "팹시제로", 500L);
+        SkuRef 첫번째_상품 = new SkuRef("SKU_CODE_1", "코카콜라", 700L);
+        SkuRef 두번째_상품 = new SkuRef("SKU_CODE_2", "팹시제로", 500L);
 
-        skuRepository.save(첫번째_상품);
-        skuRepository.save(두번째_상품);
+        skuRepositoryRef.save(첫번째_상품);
+        skuRepositoryRef.save(두번째_상품);
     }
 
     @Test
     void createOrderAndRetrieveByItem() {
 
         // given
-        OrderCustomer 주문자_정보 = new OrderCustomer();
-        ReceiveCustomer 수령자_정보 = new ReceiveCustomer();
+        OrderCustomerRef 주문자_정보 = new OrderCustomerRef();
+        ReceiveCustomerRef 수령자_정보 = new ReceiveCustomerRef();
 
-        Orders 새_주문 = new Orders(주문자_정보, 수령자_정보, OrderStatus.PURCHASED);
-        orderService.save(새_주문);
-
-        // when -> orderItems
-        Sku 첫번째_상품 = skuRepository.findById(1L).orElseThrow();
-        Sku 두번째_상품 = skuRepository.findById(2L).orElseThrow();
-
-        Item 첫번째_주문_상품 = new Item(첫번째_상품, 600L, 100L, 3);
-        Item 두번째_주문_상품 = new Item(두번째_상품, 500L, 0, 3);
+        OrdersRef 새_주문 = new OrdersRef(주문자_정보, 수령자_정보, OrderStatusRef.PURCHASED);
+        orderServiceRef.save(새_주문);
 
         final long 새_주문번호 = 새_주문.getId();
 
-        orderService.appendItem(새_주문번호, 첫번째_주문_상품);
-        orderService.appendItem(새_주문번호, 두번째_주문_상품);
+        // when -> orderItems
+        SkuRef 첫번째_상품 = skuRepositoryRef.findById(1L).orElseThrow();
+        SkuRef 두번째_상품 = skuRepositoryRef.findById(2L).orElseThrow();
+
+        ItemRef 첫번째_주문_상품 = new ItemRef(첫번째_상품, 600L, 100L, 3);
+        ItemRef 두번째_주문_상품 = new ItemRef(두번째_상품, 500L, 0, 3);
+
+        itemServiceRef.appendItem(새_주문번호, 첫번째_주문_상품);
+        itemServiceRef.appendItem(새_주문번호, 두번째_주문_상품);
 
         // then
-        List<Item> items = orderService.retrieveOrderItems(새_주문번호);
-        List<Long> collect = items.stream().map(Item::getId).toList();
+        List<ItemRef> itemRefs = itemServiceRef.retrieveOrderItems(새_주문번호);
+        List<Long> collect = itemRefs.stream().map(ItemRef::getId).toList();
 
         assertThat(collect.size()).isEqualTo(2);
     }
@@ -71,26 +79,23 @@ public class ByReferenceTest extends JpaTest {
     @Test
     void createOrderAndRetrieveByDelivery() {
         // given
-        OrderCustomer 주문자_정보 = new OrderCustomer();
-        ReceiveCustomer 수령자_정보 = new ReceiveCustomer();
+        OrderCustomerRef 주문자_정보 = new OrderCustomerRef();
+        ReceiveCustomerRef 수령자_정보 = new ReceiveCustomerRef();
 
-        Orders 새_주문 = new Orders(주문자_정보, 수령자_정보, OrderStatus.PURCHASED);
-        orderService.save(새_주문);
-
-        // when -> orderDeliveries
-
-        Delivery 배송_정보 = new Delivery("1234567", 10L);
+        OrdersRef 새_주문 = new OrdersRef(주문자_정보, 수령자_정보, OrderStatusRef.PURCHASED);
+        orderServiceRef.save(새_주문);
 
         final long 새_주문번호 = 새_주문.getId();
 
-        orderService.appendDelivery(새_주문번호, 배송_정보);
+        // when -> orderDeliveries
+        DeliveryRef 배송_정보 = new DeliveryRef("1234567", 10L);
+
+        deliveryServiceRef.appendDelivery(새_주문번호, 배송_정보);
 
         // then
-        List<Delivery> deliveries = orderService.retrieveOrderDeliveries(새_주문번호);
-        List<Long> collect = deliveries.stream().map(Delivery::getId).toList();
+        List<DeliveryRef> deliveries = deliveryServiceRef.retrieveOrderDeliveries(새_주문번호); // << 여기가 차이남
+        List<Long> collect = deliveries.stream().map(DeliveryRef::getId).toList();
 
         assertThat(collect.size()).isEqualTo(1);
-
-
     }
 }

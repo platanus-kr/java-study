@@ -1,6 +1,7 @@
 package com.jpapractice01.unit.byreference;
 
 
+import com.jpapractice01.byreference.delivery.Delivery;
 import com.jpapractice01.byreference.order.Item;
 import com.jpapractice01.byreference.order.OrderCustomer;
 import com.jpapractice01.byreference.order.OrderService;
@@ -16,12 +17,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SuppressWarnings("NonAsciiCharacters")
-public class OrdersServiceTest extends JpaTest {
+public class ByReferenceTest extends JpaTest {
 
     @Autowired
     private OrderService orderService;
@@ -40,37 +40,57 @@ public class OrdersServiceTest extends JpaTest {
     }
 
     @Test
-    void createOrder() {
+    void createOrderAndRetrieveByItem() {
 
         // given
         OrderCustomer 주문자_정보 = new OrderCustomer();
         ReceiveCustomer 수령자_정보 = new ReceiveCustomer();
 
-        // when
         Orders 새_주문 = new Orders(주문자_정보, 수령자_정보, OrderStatus.PURCHASED);
         orderService.save(새_주문);
 
-        final long 저장된_주문번호 = 새_주문.getId();
+        // when -> orderItems
+        Sku 첫번째_상품 = skuRepository.findById(1L).orElseThrow();
+        Sku 두번째_상품 = skuRepository.findById(2L).orElseThrow();
 
-        Sku findFirst = skuRepository.findById(1L).orElseThrow();
-        Sku findSecond = skuRepository.findById(2L).orElseThrow();
+        Item 첫번째_주문_상품 = new Item(첫번째_상품, 600L, 100L, 3);
+        Item 두번째_주문_상품 = new Item(두번째_상품, 500L, 0, 3);
 
-        Item 첫번째_주문아이템 = new Item(findFirst, 600L, 100L, 3);
-        Item 두번째_주문아이템 = new Item(findSecond, 500L, 0, 3);
-
-        // when
-//        Orders 찾은_주문 = orderService.findById(저장된_주문번호);
         final long 새_주문번호 = 새_주문.getId();
 
-        orderService.appendItem(새_주문번호, 첫번째_주문아이템);
-        orderService.appendItem(새_주문번호, 두번째_주문아이템);
+        orderService.appendItem(새_주문번호, 첫번째_주문_상품);
+        orderService.appendItem(새_주문번호, 두번째_주문_상품);
 
         // then
-//        Orders 검증_주문 = orderService.findById(찾은_주문번호);
-//        List<Item> items = 검증_주문.getItems();
-//        List<Long> retrieveOrderItemNos = items.stream().map(Item::getId).toList();
-//
-//        assertThat(retrieveOrderItemNos.size()).isEqualTo(2L);
-        orderService.retrieveAll();
+        List<Item> items = orderService.retrieveOrderItems(새_주문번호);
+        List<Long> collect = items.stream().map(Item::getId).toList();
+
+        assertThat(collect.size()).isEqualTo(2);
+    }
+
+    @Test
+    void createOrderAndRetrieveByDelivery() {
+        // given
+        OrderCustomer 주문자_정보 = new OrderCustomer();
+        ReceiveCustomer 수령자_정보 = new ReceiveCustomer();
+
+        Orders 새_주문 = new Orders(주문자_정보, 수령자_정보, OrderStatus.PURCHASED);
+        orderService.save(새_주문);
+
+        // when -> orderDeliveries
+
+        Delivery 배송_정보 = new Delivery("1234567", 10L);
+
+        final long 새_주문번호 = 새_주문.getId();
+
+        orderService.appendDelivery(새_주문번호, 배송_정보);
+
+        // then
+        List<Delivery> deliveries = orderService.retrieveOrderDeliveries(새_주문번호);
+        List<Long> collect = deliveries.stream().map(Delivery::getId).toList();
+
+        assertThat(collect.size()).isEqualTo(1);
+
+
     }
 }

@@ -12,6 +12,8 @@ import java.util.List;
 @Embeddable
 @NoArgsConstructor
 public class OrderItems {
+
+    // 여기도 직접참조
     @OneToMany(mappedBy = "orders", cascade = CascadeType.PERSIST, orphanRemoval = true)
     private final List<Item> items = new ArrayList<>();
 

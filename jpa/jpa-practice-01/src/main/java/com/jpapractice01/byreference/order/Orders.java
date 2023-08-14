@@ -1,5 +1,6 @@
 package com.jpapractice01.byreference.order;
 
+import com.jpapractice01.byreference.delivery.Delivery;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
@@ -7,13 +8,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 
-@Getter
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -24,6 +23,9 @@ public class Orders {
     private Long id;
     @Embedded
     private OrderItems orderItems = new OrderItems();
+
+    @Embedded
+    private OrderDeliveries orderDeliveries = new OrderDeliveries();
 
     @Embedded
     private OrderCustomer orderCustomer;
@@ -51,7 +53,39 @@ public class Orders {
         return this.orderItems.getItems();
     }
 
+    public List<Delivery> getDeliveries() {
+        return this.orderDeliveries.getDeliveries();
+    }
+
     public void addItem(Item item) {
         this.orderItems.add(item, this);
+    }
+
+    public void addDelivery(Delivery delivery) {
+        this.orderDeliveries.add(delivery, this);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public OrderItems getOrderItems() {
+        return orderItems;
+    }
+
+    public OrderDeliveries getOrderDeliveries() {
+        return orderDeliveries;
+    }
+
+    public OrderCustomer getOrderCustomer() {
+        return orderCustomer;
+    }
+
+    public ReceiveCustomer getReceiveCustomer() {
+        return receiveCustomer;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
     }
 }

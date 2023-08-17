@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>event test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+
+</head>
+<body>
+
+<div class="wrap">
+    <div class="chat-service">
+        <div class="room-action-menu">
+            <span>작동</span>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-id" class="chat-input-id" value="test"/>
+            <input type="text" id="chat-text" class="chat-input-text"/>
+            <input type="button" class="chat-input-send-button" value="전송" onclick="sendMessageWrap()"/>
+        </div>
+        <div class="stream-box">
+            <div class="inner-box">
+                <div class="chat-line"> <!-- overflow add check! -->
+                    <div class="member-profile">
+                        <div class="member-profile-image">
+
+                        </div>
+                        <div class="member-nickname">
+                            <span>닉네임</span>
+                        </div>
+                    </div>
+                    <div class="member-text">
+                        <span>채팅 내용</span>
+                    </div>
+                    <div class="chat-action-menu">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    let socket = '';
+    const nickname = makeId(5);
+    $(document).ready(function () {
+        socket = new WebSocket('ws://localhost:8081/message');
+
+        socket.onopen = function (event) {
+            // 연결이 열리면 실행되는 코드
+            console.log('WebSocket 연결이 열렸습니다.');
+            let identifier = {
+                channel: "eventTopic",
+                nickname: nickname
+            }
+            let message = {
+                command: "subscribe",
+                identifier: identifier
+            }
+            console.log(message);
+            socket.send(JSON.stringify(message));
+        };
+
+        $(".chat-input-id").val(nickname);
+
+        socket.addEventListener('message', function (data) {
+            let response = JSON.parse(data.data);
+            console.log('Message from server: ', response);
+            $('.chat-line').append('<p><b>' + response.identifier.nickname + '</b> : ' + response.message + ' | <span>'+ response.timestamp +'</span></p>');
+        });
+    })
+
+    function makeId(length) {
+        let result = '';
+        const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        const charactersLength = characters.length;
+        let counter = 0;
+        while (counter < length) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            counter += 1;
+        }
+        return result;
+    }
+
+
+    function sendMessageWrap() {
+        const chatText = $("#chat-text").val();
+        let identifier = {
+            channel: "eventTopic",
+            nickname: nickname
+        }
+        let message = {
+            command: "message",
+            message: chatText,
+            identifier: identifier
+        }
+        socket.send(JSON.stringify(message));
+    }
+
+</script>
+
+
+</body>
+</html>

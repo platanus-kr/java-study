@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>글 쓰기</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+  <h2>게시판 등록</h2>
+  <form id="frm" name="frm" method="post" action="/board/insertBoard.do"
+  enctype="multipart/form-data">
+    <table class="board_detail">
+      <tr>
+        <td>제목</td>
+        <td><input type="text" id="title" name="title"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <textarea id="contents" name="contents"></textarea>
+        </td>
+      </tr>
+    </table>
+    <input type="file" id="files" name="files" multiple="multiple">
+    <input type="submit" id="submit" value="글 저장" class="btn">
+  </form>
+</div>
+</body>
+</html>

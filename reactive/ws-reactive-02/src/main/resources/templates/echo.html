@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>echo test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+
+
+</head>
+<body>
+<div>
+
+  <div class="wrap">
+    <div class="chat-service">
+      <div class="room-action-menu">
+        <span>작동</span>
+      </div>
+      <div class="stream-box">
+        <div class="inner-box">
+          <div class="chat-line"> <!-- overflow add check! -->
+
+          </div>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="echo-text" class="echo-input-text"/>
+        <input type="button" class="echo-input-send-text" value="전송" onclick="sendMessageWrap()"/>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const socket = new WebSocket('ws://localhost:8081/ws/echo');
+
+  socket.addEventListener('open', function (event) {
+    socket.send('Hello Server!');
+  });
+
+  socket.addEventListener('message', function (event) {
+    console.log('Message from server: ', event.data);
+    $('.chat-line').append('<p>' + event.data + '</p>');
+  });
+
+  function sendMessageWrap() {
+    const echoText = $("#echo-text").val();
+    socket.send(echoText);
+  }
+</script>
+</body>
+</html>

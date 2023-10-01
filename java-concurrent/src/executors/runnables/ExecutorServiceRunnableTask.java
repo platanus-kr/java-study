@@ -1,6 +1,6 @@
-package executors;
+package executors.runnables;
 
-public class ExecutorServiceRunnableTaskExample implements Runnable {
+public class ExecutorServiceRunnableTask implements Runnable {
     @Override
     public void run() {
         Thread thread = Thread.currentThread();

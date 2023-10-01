@@ -1,16 +1,17 @@
-package executors;
+package executors.callables;
 
 import java.util.Random;
 import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
 
-public class ExecutorServiceCallableTaskExample implements Callable<Integer> {
+public class CallableTask implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         Thread thread = Thread.currentThread();
         int result = getRandomInt();
         System.out.println("[" + thread.getName() + "] " + result + " RUNNING...");
         try {
-            Thread.sleep(15);
+            TimeUnit.MILLISECONDS.sleep(100);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

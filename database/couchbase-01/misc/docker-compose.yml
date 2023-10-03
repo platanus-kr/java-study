@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  couchbase:
+    image: couchbase:latest
+    ports:
+      - "8091-8094:8091-8094"
+      - "11210:11210"
+    environment:
+      COUCHBASE_SERVER_MEMORY_QUOTA: "300"
+      COUCHBASE_CLUSTER_RAMSIZE: "300"
+      COUCHBASE_CLUSTER_NAME: "couchbase-cluster"
+      COUCHBASE_CLUSTER_USERNAME: "admin"
+      COUCHBASE_CLUSTER_PASSWORD: "password"
+      COUCHBASE_BUCKET: "sample"
+      COUCHBASE_BUCKET_TYPE: "couchbase"
+      COUCHBASE_BUCKET_RAMSIZE: "100"
+      COUCHBASE_RBAC_USERNAME: "springboot"
+      COUCHBASE_RBAC_PASSWORD: "springbootpass"
+      COUCHBASE_RBAC_ROLE: "admin"
+    volumes:
+      - couchbase-data:/opt/couchbase/var
+
+volumes:
+  couchbase-data:

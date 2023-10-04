@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Collection">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/exception/UncheckedExceptionPractice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fundamental/exception/UncheckedExceptionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/exception/UncheckedExceptionExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,13 +102,13 @@
       <recent name="org.codepractice.HttpPost" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.org.concurrent.semaphore.CustomExecutor">
-    <configuration name="CompanyWorkerLaunchThreadTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.designpattern.singleton.CompanyWorkerLaunchThreadTest" />
+  <component name="RunManager" selected="Application.UncheckedExceptionExample">
+    <configuration name="CustomExecutor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.concurrent.baeldung._01_executor.CustomExecutor" />
       <module name="basic.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.designpattern.singleton.*" />
+          <option name="PATTERN" value="org.concurrent.baeldung._01_executor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +116,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomExecutor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.concurrent.baeldung._01_executor.CustomExecutor" />
+    <configuration name="UncheckedExceptionExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fundamental.exception.UncheckedExceptionExample" />
       <module name="basic.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.concurrent.baeldung._01_executor.*" />
+          <option name="PATTERN" value="org.fundamental.exception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -171,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UncheckedExceptionExample" />
         <item itemvalue="Application.org.concurrent.semaphore.CustomExecutor" />
         <item itemvalue="Application.org.concurrent.countdownlatch.CustomExecutor" />
         <item itemvalue="Application.CustomExecutor" />
         <item itemvalue="Application.org.concurrent.baeldung._02_executorservice.CustomExecutor" />
-        <item itemvalue="Application.CompanyWorkerLaunchThreadTest" />
       </list>
     </recent_temporary>
   </component>
@@ -217,6 +216,7 @@
       <workItem from="1686620242868" duration="316000" />
       <workItem from="1695264418635" duration="707000" />
       <workItem from="1695339339272" duration="592000" />
+      <workItem from="1696382320863" duration="448000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1659780737225</created>

@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Collection">
-      <change afterPath="$PROJECT_DIR$/.idea/java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/classes/inheritances/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/classes/inheritances/MP3Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/classes/inheritances/MusicPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/classes/inheritances/WinAmp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fundamental/classes/inheritances/MP3Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/classes/inheritances/MP3Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fundamental/classes/inheritances/WinAmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fundamental/classes/inheritances/WinAmp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +220,7 @@
       <workItem from="1695264418635" duration="707000" />
       <workItem from="1695339339272" duration="592000" />
       <workItem from="1696382320863" duration="448000" />
-      <workItem from="1698113143866" duration="3570000" />
+      <workItem from="1698113143866" duration="4027000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1659780737225</created>

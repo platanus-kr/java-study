@@ -18,4 +18,6 @@ public abstract class MP3Player implements MusicPlayer {
 	public void doReadLyrics() {
 		System.out.println("abstract public: doReadLyrics()");
 	}
+	
+	public abstract void doConnectSession();
 }

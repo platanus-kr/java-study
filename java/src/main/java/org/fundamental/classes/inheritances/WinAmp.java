@@ -5,6 +5,7 @@ public class WinAmp extends MP3Player implements MusicPlayer {
 	public void doReadLyrics() { // 필수는 아님
 		super.doReadLyrics();
 	}
+
 	
 	@Override
 	protected void doPreloadByNextFile() { // 필수는 아님
@@ -12,12 +13,18 @@ public class WinAmp extends MP3Player implements MusicPlayer {
 	}
 	
 	@Override
-	public void doStop() { // 필수임
+	public void doStop() { // from interface.. 필수임
 	
 	}
 	
 	@Override
-	public void doRewind() { // 필수임
+	public void doRewind() { // from interface.. 필수임
+	
+	}
+	
+	
+	@Override
+	public void doConnectSession() { // from abstract.. 필수임
 	
 	}
 	

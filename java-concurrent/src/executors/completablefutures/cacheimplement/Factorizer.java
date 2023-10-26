@@ -11,5 +11,11 @@ public class Factorizer {
     };
     private final Computable<BigInteger, BigInteger[]> cache = new Memoizer<>(computable);
 
-    //...
+    public void service(BigInteger request) {
+        try {
+            cache.compute(request);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

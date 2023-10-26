@@ -30,6 +30,7 @@ public class Memoizer<A, V> implements Computable<A, V> {
                     futureTask.run();
                 }
             }
+
             try {
                 return future.get();  // 이렇게 하면 바로 결과를 가지고온다.
             } catch (CancellationException e) {

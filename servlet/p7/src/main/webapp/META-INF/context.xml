@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+  <WatchedResource>WEB-INF/web.xml</WatchedResource>
+  <Resource
+    name="jdbc/h2"
+    auth="Container"
+    type="javax.sql.DataSource"
+    driverClassName="org.h2.Driver"
+    url="jdbc:h2:tcp://localhost/~/Development/h2/jsp"
+    username="sa"
+    password=""
+  />
+</Context>

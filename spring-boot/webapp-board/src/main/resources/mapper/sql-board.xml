@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.platanus.webappboard.app.mapper.BoardMapper">
+  <select id="selectBoardList" resultType="org.platanus.webappboard.app.dto.BoardDto">
+  <![CDATA[
+    SELECT board_idx,
+           title,
+           hit_cnt,
+           FORMATDATETIME(created_datetime, 'yyyy-MM-dd HH-mm-ss') AS created_datetime
+    FROM t_board
+    WHERE deleted_yn = 'N'
+    ORDER BY board_idx DESC
+    ]]>
+  </select>
+
+  <select id="selectBoardDetail" parameterType="int"
+    resultType="org.platanus.webappboard.app.dto.BoardDto">
+  <![CDATA[
+    SELECT board_idx,
+           title,
+           contents,
+           hit_cnt,
+           FORMATDATETIME(created_datetime, 'yyyy-MM-dd HH-mm-ss') AS created_datetime,
+           creator_id
+    FROM t_board
+    WHERE board_idx = #{boardIdx}
+      AND deleted_yn = 'N'
+    ]]>
+  </select>
+
+  <select id="selectBoardFileList" parameterType="int"
+    resultType="org.platanus.webappboard.app.dto.BoardFileDto">
+    <![CDATA[
+    SELECT idx,
+           board_idx,
+           original_file_name,
+           ROUND(file_size / 1024) AS file_size
+    FROM t_file
+    WHERE board_idx = #{boardIdx}
+      AND deleted_yn = 'N'
+    ]]>
+	</select>
+
+  <select id="selectBoardFileInformation" parameterType="map"
+    resultType="org.platanus.webappboard.app.dto.BoardFileDto">
+    <![CDATA[
+    SELECT original_file_name,
+           stored_file_path,
+           file_size
+    FROM t_file
+    WHERE idx = #{idx}
+      AND board_idx = #{boardIdx}
+      AND deleted_yn = 'N'
+    ]]>
+	</select>
+
+  <insert id="insertBoard" parameterType="org.platanus.webappboard.app.dto.BoardDto"
+    useGeneratedKeys="true" keyProperty="boardIdx">
+  <![CDATA[
+    INSERT INTO t_board (title,
+                         contents,
+                         created_datetime,
+                         creator_id)
+    VALUES (#{title},
+            #{contents},
+            NOW(),
+            'admin')
+    ]]>
+  </insert>
+
+
+  <insert id="insertBoardFileList" parameterType="org.platanus.webappboard.app.dto.BoardFileDto">
+    <![CDATA[
+    INSERT INTO t_file
+    (
+      board_idx,
+      original_file_name,
+      stored_file_path,
+      file_size,
+      creator_id,
+      created_datetime
+    )
+    VALUES
+    ]]>
+    <foreach collection="list" item="item" separator=",">
+      (
+      #{item.boardIdx},
+      #{item.originalFileName},
+      #{item.storedFilePath},
+      #{item.fileSize},
+      'admin',
+      NOW()
+      )
+    </foreach>
+  </insert>
+
+  <update id="updateHitCount" parameterType="int">
+  <![CDATA[
+    UPDATE
+      t_board
+    SET hit_cnt = hit_cnt + 1
+    WHERE board_idx = #{boardIdx}
+    ]]>
+  </update>
+
+
+  <update id="updateBoard" parameterType="org.platanus.webappboard.app.dto.BoardDto">
+    <![CDATA[
+    UPDATE t_board
+    SET title            = #{title},
+        contents=#{contents},
+        updated_datetime = NOW(),
+        updater_id       = 'admin'
+    WHERE board_idx = #{boardIdx}
+    ]]>
+  </update>
+
+  <update id="deleteBoard" parameterType="int">
+    <![CDATA[
+    UPDATE t_board
+    SET deleted_yn       = 'Y',
+        updated_datetime = NOW(),
+        updater_id       = 'admin'
+    WHERE board_idx = #{board_idx}
+    ]]>
+  </update>
+
+</mapper>
+

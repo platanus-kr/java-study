@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ff5d65b-fe9f-4ef2-a14b-fa75de4e7532" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../servlet/p7/.idea/artifacts/p7_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../servlet/p7/.idea/artifacts/p7_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../servlet/p7/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../servlet/p7/p7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../servlet/p7/p7.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1cfH30c1nPZDSNXt6Bgd2CJcudU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="PointOfSalesSystem.model" />
+      <recent name="PointOfSalesSystem" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="CodePractice" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DataClient">
+    <configuration name="Application (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Chicken.Application" />
+      <module name="basic2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Chicken.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Application" />
+      <module name="basic2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SocketCommunicate.DataClient" />
+      <module name="basic2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SocketCommunicate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CodePractice.JavaClassAndObjectBasic.Example" />
+      <module name="basic2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CodePractice.JavaClassAndObjectBasic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="CodePractice.virtualfunction.TestA" />
+      <module name="basic2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TestA" />
+      <item itemvalue="Application.Example" />
+      <item itemvalue="Application.Application" />
+      <item itemvalue="Application.Application (1)" />
+      <item itemvalue="Application.DataClient" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DataClient" />
+        <item itemvalue="Application.TestA" />
+        <item itemvalue="Application.Application (1)" />
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Example" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ff5d65b-fe9f-4ef2-a14b-fa75de4e7532" name="Default Changelist" comment="" />
+      <created>1590912524535</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590912524535</updated>
+      <workItem from="1590912525856" duration="1116000" />
+      <workItem from="1591015936411" duration="543000" />
+      <workItem from="1591098524647" duration="386000" />
+      <workItem from="1592843858626" duration="1367000" />
+      <workItem from="1592881346821" duration="97000" />
+      <workItem from="1593485239785" duration="146000" />
+      <workItem from="1594296702101" duration="195000" />
+      <workItem from="1594297141416" duration="1155000" />
+      <workItem from="1599572590220" duration="785000" />
+      <workItem from="1599838376655" duration="575000" />
+      <workItem from="1599880165359" duration="635000" />
+      <workItem from="1605882210171" duration="599000" />
+      <workItem from="1606047753501" duration="687000" />
+      <workItem from="1606211926855" duration="1795000" />
+      <workItem from="1606219124530" duration="1246000" />
+      <workItem from="1606261119173" duration="40000" />
+      <workItem from="1606267592778" duration="5024000" />
+      <workItem from="1606298423313" duration="576000" />
+      <workItem from="1606393183206" duration="606000" />
+      <workItem from="1606400975240" duration="640000" />
+      <workItem from="1606441453200" duration="2159000" />
+      <workItem from="1606641867444" duration="598000" />
+      <workItem from="1606701243226" duration="1931000" />
+      <workItem from="1606893652663" duration="511000" />
+      <workItem from="1606894599290" duration="518000" />
+      <workItem from="1606898661806" duration="592000" />
+      <workItem from="1606914470248" duration="2872000" />
+      <workItem from="1606985258117" duration="599000" />
+      <workItem from="1607084446893" duration="34000" />
+      <workItem from="1607084500571" duration="567000" />
+      <workItem from="1607244707264" duration="799000" />
+      <workItem from="1607345468424" duration="609000" />
+      <workItem from="1607494588199" duration="552000" />
+      <workItem from="1607515309987" duration="529000" />
+      <workItem from="1607562189728" duration="601000" />
+      <workItem from="1607584418933" duration="595000" />
+      <workItem from="1607648634174" duration="313000" />
+      <workItem from="1607695240259" duration="505000" />
+      <workItem from="1607754712120" duration="599000" />
+      <workItem from="1607770287071" duration="327000" />
+      <workItem from="1607856030785" duration="163000" />
+      <workItem from="1607861740966" duration="599000" />
+      <workItem from="1607906639760" duration="599000" />
+      <workItem from="1608003120913" duration="598000" />
+      <workItem from="1608043955751" duration="2095000" />
+      <workItem from="1608047339057" duration="2052000" />
+      <workItem from="1608268699839" duration="3766000" />
+      <workItem from="1608285007337" duration="6254000" />
+      <workItem from="1608351731894" duration="599000" />
+      <workItem from="1608395663073" duration="460000" />
+      <workItem from="1608480792937" duration="581000" />
+      <workItem from="1608967661454" duration="572000" />
+      <workItem from="1609676478780" duration="212000" />
+      <workItem from="1609839559882" duration="567000" />
+      <workItem from="1610029198692" duration="598000" />
+      <workItem from="1610722305828" duration="596000" />
+      <workItem from="1610725167237" duration="598000" />
+      <workItem from="1610810647078" duration="1082000" />
+      <workItem from="1610829459646" duration="598000" />
+      <workItem from="1610832238189" duration="114000" />
+      <workItem from="1610832366107" duration="598000" />
+      <workItem from="1610834893986" duration="599000" />
+      <workItem from="1610836015272" duration="304000" />
+      <workItem from="1610836342219" duration="6000" />
+      <workItem from="1610836380940" duration="103000" />
+      <workItem from="1610836513379" duration="475000" />
+      <workItem from="1611230234179" duration="422000" />
+      <workItem from="1611230702090" duration="598000" />
+      <workItem from="1611820416790" duration="504000" />
+      <workItem from="1611990171817" duration="585000" />
+      <workItem from="1615638904961" duration="112000" />
+      <workItem from="1619500320777" duration="2326000" />
+      <workItem from="1619615561392" duration="539000" />
+      <workItem from="1619658067409" duration="23000" />
+      <workItem from="1619661627967" duration="318000" />
+    </task>
+    <task id="LOCAL-00001" summary="20200531">
+      <created>1590930132423</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590930132423</updated>
+    </task>
+    <task id="LOCAL-00002" summary="20200630">
+      <created>1593485322608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593485322609</updated>
+    </task>
+    <task id="LOCAL-00003" summary="20200709">
+      <created>1594299603028</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594299603028</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add finding duplication in array">
+      <created>1606918384048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606918384048</updated>
+    </task>
+    <task id="LOCAL-00005" summary="-">
+      <created>1606918402473</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606918402473</updated>
+    </task>
+    <task id="LOCAL-00006" summary="-">
+      <created>1608044576020</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608044576020</updated>
+    </task>
+    <task id="LOCAL-00007" summary="-">
+      <created>1608282865095</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608282865095</updated>
+    </task>
+    <task id="LOCAL-00008" summary="-">
+      <created>1608286139135</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608286139135</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="20200531" />
+    <MESSAGE value="20200630" />
+    <MESSAGE value="20200709" />
+    <MESSAGE value="Add finding duplication in array" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

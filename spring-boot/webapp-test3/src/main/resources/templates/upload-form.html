@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<!-- Multipart -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div class="container">
+    <div class="py-5 text-center"> <h2>등록 폼</h2>
+    </div>
+    <h4 class="mb-3">입력</h4>
+    <form th:action method="post" enctype="multipart/form-data">
+        <ul>
+            <li>아이템명 <input type="text" name="itemName"></li>
+            <li>가격 <input type="text" name="priceName"></li>
+            <li>레이블명 <input type="text" name="labelName"></li>
+            <li>유통사명 <input type="text" name="distributorName"></li>
+            <li>파일<input type="file" name="file" ></li> </ul>
+        <input type="submit"/>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>

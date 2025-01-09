@@ -1,0 +1,18 @@
+### 사용자 조회
+GET http://localhost:8080/api/users
+
+### 사용자 로그인
+POST http://localhost:8080/api/login?username=pla&password=1234
+Content-Type: application/x-www-form-urlencoded
+
+### 사용자 조회 (잘못된 토큰)
+GET http://localhost:8080/api/users
+Authorization: Bearer asdfasdfasdf
+
+### 사용자 조회 (인가된 토큰)
+GET http://localhost:8080/api/users
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwbGEiLCJyb2xlcyI6WyJST0xFX0FETUlOIiwiUk9MRV9NQU5BR0VSIiwiUk9MRV9TVVBFUl9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjU5Nzc3MjY4fQ.t8VEvGM3vwu1UZXMm_y9tHzioGHmxlR6lKUo-2gKmQ0
+
+### 토큰 갱신
+GET http://localhost:8080/api/token/refresh
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwbGEiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2xvZ2luIiwiZXhwIjoxNjU5Nzc4NDY4fQ.XwitRqgr8KUnD578qUxw5tD1Mde4XJLombK3HorcLNQ

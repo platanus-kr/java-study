@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:n="http://shopn.platform.nhncorp.com/">
+    <soapenv:Body>
+        <n:RetrieveBranchResponse>
+            <n:RequestID>PLATEST</n:RequestID>
+            <n:ResponseType>SUCCESS</n:ResponseType>
+            <n:ResponsseTime>191</n:ResponsseTime>
+            <BranchId>id</BranchId>
+            <BranchName>천안</BranchName>
+            <PossibleDeliveryTypes>
+                <PossibleDeliveryType>TODAY_DELIVERY</PossibleDeliveryType>
+            </PossibleDeliveryTypes>
+            <BranchContractInfo>12313231</BranchContractInfo>
+            <ActivationYn>true</ActivationYn>
+            <BranchAreas>
+                <BranchArea>
+                    <DeliveryType>TODAY_DELIVERY</DeliveryType>
+                    <AreaNo>182</AreaNo>
+                    <ActivationYn>true</ActivationYn>
+                </BranchArea>
+                <BranchArea>
+                    <DeliveryType>TODAY_DELIVERY</DeliveryType>
+                    <AreaNo>89</AreaNo>
+                    <ActivationYn>true</ActivationYn>
+                </BranchArea>
+                <BranchArea>
+                    <DeliveryType>TODAY_DELIVERY</DeliveryType>
+                    <AreaNo>7001117</AreaNo>
+                    <ActivationYn>false</ActivationYn>
+                </BranchArea>
+             </BranchAreas>
+        </n:RetrieveBranchResponse>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+
+

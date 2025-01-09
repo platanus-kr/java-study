@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="hello">
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="jpa"/>
+            <property name="javax.persistence.jdbc.password" value="jpadb"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/jpa"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,1 @@
+GET http://localhost:8080/multirow/set?rows[0].id=1&rows[0].value=aaa&rows[1].id=2&rows[1].value=bbb

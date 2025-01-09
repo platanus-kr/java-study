@@ -17,7 +17,7 @@
 | Meassge         | WebSocket       | WebSocket                | MVC와 WebFlux에서 WebSocket 연결과 처리                            |
 | Message Broker  | Kafka           | Pub-sub, Messaging Queue | Publisher-Subscriber 패턴, Producer, Comsumer, Topic, Offset, ISP  |
 | Database        | Mapper          | Database Mapper          | Spring Data JDBC, MyBatis, 매퍼를 사용한 동적 쿼리                 |
-| ORM             | JPA             | ORM                      | Spring Data JPA, QueryDSL, 직접 참조/간접 참조                     |
+| Database        | ORM             | JPA                      | Spring Data JPA, QueryDSL                                          |
 | Database        | NoSQL           | Redis                    | k-v 데이터베이스 CRUD, RedisTemplate, Spring Data Redis (Lecttuce) |
 | Database        | NoSQL           | MongoDB                  | Document 데이터베이스 CRUD, MongoTemplate, Spring Data MongoDB     |
 

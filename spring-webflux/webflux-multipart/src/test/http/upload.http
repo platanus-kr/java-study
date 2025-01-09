@@ -1,0 +1,10 @@
+### 업로드
+POST http://localhost:8080/file
+Content-Type: multipart/form-data; boundary=PLATABOARDTEST
+
+--PLATABOARDTEST
+Content-Disposition: form-data; name="files"; filename="text.txt"
+Content-Type: text/plain
+
+< ./text.txt
+--PLATABOARDTEST--

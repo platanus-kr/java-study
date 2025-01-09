@@ -1,0 +1,155 @@
+package com.example.reactor01._08_adapt;
+
+import java.util.concurrent.CompletableFuture;
+
+import io.reactivex.rxjava3.core.BackpressureStrategy;
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.Single;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+/**
+ * https://www.codingame.com/playgrounds/929/reactive-programming-with-reactor-3/Adapt
+ */
+public class WithRxJava {
+	
+	/**
+	 * Reactor <-> RxJava
+	 * ---------------------
+	 * Mono - Single
+	 * Flux - Flowable
+	 * Observable
+	 *
+	 * ---------------------
+	 *
+	 * Java CompletableFuture
+	 *
+	 */
+
+
+	//
+//========================================================================================
+	
+	// TODO Adapt Flux to RxJava Flowable
+	Flowable<User> fromFluxToFlowable(Flux<User> flux) {
+		return Flowable.fromPublisher(flux);
+	}
+	
+	// TODO Adapt RxJava Flowable to Flux
+	Flux<User> fromFlowableToFlux(Flowable<User> flowable) {
+		return Flux.from(flowable);
+	}
+
+//========================================================================================
+	
+	// TODO Adapt Flux to RxJava Observable
+	Observable<User> fromFluxToObservable(Flux<User> flux) {
+		return Observable.fromPublisher(flux);
+	}
+	
+	// TODO Adapt RxJava Observable to Flux
+	Flux<User> fromObservableToFlux(Observable<User> observable) {
+		return Flux.from(observable.toFlowable(BackpressureStrategy.BUFFER));
+	}
+
+//========================================================================================
+	
+	// TODO Adapt Mono to RxJava Single
+	Single<User> fromMonoToSingle(Mono<User> mono) {
+		return Single.fromPublisher(mono);
+	}
+	
+	// TODO Adapt RxJava Single to Mono
+	Mono<User> fromSingleToMono(Single<User> single) {
+		return Mono.from(single.toFlowable());
+	}
+
+//========================================================================================
+	
+	// Finally, you can easily transform a Mono to a Java 8 CompletableFuture and vice-versa.
+	// Notice how these conversion methods all begin with from (when converting an external type to a Reactor one) and
+	// to (when converting a Reactor type to an external one).
+	
+	// TODO Adapt Mono to Java 8+ CompletableFuture
+	CompletableFuture<User> fromMonoToCompletableFuture(Mono<User> mono) {
+		return mono.toFuture();
+	}
+	
+	// TODO Adapt Java 8+ CompletableFuture to Mono
+	Mono<User> fromCompletableFutureToMono(CompletableFuture<User> future) {
+		return Mono.fromFuture(future);
+	}
+}
+
+class User {
+	
+	public static final User SKYLER = new User("swhite", "Skyler", "White");
+	public static final User JESSE = new User("jpinkman", "Jesse", "Pinkman");
+	public static final User WALTER = new User("wwhite", "Walter", "White");
+	public static final User SAUL = new User("sgoodman", "Saul", "Goodman");
+	
+	private final String username;
+	
+	private final String firstname;
+	
+	private final String lastname;
+	
+	public User(String username, String firstname, String lastname) {
+		this.username = username;
+		this.firstname = firstname;
+		this.lastname = lastname;
+	}
+	
+	public String getUsername() {
+		return username;
+	}
+	
+	public String getFirstname() {
+		return firstname;
+	}
+	
+	public String getLastname() {
+		return lastname;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
+		
+		User user = (User) o;
+		
+		if (!username.equals(user.username)) {
+			return false;
+		}
+		if (!firstname.equals(user.firstname)) {
+			return false;
+		}
+		return lastname.equals(user.lastname);
+		
+	}
+	
+	@Override
+	public int hashCode() {
+		int result = username.hashCode();
+		result = 31 * result + firstname.hashCode();
+		result = 31 * result + lastname.hashCode();
+		return result;
+	}
+	
+	@Override
+	public String toString() {
+		return "Person{" +
+				"username='" + username + '\'' +
+				", firstname='" + firstname + '\'' +
+				", lastname='" + lastname + '\'' +
+				'}';
+	}
+}
+
+

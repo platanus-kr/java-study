@@ -1,0 +1,63 @@
+### 상품 삽입1
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "name": "사과",
+  "price": "10000"
+}
+
+### 상품 삽입2
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "name": "사과바나나",
+  "price": "11000"
+}
+
+### 상품 삽입3
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "name": "바나나",
+  "price": "12000"
+}
+
+### 상품 삽입4
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "name": "바나나우유",
+  "price": "13000"
+}
+
+### 상품 삽입5
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "name": "바나나오렌지",
+  "price": "14000"
+}
+
+### 상품 삽입6
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "name": "apple",
+  "price": "15000"
+}
+
+### 상품조회 (전체)
+GET http://localhost:8080/product/findAll
+
+### 상품 조회 (아이디)
+GET http://localhost:8080/product?id=8e0db2ae-0bfa-4fd1-ad02-6c236348f8a5
+
+### 상품 조회 (상품명)
+GET http://localhost:8080/product/findByName?name=사과
+

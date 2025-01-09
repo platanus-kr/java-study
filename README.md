@@ -1,4 +1,37 @@
-# 웹 개발자가 되기 위한 나의 로드맵
+# 자바 ECO 스터디 저장소
+
+자바 환경의 웹 어플리케이션 개발을 위해 학습했던 예제 코드들을 정리해놓은 저장소 입니다.
+
+- **Backend** : 자바를 베이스로 하는 웹 어플리케이션 개발 지식
+- **Deploy and Infrastructure** : 형상관리와 배포 관리, 어플리케이션 실행 환경 구성
+
+## Backend
+
+| 분야            | 이름            | 주제                     | 내용                                                               |
+| --------------- | --------------- | ------------------------ | ------------------------------------------------------------------ |
+| Language        | Java            | Programming              | 자바, OOP, 스레딩, I/O 처리, JVM                                   |
+| Framework       | Spring          | Spring Framework Core    | AOP, DI, Bean Lifecycle, Interceptor, Validation, MVC, JSP         |
+| Web Application | Spring Boot     | Spring Web MVC           | Web Backend Architecture, Multipart, RestController                |
+| Web Application | Spring Security | Session, Token, OAuth2   | Payload 커스터마이징, JWT 인증/인가, 세션 인증, OAuth2 인증        |
+| Reactive        | Spring WebFlux  | Reactor                  | netty기반 비동기 처리 서블릿을 사용하는 Spring                     |
+| Meassge         | WebSocket       | WebSocket                | MVC와 WebFlux에서 WebSocket 연결과 처리                            |
+| Message Broker  | Kafka           | Pub-sub, Messaging Queue | Publisher-Subscriber 패턴, Producer, Comsumer, Topic, Offset, ISP  |
+| Database        | Mapper          | Database Mapper          | Spring Data JDBC, MyBatis, 매퍼를 사용한 동적 쿼리                 |
+| ORM             | JPA             | ORM                      | Spring Data JPA, QueryDSL, 직접 참조/간접 참조                     |
+| Database        | NoSQL           | Redis                    | k-v 데이터베이스 CRUD, RedisTemplate, Spring Data Redis (Lecttuce) |
+| Database        | NoSQL           | MongoDB                  | Document 데이터베이스 CRUD, MongoTemplate, Spring Data MongoDB     |
+
+## Deploy and Infrastructure
+
+| 분야  | 이름           | 주제                | 내용                                |
+| ----- | -------------- | ------------------- | ----------------------------------- |
+| OS    | Linux          | Infrastructure      | RedHat, Rocky, CentOS               |
+| Cloud | Container      | Docker              | Dockerfile, docker-compose          |
+| Cloud | Ochestration   | Kubernetes          |                                     |
+| SCM   | git            | git, GitHub, GitLab | 소프트웨어 형상 관리 및 브랜치 관리 |
+| CI/CD | GitHub Actions | 어플리케이션 배포   | 어플리케이션 빌드 및 배포 자동화    |
+
+<!--# 웹 개발자가 되기 위한 나의 로드맵
 
 ## 로드맵
 
@@ -126,4 +159,4 @@
 3. 왠만하면 직접 서점에서 보고 경쟁 도서 대비 괜찮은 책으로 담았습니다.
 4. 이 목록은 협찬 및 선물 도서가 포함되어 있습니다.
 5.
-```
+```-->

@@ -1,0 +1,31 @@
+### member join test
+POST http://localhost:8080/member/join
+Content-Type: application/json
+
+{
+  "username": "test2",
+  "password": "test1",
+  "name": "이름",
+  "email": "d@d.com"
+}
+
+### normal
+GET http://localhost:8080/nice/test
+
+### login test
+POST http://localhost:8080/member/login
+Content-Type: application/json
+
+{
+  "username": "test2",
+  "password": "test1"
+}
+
+### authorization test
+GET http://localhost:8080/nice/auth
+Cookie: JSESSIONID=C6F7D276FC21166BDDFB4CAACEBA3517;
+
+
+### logout test
+GET http://localhost:8080/logout
+Cookie: JSESSIONID=1304946D24395313CBA3E46AF1EE99A5;

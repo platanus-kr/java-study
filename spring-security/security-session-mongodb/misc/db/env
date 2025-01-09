@@ -1,0 +1,6 @@
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_ROOT_PASSWORD=platasessiontest
+MYSQL_DATABASE=platasessiontest
+MYSQL_USER=platalocal
+MYSQL_PASSWORD=platasessiontest

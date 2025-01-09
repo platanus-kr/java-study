@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25463895-4113-4bca-8064-59c4d513044d" name="Changes" comment="add: Collection">
-      <change beforePath="$PROJECT_DIR$/../java-concurrent/src/executors/completablefutures/cacheimplement/Memoizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-concurrent/src/executors/completablefutures/cacheimplement/Memoizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,11 +82,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.AnonymousClassTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FunctionalProgrammingTest.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;trunk/2023FW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;trunk/2024SS&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Pla/Development/repo/study/java-study/java&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -99,7 +102,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.24580336&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -115,13 +118,13 @@
       <recent name="org.codepractice.HttpPost" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.fundamental.classes.inheritances.Client" />
+  <component name="RunManager" selected="Application.AnonymousClassTest">
+    <configuration name="AnonymousClassTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fundamental.lambda.AnonymousClassTest" />
       <module name="basic.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.fundamental.classes.inheritances.*" />
+          <option name="PATTERN" value="org.fundamental.lambda.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +132,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomExecutor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.concurrent.baeldung._01_executor.CustomExecutor" />
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fundamental.classes.inheritances.Client" />
       <module name="basic.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.concurrent.baeldung._01_executor.*" />
+          <option name="PATTERN" value="org.fundamental.classes.inheritances.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,13 +186,20 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AnonymousClassTest" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.UncheckedExceptionExample" />
         <item itemvalue="Application.org.concurrent.semaphore.CustomExecutor" />
         <item itemvalue="Application.org.concurrent.countdownlatch.CustomExecutor" />
-        <item itemvalue="Application.CustomExecutor" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.21-temurin-11.0.21-f644763e9732-581af876" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -233,6 +243,12 @@
       <workItem from="1698113143866" duration="5354000" />
       <workItem from="1698149768115" duration="1127000" />
       <workItem from="1698325432136" duration="25000" />
+      <workItem from="1704360143004" duration="81000" />
+      <workItem from="1704360235267" duration="1418000" />
+      <workItem from="1704938603769" duration="24000" />
+      <workItem from="1704938684354" duration="17000" />
+      <workItem from="1705630035546" duration="578000" />
+      <workItem from="1705891948886" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <created>1659780737225</created>
@@ -270,5 +286,12 @@
     <MESSAGE value="add: Thread" />
     <MESSAGE value="add: Collections" />
     <option name="LAST_COMMIT_MESSAGE" value="add: Collections" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
